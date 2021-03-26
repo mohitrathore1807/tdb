@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Faustina&family=Play&family=Rokkitt:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+body {
+    background-color: black;
+}
+
+.home {
+    position: fixed;
+    top: 27%;
+    right: 2%;
+    float: right;
+    z-index: 4;
+}
+
+.home ul {
+    list-style: none;
+    padding: 32px;
+}
+
+.home ul li {
+    display: flex;
+    padding: 8px;
+    justify-content: flex-end;
+}
+
+.home ul li button {
+    padding: 8px;
+    color: white;
+    background: none;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    font-family: 'Play', sans-serif;
+    cursor: pointer;
+}
+
+.home ul li button {
+    display: none;
+}
+
+.home ul li .line {
+    background-color: #998e8e;
+    height: 40px;
+    width: 2px;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+    transition: all 1s;
+    opacity: 0.6;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 4;
+    padding: 12px;
+    transition: all 1s;
+}
+
+.navbar:hover {
+    background-color: white;
+}
+
+.navbar:hover .burger {
+    filter: invert(1);
+}
+
+.navbar img {
+    width: 66px;
+    height: 44px;
+    transition: transform 0.4s;
+}
+
+.navbar img:hover {
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+.nav-list {
+    transition: all 2s;
+}
+
+.navbar ul {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    padding: 8px;
+    padding-left: 20%;
+}
+
+.navbar:hover img,
+.navbar:hover ul {
+    filter: invert(1);
+}
+
+.navbar ul a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    font-family: 'Play', sans-serif;
+}
+
+.navbar ul a:hover {
+    border-bottom: 2px solid;
+}
+
+.navbar ul .btn {
+    color: white;
+    font-size: 20px;
+    padding: 8px;
+    outline: none;
+    border: 2px solid white;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Play', sans-serif;
+}
+
+.navbar ul .btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    top: 16px;
+    right: 4%;
+}
+
+.b-line {
+    width: 32px;
+    background-color: white;
+    height: 4px;
+    margin: 6px 3px;
+}
+
+.btn-sticky {
+    z-index: 4;
+}
+
+#home {
+    max-width: 100%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 1s;
+}
+
+#home .big-para {
+    font-size: 4.8rem;
+    width: 50%;
+    height: 41vh;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Play', sans-serif;
+}
+
+#home .sm-para {
+    font-size: 2rem;
+    width: 50%;
+    height: 8vh;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sec1 {
+    height: 100%;
+}
+
+#about {
+    max-width: 100%;
+    height: 60vh;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    transition: all 1s;
+}
+
+#about a {
+    list-style: none;
+    text-decoration: none;
+    display: contents;
+}
+
+.heading {
+    display: flex;
+    height: 6vh;
+    width: 22%;
+    padding-top: 16px;
+    border-top: 2px solid white;
+    font-family: 'Faustina', serif;
+    opacity: 1;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    transition: all 1s;
+    background-blend-mode: soft-light;
+    z-index: 0;
+    height: 100vh;
+}
+
+#para1 {
+    max-width: 50%;
+    font-size: 1.6rem;
+    font-family: 'Play', sans-serif;
+    color: white;
+    padding: 44px;
+    transition: all 1s;
+}
+
+#para1 strong {
+    font-size: 3.6rem;
+    font-family: 'Faustina', serif;
+}
+
+#img1 {
+    max-width: 44%;
+    max-height: 44%;
+    padding: 16px;
+    transition: all 1s;
+    margin: 16px;
+}
+
+@keyframes mynewmove {
+    0% {
+        max-width: 44%;
+        max-height: 44%;
+    }
+    50% {
+        max-width: 40%;
+        max-height: 40%;
+    }
+    100% {
+        max-width: 44%;
+        max-height: 44%;
+    }
+}
+
+#mission {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: 100vh;
+    transition: all 1s;
+}
+
+#para2 {
+    max-width: 50%;
+    font-size: 1.6rem;
+    font-family: 'Play', sans-serif;
+    color: white;
+    padding: 44px;
+    transition: all 1s;
+}
+
+#para2 strong {
+    font-size: 3.6rem;
+    font-family: 'Faustina', serif;
+}
+
+#img2 {
+    max-width: 44%;
+    max-height: 44%;
+    padding: 16px;
+    transition: all 1s;
+    margin: 16px;
+}
+
+#img2:hover {
+    max-width: 46%;
+    max-height: 46%;
+}
+
+#vision {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: 100vh;
+    transition: all 1s;
+}
+
+#para3 {
+    max-width: 50%;
+    font-size: 1.6rem;
+    color: white;
+    padding: 44px;
+    font-family: 'Play', sans-serif;
+    transition: all 1s;
+}
+
+#para3 strong {
+    font-size: 3.6rem;
+    font-family: 'Faustina', serif;
+}
+
+#img3 {
+    max-width: 44%;
+    max-height: 44%;
+    padding: 16px;
+    transition: all 1s;
+    margin: 16px;
+}
+
+#img3:hover {
+    width: 46%;
+}
+
+.contact-head {
+    max-width: 100%;
+    color: #d3d3d3;
+    padding-left: 6%;
+    font-size: 1.6rem;
+    font-family: 'Play', sans-serif;
+}
+
+.contact-data {
+    max-width: 100%;
+    height: 40vh;
+    color: #d3d3d3;
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    font-family: 'Play', sans-serif;
+}
+
+.contact-data .heading1 {
+    height: fit-content;
+    width: 24%;
+    font-size: 22px;
+    font-weight: unset;
+    padding-top: 16px;
+    border-top: 2px solid #d3d3d3;
+    font-family: sans-serif;
+    opacity: 1;
+    color: #d3d3d3;
+    font-family: 'Play', sans-serif;
+}
+
+.co-icon {
+    font-size: 22px;
+    padding-right: 10px;
+}
+
+.contact-data .heading1 a {
+    color: #d3d3d3;
+}
+
+.contact-data .heading1 .main-icon {
+    color: #d3d3d3;
+    cursor: pointer;
+    font-size: 32px;
+}
+
+.contact-data .heading1 .main-icon:hover {
+    padding-left: 16px;
+}
+
+.contact-data .heading1 strong {
+    font-size: 1.8rem;
+}
+
+
+/* Dropdown Style */
+
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Contact Form */
+
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+
+
+/* The popup chat - hidden by default */
+
+.chat-popup {
+    display: none;
+    position: fixed;
+    width: 36%;
+    bottom: 0;
+    right: 32%;
+    font-family: 'Play', sans-serif;
+    z-index: 9;
+}
+
+.cross {
+    width: 100%;
+    color: white;
+    background-color: white;
+}
+
+.cross i {
+    float: right;
+    font-size: 22px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+
+/* Add styles to the form container */
+
+.form-container {
+    max-width: 100%;
+    padding: 10px;
+    background-color: white;
+    background: #3a3737;
+}
+
+.form-container h1 {
+    text-align: center;
+    color: white;
+}
+
+.form-container input {
+    width: 94%;
+    padding: 6px;
+    margin: 3px;
+    font-family: 'Play', sans-serif;
+    outline: none;
+}
+
+
+/* Full-width textarea */
+
+.form-container textarea {
+    width: 95%;
+    padding: 6px;
+    margin: 3px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    outline: none;
+    min-height: 164px;
+}
+
+.form-container .chat-btn {
+    background-color: black;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    font-size: 16px;
+    font-family: 'Play', sans-serif;
+}
+
+.form-container .chat-btn:hover,
+.open-button:hover {
+    opacity: 1;
+}

@@ -1,0 +1,575 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="{% static 'responsive.css' %}">
+  <script src="https://kit.fontawesome.com/c3993a26e0.js" crossorigin="anonymous"></script>
+  <title>TDB.AI</title>
+</head>
+{% block body %}
+<body>
+  <video autoplay muted loop id="myVideo">
+    <source src="{% static 'Product/gifs/scrap/Thermal.mp4' %}" type="video/mp4">
+  </video>
+
+  <section class="home">
+    <ul>
+      <li><button class="btn-sticky" id="start0" style="height: 40px;"></button>
+        <div class="line" id="line0"></div>
+      </li>
+      <li><button class="btn-sticky" id="start" style="height: 40px;">Accurate</button>
+        <a href="#content">
+          <div class="line" id="line1"></div>
+        </a>
+      </li>
+      <li><button class="btn-sticky" id="start1" style="height: 40px;">Covid-19</button>
+        <a href="#mission">
+          <div class="line" id="line2"></div>
+        </a>
+      </li>
+      <li><button class="btn-sticky" id="start2" style="height: 40px;">Target</button>
+        <a href="#vision">
+          <div class="line" id="line3"></div>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+
+  <div id="home">
+    <p class="big-para">Calculate things easily</p>
+    <p class="sm-para"></p>
+  </div>
+
+  <div id="about">
+    <a href="#content">
+      <h2 class="heading" id="head1">Accurate</h2>
+    </a>
+    <a href="#mission">
+      <h2 class="heading" id="head2">Covid-19</h2>
+    </a>
+    <a href="#vision">
+      <h2 class="heading" id="head3">Target</h2>
+    </a>
+  </div>
+
+  <div id="content">
+    <p id="para1">
+      <strong>Get the accurate measurement</strong>
+      <br>
+      TDB's temperature detection system TDS is a video analytics solution provides the accurate measurement of temperature at real time. 
+    </p>
+    <img src="{% static 'Product/gifs/thermal_temp1.gif' %}" id="img1" alt="Team">
+  </div>
+
+
+  <br>
+
+  <div id="mission">
+    <img src="{% static 'Product/gifs/thermal_temp2.gif' %}" id="img2" alt="img">
+    <p id="para2">
+      <strong>Resolve Covid-19 Effectiveness</strong>
+      <br>
+      From Big enterprises to public streets, TDB's video analytics solution TDS helps out to be more effective way to manage covid effectiveness on crowd management..
+    </p>
+  </div>
+
+
+  <br>
+
+  <div id="vision">
+    <p id="para3">
+      <strong>AI for ALL</strong>
+      <br>
+      Our Mission is to leverage AI to solve the sensitive points in various industries through AI and be affordable for
+      ALL.
+    </p>
+    <img src="{% static 'Product/gifs/thermal_temp3.gif' %}" id="img3" alt="img">
+  </div>
+
+  <br>
+
+  <div id="contact">
+    <div class="contact-head">
+      <h1>Let's Connect with us</h1>
+    </div>
+
+    <div class="contact-data">
+      <p class="heading1" id="head-1">
+          <i class="main-icon fa fa-long-arrow-right" onclick="openForm()" ></i>
+        <br>
+        <strong>Get in touch</strong>
+        <br>
+      </p>
+
+      <p class="heading1" id="head-2">
+          <i class="main-icon fa fa-long-arrow-right"></i>
+        <br>
+        <strong>Request a demo</strong>
+        <br>
+      </p>
+
+      <p class="heading1" id="head-3">
+          <i class="main-icon fa fa-long-arrow-right"></i>
+        <br>
+        <strong>Contact us :</strong>
+        <br>
+        <a href="mailto:info@tdb.ai"><i class="co-icon fa fa-envelope-o"></i>info@tdb.ai</a>
+        <br>
+        <a href="tel:+917313510004"><i class="co-icon fa fa-phone"></i>+91-731-3510004</a>
+        <br>
+        <a href="tel:+917507898930"><i class="co-icon fa fa-phone"></i>+91-7507898930</a>
+        <br>
+        <a href=""><i class="co-icon fa fa-map-marker"></i>615, Apollo Premier, Vijay Nagar Square, Indore, Madhya Pradesh 452001</a>
+        <br>
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-popup" id="myForm">
+    <div class="cross"><i class="fa fa-times" onclick="closeForm()" ></i></div>
+    <form action="/action_page.php" class="form-container">
+      <h1>Let's Chat</h1>
+      <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+      <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+      <input type="text" name="phone" id="phone" placeholder="Enter Your Phone Number" required>
+      <input type="text" name="city" id="city" placeholder="Enter Your city" required>
+      <textarea placeholder="Additional information.." name="msg" required></textarea>
+
+      <button type="submit" class="chat-btn">Send</button>
+    </form>
+  </div>
+
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+  </script>
+
+  <script>
+    var p = document.getElementById("home");
+    var q = document.getElementById("about");
+    var content = document.getElementById("content");
+    var para1 = document.getElementById("para1");
+    var img1 = document.getElementById("img1");
+    var r = document.getElementById("mission");
+    var para2 = document.getElementById("para2");
+    var img2 = document.getElementById("img2");
+    var s = document.getElementById("vision");
+    var para3 = document.getElementById("para3");
+    var img3 = document.getElementById("img3");
+    var t = document.getElementById("contact");
+
+    var x = document.querySelector(".navbar");
+    var y = document.getElementById("logo");
+    var z = document.querySelector(".nav-list");
+    var a = document.getElementById("myVideo");
+    var h1 = document.getElementById("head1");
+    var h2 = document.getElementById("head2");
+    var h3 = document.getElementById("head3");
+
+
+    burger = document.querySelector('.burger');
+    var menu = document.getElementById("menu");
+
+    window.addEventListener('scroll', () => {
+      console.log(window.scrollY);
+    });
+
+
+
+    const mediaQuery = window.matchMedia('(min-width: 1020px)');
+    if (mediaQuery.matches) {
+      window.onscroll = function () { scrollFunction() };
+
+      function scrollFunction() {
+        if (scrollY > 100) {
+          // x.style.backgroundColor = 'black';
+          z.style.opacity = '0';
+          menu.style.display = 'block';
+          // a.style.margin = '50px';
+          // a.style.width = '92vw';
+          p.style.height = '50vh';
+          p.style.paddingTop = '348px';
+          q.style.height = '30vh';
+
+          document.getElementById("nav").onmouseover = function () {
+            // x.style.backgroundColor = 'white';
+            // y.style.filter = "invert(1)";
+            menu.style.filter = "invert(1)";
+
+            burger.addEventListener('click', () => {
+              menu.style.display = 'none';
+              z.style.opacity = '1';
+            });
+          }
+
+          document.getElementById("nav").onmouseout = function () {
+            // x.style.backgroundColor = 'black';
+            // y.style.filter = "invert(0)";
+            menu.style.filter = "invert(0)";
+          }
+        }
+
+        if (scrollY < 100) {
+          z.style.display = 'flex';
+          // a.style.margin = '0px';
+          // a.style.width = '100vw';
+          p.style.height = '100vh';
+          p.style.paddingTop = '0';
+          q.style.height = '60vh';
+
+          z.style.opacity = '1';
+          menu.style.display = 'none';
+        }
+
+        if (scrollY > 300) {
+          a.style.display = 'none';
+          p.style.height = '60vh';
+          q.style.height = '10vh';
+
+          p.style.paddingTop = '0';
+          q.style.position = "fixed";
+          q.style.top = "100px";
+          q.style.zIndex = "2";
+          q.style.width = "100%"
+          para1.style.padding = "36px";
+          para1.style.paddingTop = "44px";
+          img1.style.maxWidth = "48%";
+          img1.style.maxHeight = "48%";
+          img1.style.animation = "mynewmove 2s infinite";
+          content.style.height = "100vh";
+          content.style.backgroundColor = "black";
+
+          h2.style.color = "rgb(132 126 117)";
+          h3.style.color = "rgb(132 126 117)";
+          h2.style.borderColor = "rgb(132 126 117)";
+          h3.style.borderColor = "rgb(132 126 117)";
+        }
+
+        if (scrollY < 300) {
+          q.style.position = "unset";
+          a.style.display = 'block';
+          para1.style.padding = "44px";
+          para1.style.paddingTop = "50px";
+          img1.style.maxWidth = "44%";
+          img1.style.maxHeight = "44%";
+          img1.style.animation = "none";
+          content.style.height = "unset";
+          content.style.backgroundColor = "none";
+
+          h2.style.color = "white";
+          h3.style.color = "white";
+          h2.style.borderColor = "white";
+          h3.style.borderColor = "white";
+        }
+
+        if (scrollY > 656) {
+          h1.style.color = "rgb(132 126 117)";
+          h2.style.color = "white";
+          h3.style.color = "rgb(132 126 117)";
+          h1.style.borderColor = "rgb(132 126 117)";
+          h2.style.borderColor = "white";
+          h3.style.borderColor = "rgb(132 126 117)";
+
+          img2.style.maxWidth = "48%";
+          img2.style.maxHeight = "48%";
+
+          para2.style.padding = "36px";
+          para2.style.paddingTop = "44px";
+          r.style.height = "100vh";
+          r.style.backgroundColor = "black";
+        }
+
+        if (scrollY < 656) {
+          h1.style.color = "white";
+          h2.style.color = "rgb(132 126 117)";
+          h3.style.color = "rgb(132 126 117)";
+          h1.style.borderColor = "white";
+          h2.style.borderColor = "rgb(132 126 117)";
+          h3.style.borderColor = "rgb(132 126 117)";
+          img2.style.maxWidth = "44%";
+          img2.style.maxHeight = "44%";
+
+          para2.style.padding = "44px";
+          para2.style.paddingTop = "50px";
+          r.style.height = "unset";
+          r.style.backgroundColor = "none";
+        }
+
+        if (scrollY > 1380) {
+          h1.style.color = "rgb(132 126 117)";
+          h2.style.color = "rgb(132 126 117)";
+          h3.style.color = "white";
+          h1.style.borderColor = "rgb(132 126 117)";
+          h2.style.borderColor = "rgb(132 126 117)";
+          h3.style.borderColor = "white";
+
+          para3.style.padding = "36px";
+          para3.style.paddingTop = "44px";
+          img3.style.maxWidth = "40%";
+          img3.style.maxHeight = "40%";
+          s.style.height = "100vh";
+          s.style.backgroundColor = "black";
+        }
+
+        if (scrollY < 1380) {
+          para3.style.padding = "44px";
+          para3.style.paddingTop = "50px";
+          img3.style.maxWidth = "44%";
+          img3.style.maxHeight = "44%";
+          s.style.height = "unset";
+          s.style.backgroundColor = "none";
+        }
+
+        document.getElementById("line0").style.backgroundColor = "white";
+        document.getElementById("start0").style.display = "block";
+
+        if (scrollY < 100) {
+          document.getElementById("line1").style.backgroundColor = "#998e8e";
+          document.getElementById("start").style.display = "none";
+        }
+
+        if (scrollY > 300) {
+          document.getElementById("start").style.display = "block";
+          document.getElementById("start1").style.display = "none";
+          document.getElementById("start2").style.display = "none";
+          document.getElementById("line0").style.backgroundColor = "#998e8e";
+          document.getElementById("line1").style.backgroundColor = "white";
+          document.getElementById("line2").style.backgroundColor = "#998e8e";
+          document.getElementById("line3").style.backgroundColor = "#998e8e";
+        }
+
+        if (scrollY > 656) {
+          document.getElementById("start").style.display = "none";
+          document.getElementById("start1").style.display = "block";
+          document.getElementById("start2").style.display = "none";
+          document.getElementById("line0").style.backgroundColor = "#998e8e";
+          document.getElementById("line1").style.backgroundColor = "#998e8e";
+          document.getElementById("line2").style.backgroundColor = "white";
+          document.getElementById("line3").style.backgroundColor = "#998e8e";
+        }
+
+        if (scrollY > 1380) {
+          document.getElementById("start").style.display = "none";
+          document.getElementById("start1").style.display = "none";
+          document.getElementById("start2").style.display = "block";
+          document.getElementById("line0").style.backgroundColor = "#998e8e";
+          document.getElementById("line1").style.backgroundColor = "#998e8e";
+          document.getElementById("line2").style.backgroundColor = "#998e8e";
+          document.getElementById("line3").style.backgroundColor = "white";
+        }
+
+        if (scrollY > 3600) {
+          document.getElementById("start").style.display = "none";
+          document.getElementById("start1").style.display = "none";
+          document.getElementById("start2").style.display = "none";
+          document.getElementById("line0").style.backgroundColor = "#998e8e";
+          document.getElementById("line1").style.backgroundColor = "#998e8e";
+          document.getElementById("line2").style.backgroundColor = "#998e8e";
+          document.getElementById("line3").style.backgroundColor = "#998e8e";
+        }
+      }
+    }else{
+      window.onscroll = function () { scrollFunction() };
+
+      function scrollFunction() {
+        if (scrollY > 100) {
+          x.style.backgroundColor = 'black';
+          a.style.margin = '50px';
+          a.style.width = '84vw';
+          p.style.height = '50vh';
+          p.style.paddingTop = '348px';
+          q.style.height = '30vh';
+
+          document.getElementById("nav").onmouseover = function () {
+            x.style.backgroundColor = 'white';
+            y.style.filter = "invert(1)";
+            menu.style.filter = "invert(1)";
+          }
+
+          document.getElementById("nav").onmouseout = function () {
+            x.style.backgroundColor = 'black';
+            y.style.filter = "invert(0)";
+            menu.style.filter = "invert(0)";
+          }
+        }
+
+        if (scrollY < 100) {
+          // z.style.display = 'flex';
+          x.style.backgroundColor = 'none';
+          a.style.margin = '0px';
+          a.style.width = '100vw';
+          p.style.height = '100vh';
+          p.style.paddingTop = '0';
+          q.style.height = '60vh';
+
+          // z.style.opacity = '1';
+          // menu.style.display = 'none';
+        }
+
+        if (scrollY > 300) {
+          a.style.display = 'none';
+          p.style.height = '60vh';
+          q.style.height = '10vh';
+
+          p.style.paddingTop = '0';
+          q.style.position = "fixed";
+          q.style.top = "100px";
+          q.style.zIndex = "2";
+          q.style.width = "100%"
+          para1.style.padding = "36px";
+          para1.style.paddingTop = "44px";
+          img1.style.maxWidth = "78%";
+          img1.style.maxHeight = "48%";
+          img1.style.animation = "mynewmove 2s infinite";
+          content.style.height = "100vh";
+          content.style.backgroundColor = "black";
+
+          h2.style.color = "rgb(132 126 117)";
+          h3.style.color = "rgb(132 126 117)";
+          h2.style.borderColor = "rgb(132 126 117)";
+          h3.style.borderColor = "rgb(132 126 117)";
+        }
+
+        if (scrollY < 300) {
+          q.style.position = "unset";
+          a.style.display = 'block';
+          para1.style.padding = "44px";
+          para1.style.paddingTop = "50px";
+          img1.style.maxWidth = "44%";
+          img1.style.maxHeight = "44%";
+          img1.style.animation = "none";
+          content.style.height = "unset";
+          content.style.backgroundColor = "none";
+
+          h2.style.color = "white";
+          h3.style.color = "white";
+          h2.style.borderColor = "white";
+          h3.style.borderColor = "white";
+        }
+
+        if (scrollY > 656) {
+          h1.style.color = "rgb(132 126 117)";
+          h2.style.color = "white";
+          h3.style.color = "rgb(132 126 117)";
+          h1.style.borderColor = "rgb(132 126 117)";
+          h2.style.borderColor = "white";
+          h3.style.borderColor = "rgb(132 126 117)";
+
+          img2.style.maxWidth = "78%";
+          img2.style.maxHeight = "48%";
+
+          para2.style.padding = "36px";
+          para2.style.paddingTop = "44px";
+          r.style.height = "100vh";
+          r.style.backgroundColor = "black";
+        }
+
+        if (scrollY < 656) {
+          h1.style.color = "white";
+          h2.style.color = "rgb(132 126 117)";
+          h3.style.color = "rgb(132 126 117)";
+          h1.style.borderColor = "white";
+          h2.style.borderColor = "rgb(132 126 117)";
+          h3.style.borderColor = "rgb(132 126 117)";
+          img2.style.maxWidth = "78%";
+          img2.style.maxHeight = "44%";
+
+          para2.style.padding = "44px";
+          para2.style.paddingTop = "50px";
+          r.style.height = "unset";
+          r.style.backgroundColor = "none";
+        }
+
+        if (scrollY > 1380) {
+          h1.style.color = "rgb(132 126 117)";
+          h2.style.color = "rgb(132 126 117)";
+          h3.style.color = "white";
+          h1.style.borderColor = "rgb(132 126 117)";
+          h2.style.borderColor = "rgb(132 126 117)";
+          h3.style.borderColor = "white";
+
+          para3.style.padding = "36px";
+          para3.style.paddingTop = "44px";
+          img3.style.maxWidth = "78%";
+          img3.style.maxHeight = "40%";
+          s.style.height = "100vh";
+          s.style.backgroundColor = "black";
+        }
+
+        if (scrollY < 1380) {
+          para3.style.padding = "44px";
+          para3.style.paddingTop = "50px";
+          img3.style.maxWidth = "44%";
+          img3.style.maxHeight = "44%";
+          s.style.height = "unset";
+          s.style.backgroundColor = "none";
+        }
+
+        document.getElementById("line0").style.backgroundColor = "white";
+        document.getElementById("start0").style.display = "block";
+
+        if (scrollY < 100) {
+          document.getElementById("line1").style.backgroundColor = "#998e8e";
+          document.getElementById("start").style.display = "none";
+        }
+
+        if (scrollY > 300) {
+          document.getElementById("start").style.display = "block";
+          document.getElementById("start1").style.display = "none";
+          document.getElementById("start2").style.display = "none";
+          document.getElementById("line0").style.backgroundColor = "#998e8e";
+          document.getElementById("line1").style.backgroundColor = "white";
+          document.getElementById("line2").style.backgroundColor = "#998e8e";
+          document.getElementById("line3").style.backgroundColor = "#998e8e";
+        }
+
+        if (scrollY > 656) {
+          document.getElementById("start").style.display = "none";
+          document.getElementById("start1").style.display = "block";
+          document.getElementById("start2").style.display = "none";
+          document.getElementById("line0").style.backgroundColor = "#998e8e";
+          document.getElementById("line1").style.backgroundColor = "#998e8e";
+          document.getElementById("line2").style.backgroundColor = "white";
+          document.getElementById("line3").style.backgroundColor = "#998e8e";
+        }
+
+        if (scrollY > 1380) {
+          document.getElementById("start").style.display = "none";
+          document.getElementById("start1").style.display = "none";
+          document.getElementById("start2").style.display = "block";
+          document.getElementById("line0").style.backgroundColor = "#998e8e";
+          document.getElementById("line1").style.backgroundColor = "#998e8e";
+          document.getElementById("line2").style.backgroundColor = "#998e8e";
+          document.getElementById("line3").style.backgroundColor = "white";
+        }
+
+        if (scrollY > 3600) {
+          document.getElementById("start").style.display = "none";
+          document.getElementById("start1").style.display = "none";
+          document.getElementById("start2").style.display = "none";
+          document.getElementById("line0").style.backgroundColor = "#998e8e";
+          document.getElementById("line1").style.backgroundColor = "#998e8e";
+          document.getElementById("line2").style.backgroundColor = "#998e8e";
+          document.getElementById("line3").style.backgroundColor = "#998e8e";
+        }
+      }
+    }
+  </script>
+  <script src="{% static 'resp.js' %}"></script>
+{% endblock body %}
+</body>
+
+</html>

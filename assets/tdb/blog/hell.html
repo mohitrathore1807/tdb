@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Blogs</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+
+    <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="layout/scripts/fancybox-2.1.5/jquery.fancybox.css" type="text/css" />
+    <script type="text/javascript" src="layout/scripts/fancybox-2.1.5/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("a.fb_image").fancybox({
+                openEffect: 'elastic',
+                closeEffect: 'elastic',
+                openSpeed: 600,
+                closeSpeed: 600,
+                helpers: {
+                    overlay: {
+                        closeClick: true,
+                    },
+                    title: {
+                        type: 'over'
+                    }
+                }
+            });
+        });
+    </script>
+    <!-- End FancyBox -->
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .gallery ul{
+                display: unset;
+                /* flex-direction: column; */
+            }
+
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/demo/gallery/500x500.gif");
+            height: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero-text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+
+        .hero-text button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 10px 25px;
+            color: black;
+            background-color: #ddd;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .hero-text button:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        /* @media only screen and (max-width: 938px ) {
+            .gallery ul{
+                display: flex;
+                flex-direction: column;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 style="font-size:50px">I am Shrey</h1>
+        </div>
+    </div>
+
+    <div class="gallery row">
+
+        <ul>
+            <li class="col-12">
+                <p class="imgtitle">Indonectetus facilis leo nibh</p>
+                <a class="fb_image" href="images/demo/gallery/500x500.gif" title="Image 1 Link Title Tag"><img
+                        src="images/demo/gallery/284x224.gif" alt="" /></a>
+                <p class="readmore"><a href="./post.html">Continue Reading &raquo;</a></p>
+            </li>
+            <li>
+                <p class="imgtitle">Indonectetus facilis leo nibh</p>
+                <a class="fb_image" href="images/demo/gallery/500x500.gif" title="Image 2 Link Title Tag"><img
+                        src="images/demo/gallery/284x224.gif" alt="" /></a>
+                <p class="readmore"><a href="./post.html">Continue Reading &raquo;</a></p>
+            </li>
+            <li class="last">
+                <p class="imgtitle">Indonectetus facilis leo nibh</p>
+                <a class="fb_image" href="images/demo/gallery/500x500.gif" title="Image 3 Link Title Tag"><img
+                        src="images/demo/gallery/284x224.gif" alt="" /></a>
+                <p class="readmore"><a href="./post.html">Continue Reading &raquo;</a></p>
+            </li>
+            <li>
+                <p class="imgtitle">Indonectetus facilis leo nibh</p>
+                <a class="fb_image" href="images/demo/gallery/500x500.gif" title="Image 4 Link Title Tag"><img
+                        src="images/demo/gallery/284x224.gif" alt="" /></a>
+                <p class="readmore"><a href="./post.html">Continue Reading &raquo;</a></p>
+            </li>
+            <li>
+                <p class="imgtitle">Indonectetus facilis leo nibh</p>
+                <a class="fb_image" href="images/demo/gallery/500x500.gif" title="Image 5 Link Title Tag"><img
+                        src="images/demo/gallery/284x224.gif" alt="" /></a>
+                <p class="readmore"><a href="./post.html">Continue Reading &raquo;</a></p>
+            </li>
+            <li class="last">
+                <p class="imgtitle">Indonectetus facilis leo nibh</p>
+                <a class="fb_image" href="images/demo/gallery/500x500.gif" title="Image 6 Link Title Tag"><img
+                        src="images/demo/gallery/284x224.gif" alt="" /></a>
+                <p class="readmore"><a href="./post.html">Continue Reading &raquo;</a></p>
+            </li>
+            <li>
+                <p class="imgtitle">Indonectetus facilis leo nibh</p>
+                <a class="fb_image" href="images/demo/gallery/500x500.gif" title="Image 7 Link Title Tag"><img
+                        src="images/demo/gallery/284x224.gif" alt="" /></a>
+                <p class="readmore"><a href="./post.html">Continue Reading &raquo;</a></p>
+            </li>
+            <li>
+                <p class="imgtitle">Indonectetus facilis leo nibh</p>
+                <a class="fb_image" href="images/demo/gallery/500x500.gif" title="Image 8 Link Title Tag"><img
+                        src="images/demo/gallery/284x224.gif" alt="" /></a>
+                <p class="readmore"><a href="./post.html">Continue Reading &raquo;</a></p>
+            </li>
+            <li class="last">
+                <p class="imgtitle">Indonectetus facilis leo nibh</p>
+                <a class="fb_image" href="images/demo/gallery/500x500.gif" title="Image 9 Link Title Tag"><img
+                        src="images/demo/gallery/284x224.gif" alt="" /></a>
+                <p class="readmore"><a href="./post.html">Continue Reading &raquo;</a></p>
+            </li>
+        </ul>
+        <br class="clear" />
+    </div>
+</body>
+
+</html>

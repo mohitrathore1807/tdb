@@ -1,0 +1,224 @@
+@media only screen and (max-width: 1020px) {
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .navbar {
+        height: 216px;
+        flex-direction: column;
+        transition: all 0.8s ease-out;
+    }
+
+    .navbar:hover {
+        background-color: white;
+    }
+
+    .navbar:hover img,
+    .navbar:hover img {
+        filter: invert(1);
+    }
+
+    .navbar ul {
+        padding-left: 0;
+    }
+
+    .navbar img {
+        width: 56px;
+        height: 36px;
+    }
+
+    .navbar ul li {
+        padding: 4px;
+    }
+
+    .navbar ul a {
+        font-size: 1.2rem;
+    }
+
+    .navbar ul .btn {
+        font-size: 16px;
+        padding: 4px;
+    }
+
+    .h-nav-resp {
+        height: 42px;
+    }
+
+    .v-class-resp {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        top: 12px;
+        right: 1%;
+    }
+
+    .b-line {
+        width: 28px;
+        height: 2.4px;
+    }
+
+    .heading {
+        font-size: 1rem;
+    }
+
+    #home {
+        text-align: center;
+    }
+
+    #home .big-para {
+        text-align: center;
+        width: 56%;
+        font-size: 2rem;
+    }
+
+    #content,
+    #vision {
+        flex-direction: column-reverse;
+        height: 100vh;
+    }
+
+    @keyframes mynewmove {
+        0% {
+            max-width: 78%;
+            max-height: 44%;
+        }
+
+        50% {
+            max-width: 74%;
+            max-height: 40%;
+        }
+
+        100% {
+            max-width: 78%;
+            max-height: 44%;
+        }
+    }
+
+    #mission,
+    #culture {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    #para1,
+    #para2,
+    #para3 {
+        text-align: center;
+        font-size: 1.4rem;
+        max-width: 100%;
+    }
+
+    #para1 strong,
+    #para2 strong,
+    #para3 strong {
+        font-size: 2rem;
+    }
+
+    #img1,
+    #img2,
+    #img3 {
+        max-width: 64%;
+        padding: 4px;
+        margin: 8px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boxes {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .box-content{
+        width: 100%;
+        height: fit-content;
+        margin: 8px;
+    }
+
+    #journey{
+        background: none;
+    }
+
+    #logoIcon {
+        height: 36px;
+        width: 40px;
+    }
+
+    #timeline{
+        margin-top: 16%;
+    }
+
+    .slideshow-container {
+        max-width: 100%;
+    }
+
+    .slide-img {
+        width: 100%;
+    }
+
+    .text {
+        top: 48%;
+        width: 100%;
+        right: 0%;
+    }
+
+    #team {
+        padding-top: 80%;
+    }
+
+    .hierarchy {
+        flex-direction: column;
+    }
+
+    #culture-box {
+        /* padding-top: 164%; */
+        flex-direction: column;
+    }
+
+    #card1,
+    #card2,
+    #card3,
+    #card4 {
+        animation: none;
+        position: unset;
+        width: 96%;
+        padding: 8px;
+    }
+
+    #card1:hover,
+    #card2:hover,
+    #card3:hover,
+    #card4:hover {
+        width: 95.6%;
+    }
+}
+
+@media only screen and (max-width: 964px) {
+    .contact-head{
+        text-align: center;
+    }
+
+    .contact-data{
+        height: unset;
+        flex-direction: column;
+    align-items: center;
+    }
+
+    .contact-data .heading1{
+        width: 36%;
+    }
+}
+
+@media only screen and (max-width: 664px) {
+    .chat-popup {
+        width: 56%;
+        right: 24%;
+    }
+}
