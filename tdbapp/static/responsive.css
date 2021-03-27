@@ -4,9 +4,9 @@
     }
 
     .navbar {
-        height: 216px;
+        height: 16rem;
         flex-direction: column;
-        transition: all 0.8s ease-out;
+        /* transition: all 0.8s ease-out; */
     }
 
     .navbar:hover {
@@ -15,7 +15,7 @@
 
     .navbar:hover img,
     .navbar:hover img {
-        filter: invert(1);
+        filter: invert(0);
     }
 
     .navbar ul {
@@ -41,7 +41,7 @@
     }
 
     .h-nav-resp {
-        height: 42px;
+        height: 4rem;
     }
 
     .v-class-resp {
@@ -101,7 +101,7 @@
     #mission,
     #culture {
         flex-direction: column;
-        height: 100vh;
+        height: 100%;
     }
 
     #para1,
@@ -169,17 +169,11 @@
         right: 0%;
     }
 
-    #team {
-        padding-top: 80%;
-    }
-
-    .hierarchy {
-        flex-direction: column;
-    }
+    
 
     #culture-box {
-        /* padding-top: 164%; */
         flex-direction: column;
+        height: unset;
     }
 
     #card1,
@@ -203,6 +197,8 @@
 @media only screen and (max-width: 964px) {
     .contact-head{
         text-align: center;
+        padding: 0;
+        font-size: 0.8rem;
     }
 
     .contact-data{
@@ -212,7 +208,24 @@
     }
 
     .contact-data .heading1{
-        width: 36%;
+        width: 96%;
+        font-size: 1rem;
+        padding: 5px 0px;
+    }
+
+    .contact-data .heading1 .main-icon {
+        color: #d3d3d3;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .contact-data .heading1 strong {
+        font-size: 1rem;
+    }
+
+    .co-icon {
+        font-size: 15px;
+        padding-right: 8px;
     }
 }
 
@@ -220,5 +233,15 @@
     .chat-popup {
         width: 56%;
         right: 24%;
+    }
+}
+
+@media only screen and (max-width: 1480px){
+    #team {
+        padding-top: 36%;
+    }
+
+    .hierarchy {
+        flex-direction: column;
     }
 }
