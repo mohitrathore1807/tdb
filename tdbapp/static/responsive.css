@@ -192,6 +192,15 @@
     #card4:hover {
         width: 95.6%;
     }
+
+    
+    #team {
+        padding-top: 36%;
+    }
+
+    .hierarchy {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (max-width: 964px) {
@@ -233,15 +242,5 @@
     .chat-popup {
         width: 56%;
         right: 24%;
-    }
-}
-
-@media only screen and (max-width: 1480px){
-    #team {
-        padding-top: 36%;
-    }
-
-    .hierarchy {
-        flex-direction: column;
     }
 }
