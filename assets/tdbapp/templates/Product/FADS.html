@@ -275,6 +275,7 @@
         }
 
         if (scrollY > 656) {
+                    q.style.display = "none";
           h1.style.color = "rgb(132 126 117)";
           h2.style.color = "white";
           h3.style.color = "rgb(132 126 117)";
@@ -292,6 +293,7 @@
         }
 
         if (scrollY < 656) {
+                    q.style.display = "flex";
           h1.style.color = "white";
           h2.style.color = "rgb(132 126 117)";
           h3.style.color = "rgb(132 126 117)";
@@ -381,6 +383,21 @@
         }
       }
     }else{
+        document.getElementById("nav").onmouseover = function() {
+            x.style.backgroundColor = 'white';
+            y.style.filter = "invert(1)";
+            menu.style.filter = "invert(1)";
+        }
+
+        document.getElementById("nav").onmouseout = function() {
+            x.style.backgroundColor = 'black';
+            y.style.filter = "invert(0)";
+            menu.style.filter = "invert(0)";
+        }
+
+
+        z.style.filter = "invert(1)";
+        menu.style.display = 'block';
 
       window.onscroll = function () { scrollFunction() };
 
@@ -393,17 +410,9 @@
           p.style.paddingTop = '348px';
           q.style.height = '30vh';
 
-          document.getElementById("nav").onmouseover = function () {
-            x.style.backgroundColor = 'white';
-            y.style.filter = "invert(1)";
-            menu.style.filter = "invert(1)";
-          }
-
-          document.getElementById("nav").onmouseout = function () {
-            x.style.backgroundColor = 'black';
-            y.style.filter = "invert(0)";
-            menu.style.filter = "invert(0)";
-          }
+                    x.style.backgroundColor = 'white';
+                    y.style.filter = "invert(1)";
+                    menu.style.filter = "invert(1)";
         }
 
         if (scrollY < 100) {
@@ -413,6 +422,10 @@
           p.style.height = '100vh';
           p.style.paddingTop = '0';
           q.style.height = '60vh';
+                    
+                    x.style.backgroundColor = 'black';
+                    y.style.filter = "invert(0)";
+                    menu.style.filter = "invert(0)";
         }
 
         if (scrollY > 300) {
@@ -457,6 +470,7 @@
         }
 
         if (scrollY > 656) {
+                    q.style.display = "none";
           h1.style.color = "rgb(132 126 117)";
           h2.style.color = "white";
           h3.style.color = "rgb(132 126 117)";
@@ -474,6 +488,7 @@
         }
 
         if (scrollY < 656) {
+                    q.style.display = "flex";
           h1.style.color = "white";
           h2.style.color = "rgb(132 126 117)";
           h3.style.color = "rgb(132 126 117)";
@@ -564,7 +579,6 @@
       }
     }
   </script>
-  <script src="{% static 'resp.js' %}"></script>
 </body>
 {% endblock body %}
 

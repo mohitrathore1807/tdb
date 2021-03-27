@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/eae2567ff1.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175631726-1"></script>
     <link rel="stylesheet" href=" {% static 'style.css' %} ">
     <link rel="stylesheet" href="{% static 'about.css' %}">
     <link rel="stylesheet" href="{% static 'timeline.css' %}">
@@ -17,12 +18,22 @@
     <link rel="icon" href="{% static 'Product/img/logo.jfif' %}">
 
     <title>TDB.ai</title>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-175631726-1');
+    </script>
     <style>
         body {
             background-color: black !important;
             color: white;
         }
-        
+
         .card-body {
             color: black;
         }
@@ -30,7 +41,7 @@
 </head>
 
 <body>
-<div class="se-pre-con"></div>
+    <div class="se-pre-con"></div>
     <nav id="nav" class="navbar h-nav-resp">
         <a href="{% url 'index' %}">
             <img id="logo" src="{%static 'Product/img/logo.png'%}" alt="logo">
@@ -69,10 +80,10 @@
             <div class="b-line"></div>
         </div>
     </nav>
-    
+
     {% block body%} {% endblock body%}
 
-   
+
     <script src="{% static 'resp.js' %} "></script>
 
 </body>

@@ -240,7 +240,7 @@
 
             <div class="container">
                 <img src="{% static 'tdb/team_tdb_images/prachi_panchal.jpg' %}" alt="Image" class="hierarchy1">
-                <div class="center"><img src="tdb_team_website/PRACHI PANCHAL.gif" alt=""></div>
+                <div class="center"><img src="{% static 'tdb/tdb_team_website/PRACHI PANCHAL.gif' %} "alt=""    ></div>
             </div>
         </div>
 
@@ -402,7 +402,7 @@
                 six.style.display = "none";
                 seven.style.display = "none";
                 eight.style.display = "none";
-                logoIcon.style.left = "11%";
+                logoIcon.style.left = "10%";
             } else if (count == 2) {
                 one.style.display = "none";
                 two.style.display = "block";
@@ -412,7 +412,7 @@
                 six.style.display = "none";
                 seven.style.display = "none";
                 eight.style.display = "none";
-                logoIcon.style.left = "22%";
+                logoIcon.style.left = "20%";
             } else if (count == 3) {
                 one.style.display = "none";
                 two.style.display = "none";
@@ -422,7 +422,7 @@
                 six.style.display = "none";
                 seven.style.display = "none";
                 eight.style.display = "none";
-                logoIcon.style.left = "33%";
+                logoIcon.style.left = "30%";
             } else if (count == 4) {
                 one.style.display = "none";
                 two.style.display = "none";
@@ -432,7 +432,7 @@
                 six.style.display = "none";
                 seven.style.display = "none";
                 eight.style.display = "none";
-                logoIcon.style.left = "44%";
+                logoIcon.style.left = "40%";
             } else if (count == 5) {
                 one.style.display = "none";
                 two.style.display = "none";
@@ -442,7 +442,7 @@
                 six.style.display = "none";
                 seven.style.display = "none";
                 eight.style.display = "none";
-                logoIcon.style.left = "55%";
+                logoIcon.style.left = "50%";
             } else if (count == 6) {
                 one.style.display = "none";
                 two.style.display = "none";
@@ -452,7 +452,7 @@
                 six.style.display = "block";
                 seven.style.display = "none";
                 eight.style.display = "none";
-                logoIcon.style.left = "66%";
+                logoIcon.style.left = "60%";
             } else if (count == 7) {
                 one.style.display = "none";
                 two.style.display = "none";
@@ -462,7 +462,7 @@
                 six.style.display = "none";
                 seven.style.display = "block";
                 eight.style.display = "none";
-                logoIcon.style.left = "77%";
+                logoIcon.style.left = "70%";
             } else if (count == 8) {
                 one.style.display = "none";
                 two.style.display = "none";
@@ -472,7 +472,7 @@
                 six.style.display = "none";
                 seven.style.display = "none";
                 eight.style.display = "block";
-                logoIcon.style.left = "88%";
+                logoIcon.style.left = "80%";
             }
         }
 
@@ -489,7 +489,7 @@
                 six.style.display = "none";
                 seven.style.display = "none";
                 eight.style.display = "none";
-                logoIcon.style.left = "11%";
+                logoIcon.style.left = "10%";
             } else if (count == 2) {
                 one.style.display = "none";
                 two.style.display = "block";
@@ -499,7 +499,7 @@
                 six.style.display = "none";
                 seven.style.display = "none";
                 eight.style.display = "none";
-                logoIcon.style.left = "22%";
+                logoIcon.style.left = "20%";
             } else if (count == 3) {
                 one.style.display = "none";
                 two.style.display = "none";
@@ -509,7 +509,7 @@
                 six.style.display = "none";
                 seven.style.display = "none";
                 eight.style.display = "none";
-                logoIcon.style.left = "33%";
+                logoIcon.style.left = "30%";
             } else if (count == 4) {
                 one.style.display = "none";
                 two.style.display = "none";
@@ -519,7 +519,7 @@
                 six.style.display = "none";
                 seven.style.display = "none";
                 eight.style.display = "none";
-                logoIcon.style.left = "44%";
+                logoIcon.style.left = "40%";
             } else if (count == 5) {
                 one.style.display = "none";
                 two.style.display = "none";
@@ -529,7 +529,7 @@
                 six.style.display = "none";
                 seven.style.display = "none";
                 eight.style.display = "none";
-                logoIcon.style.left = "55%";
+                logoIcon.style.left = "50%";
             } else if (count == 6) {
                 one.style.display = "none";
                 two.style.display = "none";
@@ -539,7 +539,7 @@
                 six.style.display = "block";
                 seven.style.display = "none";
                 eight.style.display = "none";
-                logoIcon.style.left = "66%";
+                logoIcon.style.left = "60%";
             } else if (count == 7) {
                 one.style.display = "none";
                 two.style.display = "none";
@@ -549,7 +549,7 @@
                 six.style.display = "none";
                 seven.style.display = "block";
                 eight.style.display = "none";
-                logoIcon.style.left = "77%";
+                logoIcon.style.left = "70%";
             } else if (count == 8) {
                 one.style.display = "none";
                 two.style.display = "none";
@@ -559,7 +559,7 @@
                 six.style.display = "none";
                 seven.style.display = "none";
                 eight.style.display = "block";
-                logoIcon.style.left = "88%";
+                logoIcon.style.left = "80%";
             }
         }
 
@@ -667,6 +667,7 @@
                 }
 
                 if (scrollY > 564) {
+                    q.style.display = "none";
                     h1.style.color = "rgb(132 126 117)";
                     h2.style.color = "white";
                     h3.style.color = "rgb(132 126 117)";
@@ -678,6 +679,7 @@
                 }
 
                 if (scrollY < 564) {
+                    q.style.display = "flex";
                     h1.style.color = "white";
                     h2.style.color = "rgb(132 126 117)";
                     h3.style.color = "rgb(132 126 117)";
@@ -767,38 +769,48 @@
                 }
             }
         } else {
+            document.getElementById("nav").onmouseover = function() {
+            x.style.backgroundColor = 'white';
+            y.style.filter = "invert(1)";
+            menu.style.filter = "invert(1)";
+        }
+
+        document.getElementById("nav").onmouseout = function() {
+            x.style.backgroundColor = 'black';
+            y.style.filter = "invert(0)";
+            menu.style.filter = "invert(0)";
+        }
+
+
+        z.style.filter = "invert(1)";
+        menu.style.display = 'block';
+
             window.onscroll = function () { scrollFunction() };
 
             function scrollFunction() {
 
                 if (scrollY > 100) {
-                    x.style.backgroundColor = 'black';
                     a.style.margin = '19px';
                     a.style.width = '92vw';
                     p.style.height = '80vh';
                     p.style.paddingTop = '348px';
                     q.style.height = '30vh';
 
-                    document.getElementById("nav").onmouseover = function () {
-                        x.style.backgroundColor = 'white';
-                        y.style.filter = "invert(1)";
-                        menu.style.filter = "invert(1)";
-                    }
-
-                    document.getElementById("nav").onmouseout = function () {
-                        x.style.backgroundColor = 'black';
-                        y.style.filter = "invert(0)";
-                        menu.style.filter = "invert(0)";
-                    }
+                    x.style.backgroundColor = 'white';
+                    y.style.filter = "invert(1)";
+                    menu.style.filter = "invert(1)";
                 }
 
                 if (scrollY < 100) {
-                    x.style.background = 'none';
                     a.style.margin = '0px';
                     a.style.width = '100vw';
                     p.style.height = '100vh';
                     p.style.paddingTop = '0';
                     q.style.height = '60vh';
+
+                    x.style.backgroundColor = 'black';
+                    y.style.filter = "invert(0)";
+                    menu.style.filter = "invert(0)";
                 }
 
                 if (scrollY > 264) {
@@ -832,6 +844,7 @@
                 }
 
                 if (scrollY > 869) {
+                    q.style.display = "none";
                     h1.style.color = "rgb(132 126 117)";
                     h2.style.color = "white";
                     h3.style.color = "rgb(132 126 117)";
@@ -843,6 +856,7 @@
                 }
 
                 if (scrollY < 869) {
+                    q.style.display = "flex";
                     h1.style.color = "white";
                     h2.style.color = "rgb(132 126 117)";
                     h3.style.color = "rgb(132 126 117)";

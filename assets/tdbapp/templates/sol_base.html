@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/eae2567ff1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href=" {% static 'style.css' %} ">
+    <link rel="stylesheet" href="{% static 'responsive.css' %}">
+    <link rel="stylesheet" href="{%static '/css/bootstrap.css'%}">
+
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black !important;
+            color: white;
+        }
+        
+        .card-body {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="nav" class="navbar h-nav-resp">
+        <a href="{% url 'index' %}">
+            <img id="logo" src="{%static 'Product/img/logo.png'%}" alt="logo">
+        </a>
+        <ul id="navigate" class="nav-list v-class-resp">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About us</a></li>
+            <div class="dropdown">
+                <li><a class="dropbtn" href="#">Products</a></li>
+                <div class="dropdown-content">
+                    <a href="{% url 'upai' %}">UPAI</a>
+                    <a href="{% url 'ddds' %}">DDDS</a>
+                    <a href="{% url 'fds' %}">FDS</a>
+                    <a href="{% url 'fads' %}">FADS</a>
+                    <a href="{% url 'tds' %}">TDS</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <li><a class="dropbtn" href="#">Solutions</a></li>
+                <div class="dropdown-content">
+                    <a href="{% url 'healthcare' %}">Healthcare</a>
+                    <a href="{% url 'construction' %}">Construction</a>
+                    <a href="{% url 'retail' %}">Retail</a>
+                    <a href="{% url 'automobile' %}">Automobile</a>
+                    <a href="{% url 'smartcity' %}">Smart City</a>
+                </div>
+            </div>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <!-- <li><a href="blog/hell.html">Blog</a></li> -->
+            <li><button class="btn" onclick="openForm()">Get Started</button></li>
+        </ul>
+
+        <div class="burger" onclick="display()" id="menu">
+            <div class="b-line"></div>
+            <div class="b-line"></div>
+            <div class="b-line"></div>
+        </div>
+    </nav>
+    
+    {% block body%} {% endblock body%}
+
+   
+    <script src="{% static 'resp.js' %} "></script>
+
+</body>
+
+</html>
