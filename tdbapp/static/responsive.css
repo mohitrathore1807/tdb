@@ -15,7 +15,7 @@
 
     .navbar:hover img,
     .navbar:hover img {
-        filter: invert(0);
+        filter: invert(1);
     }
 
     .navbar ul {
@@ -46,6 +46,7 @@
 
     .v-class-resp {
         opacity: 0;
+        height: 0.4rem;
     }
 
     .burger {
@@ -136,13 +137,13 @@
         max-width: 100%;
     }
 
-    .box-content{
+    .box-content {
         width: 100%;
         height: fit-content;
         margin: 8px;
     }
 
-    #journey{
+    #journey {
         background: none;
     }
 
@@ -151,7 +152,7 @@
         width: 40px;
     }
 
-    #timeline{
+    #timeline {
         margin-top: 16%;
     }
 
@@ -169,7 +170,7 @@
         right: 0%;
     }
 
-    
+
 
     #culture-box {
         flex-direction: column;
@@ -192,8 +193,14 @@
     #card4:hover {
         width: 95.6%;
     }
+}
 
-    
+@media only screen and (max-width: 800px) {
+
+    .container{
+        width: 84%;
+    }
+
     #team {
         padding-top: 36%;
     }
@@ -201,46 +208,40 @@
     .hierarchy {
         flex-direction: column;
     }
+
 }
 
-@media only screen and (max-width: 964px) {
-    .contact-head{
-        text-align: center;
-        padding: 0;
+@media only screen and (max-width: 1194px) {
+    .arrow {
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 896px) {
+    .footerBox {
+        font-size: 0.8rem;
+        flex-direction: column;
+    }
+
+    .box-item {
+        width: 100%;
+    }
+
+    .footerBox h1 {
+        font-size: 1rem;
+    }
+
+    .footerBox2 {
+        flex-direction: column;
+        width: 100%;
         font-size: 0.8rem;
     }
 
-    .contact-data{
-        height: unset;
-        flex-direction: column;
-    align-items: center;
+    .terms-privacy a {
+        padding-left: 1rem;
     }
 
-    .contact-data .heading1{
-        width: 96%;
-        font-size: 1rem;
-        padding: 5px 0px;
-    }
-
-    .contact-data .heading1 .main-icon {
-        color: #d3d3d3;
-        cursor: pointer;
-        font-size: 18px;
-    }
-
-    .contact-data .heading1 strong {
-        font-size: 1rem;
-    }
-
-    .co-icon {
-        font-size: 15px;
-        padding-right: 8px;
-    }
-}
-
-@media only screen and (max-width: 664px) {
-    .chat-popup {
-        width: 56%;
-        right: 24%;
+    .box-item {
+        padding: 1rem 0;
     }
 }

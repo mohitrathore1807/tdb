@@ -11,12 +11,13 @@
   <link rel="stylesheet" href="{% static 'style.css' %}">
   <link rel="stylesheet" href="{% static 'responsive.css' %}">
   <script src="https://kit.fontawesome.com/c3993a26e0.js" crossorigin="anonymous"></script>
-  <title>TDB.AI</title>
+    {% block title %} DDDS {% endblock title %} 
+
 </head>
 {% block body %}
 <body>
   <video autoplay muted loop id="myVideo">
-    <source src="{% static 'Product/gifs/scrap/drowsiness.mp4' %}" type="video/mp4">
+    <source src="https://tdb-website-demo-con.b-cdn.net/new_video/drowsiness.mp4" type="video/mp4">
   </video>
 
   <section class="home">
@@ -66,14 +67,19 @@
       <strong>Distraction leads to Deceased</strong>
       <br>
       TDB's video intelligence DDDS based on artificial intelligence platform focuses primarily saftey of driver and passengers through fatigue, mobile, yawning detection.    </p>
-    <img src="{% static 'Product/gifs/drowsiness1.gif' %}" id="img1" alt="Team">
+    
+    <video id="img1" autoplay muted loop>
+      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/drowsiness1.webm" type="video/webm"> 
+    </video>
   </div>
 
 
   <br>
 
   <div id="mission">
-    <img src="{% static 'Product/gifs/drowsiness2.gif' %}" id="img2" alt="img">
+    <video id="img2" autoplay muted loop>
+      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/drowsiness2.webm" type="video/webm"> 
+    </video>
     <p id="para2">
       <strong>Video Analytics is the new Survellience</strong>
       <br>
@@ -91,72 +97,14 @@
       Our Mission is to leverage AI to solve the sensitive points in various industries through AI and be affordable for
       ALL.
     </p>
-    <img src="{% static 'Product/gifs/drowsiness3.gif' %}" id="img3" alt="img">
+    <video id="img3" autoplay muted loop>
+      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/drowsiness3.webm" type="video/webm"> 
+    </video>
 
   </div>
 
   <br>
 
-  <div id="contact">
-    <div class="contact-head">
-      <h1>Let's Connect with us</h1>
-    </div>
-
-    <div class="contact-data">
-      <p class="heading1" id="head-1">
-          <i class="main-icon fa fa-long-arrow-right" onclick="openForm()" ></i>
-        <br>
-        <strong>Get in touch</strong>
-        <br>
-      </p>
-
-      <p class="heading1" id="head-2">
-          <i class="main-icon fa fa-long-arrow-right"></i>
-        <br>
-        <strong>Request a demo</strong>
-        <br>
-      </p>
-
-      <p class="heading1" id="head-3">
-          <i class="main-icon fa fa-long-arrow-right"></i>
-        <br>
-        <strong>Contact us :</strong>
-        <br>
-        <a href="mailto:info@tdb.ai"><i class="co-icon fa fa-envelope-o"></i>info@tdb.ai</a>
-        <br>
-        <a href="tel:+917313510004"><i class="co-icon fa fa-phone"></i>+91-731-3510004</a>
-        <br>
-        <a href="tel:+917507898930"><i class="co-icon fa fa-phone"></i>+91-7507898930</a>
-        <br>
-        <a href=""><i class="co-icon fa fa-map-marker"></i>615, Apollo Premier, Vijay Nagar Square, Indore, Madhya Pradesh 452001</a>
-        <br>
-      </p>
-    </div>
-  </div>
-
-  <div class="chat-popup" id="myForm">
-    <div class="cross"><i class="fa fa-times" onclick="closeForm()" ></i></div>
-    <form action="/action_page.php" class="form-container">
-      <h1>Let's Chat</h1>
-      <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
-      <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
-      <input type="text" name="phone" id="phone" placeholder="Enter Your Phone Number" required>
-      <input type="text" name="city" id="city" placeholder="Enter Your city" required>
-      <textarea placeholder="Additional information.." name="msg" required></textarea>
-
-      <button type="submit" class="chat-btn">Send</button>
-    </form>
-  </div>
-
-  <script>
-    function openForm() {
-      document.getElementById("myForm").style.display = "block";
-    }
-
-    function closeForm() {
-      document.getElementById("myForm").style.display = "none";
-    }
-  </script>
 
   <script>
     var p = document.getElementById("home");
@@ -196,18 +144,13 @@
 
       function scrollFunction() {
         if (scrollY > 100) {
-          // x.style.backgroundColor = 'black';
           z.style.opacity = '0';
           menu.style.display = 'block';
-          // a.style.margin = '50px';
-          // a.style.width = '92vw';
           p.style.height = '50vh';
           p.style.paddingTop = '348px';
           q.style.height = '30vh';
 
           document.getElementById("nav").onmouseover = function () {
-            // x.style.backgroundColor = 'white';
-            // y.style.filter = "invert(1)";
             menu.style.filter = "invert(1)";
 
             burger.addEventListener('click', () => {
@@ -217,16 +160,12 @@
           }
 
           document.getElementById("nav").onmouseout = function () {
-            // x.style.backgroundColor = 'black';
-            // y.style.filter = "invert(0)";
             menu.style.filter = "invert(0)";
           }
         }
 
         if (scrollY < 100) {
           z.style.display = 'flex';
-          // a.style.margin = '0px';
-          // a.style.width = '100vw';
           p.style.height = '100vh';
           p.style.paddingTop = '0';
           q.style.height = '60vh';

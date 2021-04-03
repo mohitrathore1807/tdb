@@ -11,13 +11,13 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="{% static 'responsive.css' %}">
   <link rel="stylesheet" href="{% static 'style.css' %}">
-  <title>TDB.AI</title>
+  {% block title %} UPAI {% endblock title %} 
   
 </head>
 {% block body %}
 <body>
   <video autoplay muted loop id="myVideo">
-    <source src="{% static 'Product/gifs/scrap/face_recog.mp4' %}" type="video/mp4">
+    <source src="https://tdb-website-demo-con.b-cdn.net/new_video/face_recog.mp4" type="video/mp4">
   </video>
 
   <section class="home">
@@ -71,7 +71,9 @@
       <br>
       <a href="#" class="arrow-box"><i class="arrow fas fa-arrow-down"></i></a>
     </p>
-    <img src="{% static 'Product/gifs/face_recognition_gif.gif' %}" id="img1" alt="Team">
+    <video id="img1" autoplay muted loop>
+      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/1.%20face_recognition.webm" type="video/webm"> 
+    </video>
   </div>
 
 
@@ -79,7 +81,9 @@
 
   <div id="mission">
 
-    <img src="{% static 'Product/gifs/face_recognition_1.gif' %}" id="img2" alt="img">
+    <video id="img2" autoplay muted loop>
+      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/face_recognition_1.webm" type="video/webm"> 
+    </video>
     <p id="para2">
       <strong>USP To Contain Ease Of Accessibility</strong>
       <br>
@@ -102,71 +106,14 @@
       <br>
       <a href="#" class="arrow-box"><i class="arrow fas fa-arrow-down"></i></a>
     </p>
-    <img src="{% static 'Product/gifs/face_recognition_2.gif' %}" id="img3" alt="">
+    <video id="img3" autoplay muted loop>
+      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/face_recognition_2.webm" type="video/webm"> 
+    </video>
   </div>
 
   <br>
 
-  <div id="contact">
-    <div class="contact-head">
-      <h1>Let's Connect with us</h1>
-    </div>
-
-    <div class="contact-data">
-      <p class="heading1" id="head-1">
-          <i class="main-icon fa fa-long-arrow-right" onclick="openForm()" ></i>
-        <br>
-        <strong>Get in touch</strong>
-        <br>
-      </p>
-
-      <p class="heading1" id="head-2">
-          <i class="main-icon fa fa-long-arrow-right"></i>
-        <br>
-        <strong>Request a demo</strong>
-        <br>
-      </p>
-
-      <p class="heading1" id="head-3">
-          <i class="main-icon fa fa-long-arrow-right"></i>
-        <br>
-        <strong>Contact us :</strong>
-        <br>
-        <a href="mailto:info@tdb.ai"><i class="co-icon fa fa-envelope-o"></i>info@tdb.ai</a>
-        <br>
-        <a href="tel:+917313510004"><i class="co-icon fa fa-phone"></i>+91-731-3510004</a>
-        <br>
-        <a href="tel:+917507898930"><i class="co-icon fa fa-phone"></i>+91-7507898930</a>
-        <br>
-        <a href=""><i class="co-icon fa fa-map-marker"></i>615, Apollo Premier, Vijay Nagar Square, Indore, Madhya Pradesh 452001</a>
-        <br>
-      </p>
-    </div>
-  </div>
-
-  <div class="chat-popup" id="myForm">
-    <div class="cross"><i class="fa fa-times" onclick="closeForm()" ></i></div>
-    <form action="/action_page.php" class="form-container">
-      <h1>Let's Chat</h1>
-      <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
-      <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
-      <input type="text" name="phone" id="phone" placeholder="Enter Your Phone Number" required>
-      <input type="text" name="city" id="city" placeholder="Enter Your city" required>
-      <textarea placeholder="Additional information.." name="msg" required></textarea>
-
-      <button type="submit" class="chat-btn">Send</button>
-    </form>
-  </div>
-
-  <script>
-    function openForm() {
-      document.getElementById("myForm").style.display = "block";
-    }
-
-    function closeForm() {
-      document.getElementById("myForm").style.display = "none";
-    }
-  </script>
+  
 
   <script>
     var p = document.getElementById("home");
@@ -213,8 +160,7 @@
           q.style.height = '30vh';
 
           document.getElementById("nav").onmouseover = function () {
-            // x.style.backgroundColor = 'white';
-            // y.style.filter = "invert(1)";
+           
             menu.style.filter = "invert(1)";
 
             burger.addEventListener('click', () => {
@@ -224,14 +170,13 @@
           }
 
           document.getElementById("nav").onmouseout = function () {
-            // x.style.backgroundColor = 'black';
-            // y.style.filter = "invert(0)";
+            
             menu.style.filter = "invert(0)";
           }
         }
 
         if (scrollY < 100) {
-          // x.style.background = 'none';
+        
           z.style.display = 'flex';
           p.style.height = '100vh';
           p.style.paddingTop = '0';

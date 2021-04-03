@@ -533,3 +533,8 @@ body {
 .open-button:hover {
     opacity: 1;
 }
+
+.footer-box{
+    display: flex;
+    justify-content: space-around;
+}

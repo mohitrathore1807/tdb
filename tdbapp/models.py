@@ -6,8 +6,9 @@ class Leads(models.Model):
     name = models.CharField(max_length=25)
     email = models.EmailField()
     phone = models.CharField(max_length=13)
-    city = models.CharField(max_length=20)
-    information = models.TextField()
+    company = models.CharField(max_length=20)
+    inquiry_type = models.CharField(max_length=50)
+    helping = models.TextField()
     
 
     def __str__(self):

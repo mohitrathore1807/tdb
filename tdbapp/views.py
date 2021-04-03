@@ -43,16 +43,17 @@ def tds(request):
 
 from .models import Leads
 def leads(request):
-    if request.method == 'POST':
-        name = request.POST['name']
-        email = request.POST['email']
-        phone = request.POST['phone']
-        city = request.POST['city']
-        information = request.POST['msg']
+    name = request.POST['FirstName']
+    email = request.POST['Email']
+    phone = request.POST['Phone']
+    company = request.POST['Company']
+    inquiry_type = request.POST['enquiry']
+    helping = request.POST['howcanwehelptextarea']
+    print(name, email, phone)
 
-        lead = Leads(name=name, email=email, phone=phone, city=city, information=information )
-        print(lead, name, email)
-        lead.save()
+    lead = Leads(name=name, email=email, phone=phone, company=company, inquiry_type=inquiry_type, helping=helping )
+
+    lead.save()
         
     return redirect('index')
 

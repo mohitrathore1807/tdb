@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'sol_base.html' %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -17,7 +17,8 @@
 		content="Contact us, AI company, ai solutions,face recogition,attendance management system, ERP, computer vision syndrome.">
 	<meta name="author" content="tdbai">
 	<meta http-equiv="Cache-control" content="public">
-	<title>Contact Us</title>
+	{% block title %}Contact {% endblock title %}
+
 
 	<!-- Mobile Specific Meta
   ================================================== -->
@@ -207,9 +208,9 @@ End Fixed Navigation
 			<div class="col-md-6">
 				<div class="switch-field text-center ">
 					<input type="radio" id="radio-one" name="switch-one" value="1" checked />
-					<label for="radio-one">Indore Office</label>
+					<label style="color: white;" for="radio-one">Indore Office</label>
 					<input type="radio" id="radio-two" name="switch-one" value="2" />
-					<label for="radio-two">Hyderabad Office</label>
+					<label style="color: white;" for="radio-two">Hyderabad Office</label>
 				</div>
 				<div class="row hyderabad">
 					<div class="col-2 text-right"><img src="{%static '/images/icons/email.png'%}" class="icon-size"
