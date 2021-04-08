@@ -1,4 +1,20 @@
 @media only screen and (max-width: 1020px) {
+    .none{
+        display: none;
+    }
+
+    .block {
+        display: block;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 3rem;
+        background-color: black;
+        transition: all 0s;
+        transition-delay: 0.2s;
+    }
+
     .navbar .Slogo {
         justify-content: unset;
         align-items: unset;
@@ -51,10 +67,15 @@
         padding-top: 15%;
     }
 
+    .navbar ul a:hover {
+        border-bottom: unset;
+    }
+
     .navbar ul li {
         padding: 4px;
         border-bottom: 1px solid #6a6a6a;
         line-height: 4rem;
+        font-size: 1.4rem;
     }
 
     .dropbtn {

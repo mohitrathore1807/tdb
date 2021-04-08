@@ -2,6 +2,7 @@ burger = document.querySelector('.burger');
 navbar = document.querySelector('.navbar');
 navList = document.querySelector('.nav-list');
 Slogo = document.querySelector('.Slogo');
+none = document.querySelector('.none');
 
 
 burger.addEventListener('click', ()=>{
@@ -9,6 +10,7 @@ burger.addEventListener('click', ()=>{
     navList.classList.toggle('v-class-resp');
     navbar.classList.toggle('h-nav-resp');
     Slogo.classList.toggle('Ilogo');
+    none.classList.toggle('block');
 });
 
 //paste this code under the head tag or in a separate js file.

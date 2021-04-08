@@ -37,6 +37,10 @@ if it's not present, don't show loader */
     background: url('Product/img/logo.png') center no-repeat black;
 }
 
+.none{
+    display: none;
+}
+
 .home {
     position: fixed;
     top: 27%;
@@ -127,8 +131,8 @@ if it's not present, don't show loader */
     align-items: center;
     justify-content: space-around;
     list-style: none;
-    padding: 8px;
-    padding-left: 20%;
+    padding: 12px;
+    margin: unset;
 }
 
 .navbar:hover .Slogo,
@@ -141,6 +145,7 @@ if it's not present, don't show loader */
     font-size: 1.2rem;
     color: white;
     font-family: 'Josefin Sans', sans-serif;
+    transition: all 0.2s ease-out;
 }
 
 .navbar ul a:hover {
@@ -378,10 +383,10 @@ if it's not present, don't show loader */
 /* Dropdown Style */
 
 .dropbtn {
+    text-decoration: none;
+    font-size: 1.2rem;
     color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .dropdown {
