@@ -106,17 +106,13 @@ if it's not present, don't show loader */
     background-color: white;
 }
 
-.navbar:hover .burger {
-    filter: invert(1);
-}
-
-.navbar img {
+.navbar .Slogo {
     width: 66px;
     height: 44px;
     transition: transform 0.4s;
 }
 
-.navbar img:hover {
+.navbar .Slogo:hover {
     transform: rotate(360deg);
     cursor: pointer;
 }
@@ -135,7 +131,7 @@ if it's not present, don't show loader */
     padding-left: 20%;
 }
 
-.navbar:hover img,
+.navbar:hover .Slogo,
 .navbar:hover ul {
     filter: invert(1);
 }
@@ -238,6 +234,8 @@ if it's not present, don't show loader */
     display: flex;
     height: 6vh;
     width: 22%;
+    font-size: 1.6rem;
+    font-weight: normal;
     padding-top: 16px;
     border-top: 2px solid white;
     font-family: 'Faustina', serif;
@@ -275,6 +273,7 @@ if it's not present, don't show loader */
 #para1 strong {
     font-size: 3.6rem;
     font-family: 'Faustina', serif;
+    font-weight: 500;
 }
 
 #img1 {
@@ -324,6 +323,7 @@ if it's not present, don't show loader */
 #para2 strong {
     font-size: 3.6rem;
     font-family: 'Faustina', serif;
+    font-weight: 500;
 }
 
 #img2 {
@@ -360,6 +360,7 @@ if it's not present, don't show loader */
 #para3 strong {
     font-size: 3.6rem;
     font-family: 'Faustina', serif;
+    font-weight: 500;
 }
 
 #img3 {
@@ -464,7 +465,7 @@ if it's not present, don't show loader */
 }
 
 .box-item div {
-    padding: 0.4rem;
+    padding: 0 0.4rem;
 }
 
 .box-item a {

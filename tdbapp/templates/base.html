@@ -11,6 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175631726-1"></script>
+  
   <link rel="stylesheet" href="{% static 's.css' %}">
   <link rel="stylesheet" href=" {% static 'style.css' %}">
   <link rel="stylesheet" href="{% static 'about.css' %}">
@@ -56,7 +57,7 @@
   <div class="se-pre-con"></div>
   <nav id="nav" class="navbar h-nav-resp">
     <a href="{% url 'index' %}">
-      <img id="logo" src="https://tdb-website-demo-con.b-cdn.net/new_img/logo.png" alt="logo">
+      <img id="logo" class="Slogo Ilogo" src="https://tdb-website-demo-con.b-cdn.net/new_img/logo.png" alt="logo">
     </a>
     <ul id="navigate" class="nav-list v-class-resp">
       <li><a href="{% url 'index' %}">Home</a></li>
@@ -69,6 +70,7 @@
           <a href="{% url 'fds' %}">FDS</a>
           <a href="{% url 'fads' %}">FADS</a>
           <a href="{% url 'tds' %}">TDS</a>
+          <a href="{% url 'dr.ai' %}">Dr.AI</a>
         </div>
       </div>
       <div class="dropdown">
@@ -86,7 +88,7 @@
       {% comment %} <li><button class="btn" onclick="openForm()">Get Started</button></li> {% endcomment %}
     </ul>
 
-    <div class="burger" onclick="display()" id="menu">
+    <div class="burger Iburger" onclick="display()" id="menu">
       <div class="b-line"></div>
       <div class="b-line"></div>
       <div class="b-line"></div>
@@ -134,6 +136,9 @@
         </div>
         <div>
           <a href="{% url 'tds' %}">TDS</a>
+        </div>
+        <div>
+          <a href="{% url 'dr.ai' %}">Dr.AI</a>
         </div>
       </div>
       <div class="box-item">

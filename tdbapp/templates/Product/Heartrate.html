@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,17 +7,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="{% static 'style.css' %}">
-  <link rel="stylesheet" href="{% static 'responsive.css' %}">
   <script src="https://kit.fontawesome.com/c3993a26e0.js" crossorigin="anonymous"></script>
-   {% block title %} FADS {% endblock title %} 
-
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{% static 'responsive.css' %}">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  {% block title %} Dr.AI {% endblock title %} 
+  
 </head>
 {% block body %}
 <body>
   <video autoplay muted loop id="myVideo">
-    <source src="https://tdb-website-demo-con.b-cdn.net/new_video/fall_detection.mp4" type="video/mp4">
+    <source src="https://tdb-website-demo-con.b-cdn.net/new_video/drAI.mp4" type="video/mp4">
   </video>
 
   <section class="home">
@@ -26,17 +25,17 @@
       <li><button class="btn-sticky" id="start0" style="height: 40px;"></button>
         <div class="line" id="line0"></div>
       </li>
-      <li><button class="btn-sticky" id="start" style="height: 40px;">Prevention</button>
+      <li><button class="btn-sticky" id="start" style="height: 40px;">Visualise</button>
         <a href="#content">
           <div class="line" id="line1"></div>
         </a>
       </li>
-      <li><button class="btn-sticky" id="start1" style="height: 40px;">Analytics</button>
+      <li><button class="btn-sticky" id="start1" style="height: 40px;">Positivity</button>
         <a href="#mission">
           <div class="line" id="line2"></div>
         </a>
       </li>
-      <li><button class="btn-sticky" id="start2" style="height: 40px;">Target</button>
+      <li><button class="btn-sticky" id="start2" style="height: 40px;">Accurate</button>
         <a href="#vision">
           <div class="line" id="line3"></div>
         </a>
@@ -45,50 +44,49 @@
   </section>
 
 
+
   <div id="home">
-    <p class="big-para">Better Late Than Never</p>
+    <p class="big-para">Take It Easy</p>
     <p class="sm-para"></p>
   </div>
 
   <div id="about">
     <a href="#content">
-      <h2 class="heading" id="head1">Prevention</h2>
+      <h2 class="heading" id="head1">Visualise</h2>
     </a>
     <a href="#mission">
-      <h2 class="heading" id="head2">Analytics</h2>
+      <h2 class="heading" id="head2">Positivity</h2>
     </a>
     <a href="#vision">
-      <h2 class="heading" id="head3">Target</h2>
+      <h2 class="heading" id="head3">Accurate</h2>
     </a>
   </div>
 
   <div id="content">
     <p id="para1">
-      <strong>Prevention Is Better Than Cure</strong>
+      <strong>Visualise The Way Your Heart Beats </strong>
       <br>
-      TDB's video analytics based on artificial intelligence FADS is a solution primarily for hospital management system which creates an alarm if patient fall down. 
+      Be in small scale and large scale enterprise, TDB's DoctorAI a facial heart rate recognition system which can be integrated
+      with multiple streams on any edge or CCTV platform with ease of accessibility.
       <br>
-      <a href="#" class="arrow-box"><i class="arrow fas fa-arrow-down"></i></a>   
-      </p>
-    <video id="img1" autoplay muted loop>
-      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/fall%20detection1.webm" type="video/webm"> 
-    </video>
+      <a href="#" class="arrow-box"><i class="arrow fas fa-arrow-down"></i></a>
+    </p>
+    <img autoplay muted loop id="img1" src="https://tdb-website-demo-con.b-cdn.net/new_gif/DrAI1.gif" alt="GIF">
   </div>
 
 
   <br>
 
   <div id="mission">
-  <video id="img2" autoplay muted loop>
-      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/fall%20detection2.webm" type="video/webm"> 
-    </video>
+    <img autoplay muted loop id="img2" src="https://tdb-website-demo-con.b-cdn.net/new_gif/DrAI2.gif" alt="GIF">
     <p id="para2">
-      <strong>Video Analytics is the new Survellience</strong>
+      <strong>Stay Calm to Live a Positive Life</strong>
       <br>
-      From small scale to large scale hospitals TDB's FADS provide machine level survellience to detect fall in real time as to be more presise and accurate.
+      TDB's DoctorAI a facial heart rate recognition system has been designed to be accurate with nearly of 98% with some special
+      features included in DoctorAI.
       <br>
-      <a href="#" class="arrow-box"><i class="arrow fas fa-arrow-down"></i></a>    
-      </p>
+      <a href="#" class="arrow-box"><i class="arrow fas fa-arrow-down"></i></a>
+    </p>
   </div>
 
 
@@ -96,18 +94,20 @@
 
   <div id="vision">
     <p id="para3">
-      <strong>Reduction Of Human Level Monitoring</strong>
+      <strong>Accurate Heart Rate Measurement</strong>
       <br>
-      TDB's video analytics software FADS based on artificial intelligence helps to reduction the process of human level monitoring in hospitals through computer vision. 
+      TDB's DoctorAI is a video analytics contactless Heart rate Measurement system provides the ease of accessability with the feature of
+      measuring heart rate variation without any contact.
       <br>
       <a href="#" class="arrow-box"><i class="arrow fas fa-arrow-down"></i></a>
     </p>
-    <video id="img3" autoplay muted loop>
-      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/fall%20detection.webm" type="video/webm"> 
-    </video>
-
+    <img autoplay muted loop id="img3" src="https://tdb-website-demo-con.b-cdn.net/new_gif/DrAI3.gif" alt="GIF">
   </div>
+
   <br>
+
+  
+
   <script>
     var p = document.getElementById("home");
     var q = document.getElementById("about");
@@ -153,6 +153,7 @@
           q.style.height = '30vh';
 
           document.getElementById("nav").onmouseover = function () {
+           
             menu.style.filter = "invert(1)";
 
             burger.addEventListener('click', () => {
@@ -162,11 +163,13 @@
           }
 
           document.getElementById("nav").onmouseout = function () {
+            
             menu.style.filter = "invert(0)";
           }
         }
 
         if (scrollY < 100) {
+        
           z.style.display = 'flex';
           p.style.height = '100vh';
           p.style.paddingTop = '0';
@@ -325,7 +328,7 @@
           document.getElementById("line3").style.backgroundColor = "#998e8e";
         }
       }
-    }else{
+    } else {
       window.onscroll = function () { scrollFunction() };
 
       function scrollFunction() {
@@ -496,6 +499,7 @@
       }
     }
   </script>
+
 </body>
 {% endblock body %}
 
