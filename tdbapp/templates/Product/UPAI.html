@@ -11,10 +11,11 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="{% static 'responsive.css' %}">
   <link rel="stylesheet" href="{% static 'style.css' %}">
-  {% block title %} UPAI {% endblock title %} 
-  
+  {% block title %} UPAI {% endblock title %}
+
 </head>
 {% block body %}
+
 <body>
   <video autoplay muted loop id="myVideo">
     <source src="https://tdb-website-demo-con.b-cdn.net/new_video/face_recog.mp4" type="video/mp4">
@@ -72,7 +73,7 @@
       <a href="#" class="arrow-box"><i class="arrow fas fa-arrow-down"></i></a>
     </p>
     <video id="img1" autoplay muted loop>
-      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/1.%20face_recognition.webm" type="video/webm"> 
+      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/1.%20face_recognition.webm" type="video/webm">
     </video>
   </div>
 
@@ -82,7 +83,7 @@
   <div id="mission">
 
     <video id="img2" autoplay muted loop>
-      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/face_recognition_1.webm" type="video/webm"> 
+      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/face_recognition_1.webm" type="video/webm">
     </video>
     <p id="para2">
       <strong>USP To Contain Ease Of Accessibility</strong>
@@ -107,7 +108,7 @@
       <a href="#" class="arrow-box"><i class="arrow fas fa-arrow-down"></i></a>
     </p>
     <video id="img3" autoplay muted loop>
-      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/face_recognition_2.webm" type="video/webm"> 
+      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/face_recognition_2.webm" type="video/webm">
     </video>
   </div>
 
@@ -153,12 +154,12 @@
         if (scrollY > 100) {
           z.style.opacity = '0';
           menu.style.display = 'block';
-          p.style.height = '50vh';
+          p.style.height = '80vh';
           p.style.paddingTop = '348px';
           q.style.height = '30vh';
 
           document.getElementById("nav").onmouseover = function () {
-           
+
             menu.style.filter = "invert(1)";
 
             burger.addEventListener('click', () => {
@@ -168,13 +169,13 @@
           }
 
           document.getElementById("nav").onmouseout = function () {
-            
+
             menu.style.filter = "invert(0)";
           }
         }
 
         if (scrollY < 100) {
-        
+
           z.style.display = 'flex';
           p.style.height = '100vh';
           p.style.paddingTop = '0';
@@ -225,8 +226,13 @@
           h3.style.borderColor = "white";
         }
 
+        if (scrollY > 572) {
+          q.style.display = "none";
+        } else {
+          q.style.display = "flex";
+        }
+
         if (scrollY > 656) {
-                    q.style.display = "none";
           h1.style.color = "rgb(132 126 117)";
           h2.style.color = "white";
           h3.style.color = "rgb(132 126 117)";
@@ -244,7 +250,6 @@
         }
 
         if (scrollY < 656) {
-                    q.style.display = "flex";
           h1.style.color = "white";
           h2.style.color = "rgb(132 126 117)";
           h3.style.color = "rgb(132 126 117)";
@@ -333,22 +338,22 @@
           document.getElementById("line3").style.backgroundColor = "#998e8e";
         }
       }
-    } else {      
-        document.getElementById("nav").onmouseover = function() {
-            x.style.backgroundColor = 'white';
-        }
+    } else {
+      document.getElementById("nav").onmouseover = function () {
+        x.style.backgroundColor = 'white';
+      }
 
-        document.getElementById("nav").onmouseout = function() {
-            x.style.backgroundColor = 'black';
-        }
+      document.getElementById("nav").onmouseout = function () {
+        x.style.backgroundColor = 'black';
+      }
 
       window.onscroll = function () { scrollFunction() };
 
       function scrollFunction() {
         if (scrollY > 100) {
-          a.style.margin = '50px';
-          a.style.width = '84vw';
-          p.style.height = '50vh';
+          a.style.margin = '6vw';
+          a.style.width = '89vw';
+          p.style.height = '70vh';
           p.style.paddingTop = '348px';
           q.style.height = '30vh';
         }
@@ -402,8 +407,13 @@
           h3.style.borderColor = "white";
         }
 
+        if (scrollY > 435) {
+          q.style.display = "none";
+        } else {
+          q.style.display = "flex";
+        }
+
         if (scrollY > 656) {
-                    q.style.display = "none";
           h1.style.color = "rgb(132 126 117)";
           h2.style.color = "white";
           h3.style.color = "rgb(132 126 117)";
@@ -421,7 +431,6 @@
         }
 
         if (scrollY < 656) {
-                    q.style.display = "flex";
           h1.style.color = "white";
           h2.style.color = "rgb(132 126 117)";
           h3.style.color = "rgb(132 126 117)";
