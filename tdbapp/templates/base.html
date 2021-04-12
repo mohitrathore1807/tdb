@@ -11,7 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175631726-1"></script>
-  
+
   <link rel="stylesheet" href="{% static 's.css' %}">
   <link rel="stylesheet" href=" {% static 'style.css' %}">
   <link rel="stylesheet" href="{% static 'about.css' %}">
@@ -21,7 +21,7 @@
     key="ce25136f-b358-4965-b51f-e5fcbe6d0be5"></script>
   <link rel="icon" href="https://tdb-website-demo-con.b-cdn.net/new_img/logo.jfif">
 
-  <title>{% block title %}  {% endblock title %} | TDB.ai</title>
+  <title>{% block title %} {% endblock title %} | TDB.ai</title>
   <style>
     html {
       overflow: scroll;
@@ -61,8 +61,12 @@
       <img id="logo" class="Slogo Ilogo" src="https://tdb-website-demo-con.b-cdn.net/new_img/logo.png" alt="logo">
     </a>
     <ul id="navigate" class="nav-list v-class-resp">
-      <a href="{% url 'index' %}"><li>Home</li></a>
-      <a href="{% url 'about' %}"><li>About us</li></a>
+      <a href="{% url 'index' %}">
+        <li>Home</li>
+      </a>
+      <a href="{% url 'about' %}">
+        <li>About us</li>
+      </a>
       <div class="dropdown">
         <li class="dropbtn">Products</li>
         <div class="dropdown-content">
@@ -84,7 +88,9 @@
           <a href="{% url 'smartcity' %}">Smart City</a>
         </div>
       </div>
-      <a href="{% url 'contact' %}"><li>Contact</li></a>
+      <a href="{% url 'contact' %}">
+        <li>Contact</li>
+      </a>
       <!-- <li><a href="blog/hell.html">Blog</a></li> -->
       {% comment %} <li><button class="btn" onclick="openForm()">Get Started</button></li> {% endcomment %}
     </ul>
@@ -163,14 +169,14 @@
       <div class="box-item">
         <h1>Contact us</h1>
         <div>
-          <a href="mailto:info@tdb.ai"><i class="con-icon fa fa-envelope-o"></i>info@tdb.ai</a>
+          <a href="mailto:info@tdb.ai" target="_blank"><i class="con-icon fa fa-envelope-o"></i>info@tdb.ai</a>
         </div>
         <div>
-          <a href="tel:+917313510004"><i class="con-icon fa fa-phone"></i>+91-731-3510004</a>,
-          <a href="tel:+917507898930">+91-7507898930</a>
+          <a href="tel:+917313510004" target="_blank"><i class="con-icon fa fa-phone"></i>+91-731-3510004</a>,
+          <a href="tel:+917507898930" target="_blank">+91-7507898930</a>
         </div>
         <div>
-          <a href="https://goo.gl/maps/2Frr1XHXFfgtsv4b6"><i class="co-icon fa fa-map-marker"></i>615, Apollo Premier,
+          <a href="https://goo.gl/maps/2Frr1XHXFfgtsv4b6" target="_blank"><i class="co-icon fa fa-map-marker"></i>615, Apollo Premier,
             Vijay Nagar Square, Indore,
             Madhya Pradesh 452001</a>
         </div>
@@ -181,11 +187,11 @@
         <span>&#169;2021 - www.tdb.ai - All rights reserved</span>
       </div>
       <div class="social-item">
-        <a style="color: white;" href="https://www.facebook.com/tdbtechnologies/"
+        <a style="color: white;" href="https://www.facebook.com/tdbtechnologies/" target="_blank"
           class="social-icon fa faso fa-facebook"></a>
-        <a style="color: white;" href="https://in.linkedin.com/company/tdb-technologies"
+        <a style="color: white;" href="https://in.linkedin.com/company/tdb-technologies" target="_blank"
           class="social-icon fa faso fa-linkedin"></a>
-        <a style="color: white;" href="https://www.instagram.com/tdb.ai/?hl=en"
+        <a style="color: white;" href="https://www.instagram.com/tdb.ai/?hl=en" target="_blank"
           class="social-icon fa faso fa-instagram"></a>
       </div>
       <div class="terms-privacy">
@@ -351,8 +357,6 @@
         </form>
       </div>
     </div>
-  </div>
-
   </div>
 
   <script>
