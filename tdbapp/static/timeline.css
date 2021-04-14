@@ -42,6 +42,7 @@ img {
 #right {
     float: right;
     cursor: pointer;
+    margin-right: 8.5%;
 }
 
 #logoIcon {
@@ -190,5 +191,11 @@ img {
     .next,
     .text {
         font-size: 11px
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    #right {
+        margin-right: unset;
     }
 }

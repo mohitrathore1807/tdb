@@ -14,8 +14,8 @@
     <link rel="stylesheet" href=" {% static 'style.css' %} ">
     <link rel="stylesheet" href="{% static 'responsive.css' %}">
     <link rel="icon" href="https://tdb-website-demo-con.b-cdn.net/new_img/logo.jfif">
-    <title>{% block title %}  {% endblock title %} | TDB.ai</title>
-    
+    <title>{% block title %} {% endblock title %} | TDB.ai</title>
+
     <style>
         body {
             background-color: black !important;
@@ -29,55 +29,62 @@
 </head>
 
 <body>
-  <div class="se-pre-con"></div>
-  <div class="none block"></div>
-  <nav id="nav" class="navbar h-nav-resp">
-    <a href="{% url 'index' %}">
-      <img id="logo" style="left: 8%;" class="Slogo Ilogo" src="https://tdb-website-demo-con.b-cdn.net/new_img/logo.png" alt="logo">
-    </a>
-    <ul id="navigate" class="nav-list v-class-resp">
-      <a href="{% url 'index' %}"><li>Home</li></a>
-      <a href="{% url 'about' %}"><li>About us</li></a>
-      <div class="dropdown">
-        <li class="dropbtn">Products</li>
-        <div class="dropdown-content">
-          <a href="{% url 'upai' %}">UPAI</a>
-          <a href="{% url 'ddds' %}">DDDS</a>
-          <a href="{% url 'fds' %}">FDS</a>
-          <a href="{% url 'fads' %}">FADS</a>
-          <a href="{% url 'tds' %}">TDS</a>
-          <a href="{% url 'dr.ai' %}">Dr.AI</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <li class="dropbtn">Solutions</li>
-        <div class="dropdown-content">
-          <a href="{% url 'healthcare' %}">Healthcare</a>
-          <a href="{% url 'construction' %}">Construction</a>
-          <a href="{% url 'retail' %}">Retail</a>
-          <a href="{% url 'automobile' %}">Automobile</a>
-          <a href="{% url 'smartcity' %}">Smart City</a>
-        </div>
-      </div>
-      <a href="{% url 'contact' %}"><li>Contact</li></a>
-      <!-- <li><a href="blog/hell.html">Blog</a></li> -->
-      {% comment %} <li><button class="btn" onclick="openForm()">Get Started</button></li> {% endcomment %}
-    </ul>
+    <div class="se-pre-con"></div>
+    <div class="none block"></div>
+    <nav id="nav" class="navbar h-nav-resp">
+        <a href="{% url 'index' %}">
+            <img id="logo" style="left: 8%;" class="Slogo Ilogo"
+                src="https://tdb-website-demo-con.b-cdn.net/new_img/logo.png" alt="logo">
+        </a>
+        <ul id="navigate" class="nav-list v-class-resp">
+            <a href="{% url 'index' %}">
+                <li>Home</li>
+            </a>
+            <a href="{% url 'about' %}">
+                <li>About us</li>
+            </a>
+            <div class="dropdown">
+                <li class="dropbtn">Products</li>
+                <div class="dropdown-content">
+                    <a href="{% url 'upai' %}">UPAI</a>
+                    <a href="{% url 'ddds' %}">DDDS</a>
+                    <a href="{% url 'fds' %}">FDS</a>
+                    <a href="{% url 'fads' %}">FADS</a>
+                    <a href="{% url 'tds' %}">TDS</a>
+                    <a href="{% url 'dr.ai' %}">Dr.AI</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <li class="dropbtn">Solutions</li>
+                <div class="dropdown-content">
+                    <a href="{% url 'healthcare' %}">Healthcare</a>
+                    <a href="{% url 'construction' %}">Construction</a>
+                    <a href="{% url 'retail' %}">Retail</a>
+                    <a href="{% url 'automobile' %}">Automobile</a>
+                    <a href="{% url 'smartcity' %}">Smart City</a>
+                </div>
+            </div>
+            <a href="{% url 'contact' %}">
+                <li>Contact</li>
+            </a>
+            <!-- <li><a href="blog/hell.html">Blog</a></li> -->
+            {% comment %} <li><button class="btn" onclick="openForm()">Get Started</button></li> {% endcomment %}
+        </ul>
 
-    <div class="burger Iburger" style="right: 8%;" onclick="display()" id="menu">
-      <div class="b-line"></div>
-      <div class="b-line"></div>
-      <div class="b-line"></div>
-    </div>
-  </nav>
+        <div class="burger Iburger" style="right: 8%;" onclick="display()" id="menu">
+            <div class="b-line"></div>
+            <div class="b-line"></div>
+            <div class="b-line"></div>
+        </div>
+    </nav>
 
     {% block body%} {% endblock body%}
 
     <footer>
         <div class="footerBox">
-            <div onclick='openbtn()' class="box-item">
+            <div onclick='openbtn()' class="box-item demo-section">
                 <h1>Request a demo</h1>
-                <i class="demo-icon fa fa-arrow-circle-o-right"></i>
+                <button class="custom-btn btn-15">Click here</button>
             </div>
             <div class="box-item">
                 <h1>About us</h1>
@@ -113,7 +120,7 @@
                     <a href="{% url 'tds' %}">TDS</a>
                 </div>
                 <div>
-                  <a href="{% url 'dr.ai' %}">Dr.AI</a>
+                    <a href="{% url 'dr.ai' %}">Dr.AI</a>
                 </div>
             </div>
             <div class="box-item">
@@ -137,14 +144,16 @@
             <div class="box-item">
                 <h1>Contact us</h1>
                 <div>
-                    <a href="mailto:info@tdb.ai" target="_blank"><i class="con-icon fa fa-envelope-o"></i>info@tdb.ai</a>
+                    <a href="mailto:info@tdb.ai" target="_blank"><i
+                            class="con-icon fa fa-envelope-o"></i>info@tdb.ai</a>
                 </div>
                 <div>
                     <a href="tel:+917313510004" target="_blank"><i class="con-icon fa fa-phone"></i>+91-731-3510004</a>,
                     <a href="tel:+917507898930" target="_blank">+91-7507898930</a>
                 </div>
                 <div>
-                    <a href="https://goo.gl/maps/2Frr1XHXFfgtsv4b6" target="_blank"><i class="co-icon fa fa-map-marker"></i>615, Apollo
+                    <a href="https://goo.gl/maps/2Frr1XHXFfgtsv4b6" target="_blank"><i
+                            class="co-icon fa fa-map-marker"></i>615, Apollo
                         Premier, Vijay Nagar Square, Indore,
                         Madhya Pradesh 452001</a>
                 </div>
@@ -286,15 +295,20 @@
                                 <div class="mktoFieldWrap mktoRequiredField" id="enquiry" onclick="enquiry()"><label
                                         for="typeofInquiry" id="LbltypeofInquiry" class="mktoLabel mktoHasWidth"
                                         style="width: 164px;">
-                                        <div class="mktoAsterix">*</div>Type of Inquiry:
+                                        <div class="mktoAsterix">*</div>Information for:
                                     </label>
                                     <select name="enquiry" id="enquiry">
-                                        <option value="Product">Product</option>
-                                        <option value="Development">Development</option>
+                                        <option value="upai">UPAI</option>
+                                        <option value="ddds">DDDS</option>
+                                        <option value="fds">FDS</option>
+                                        <option value="fads">FADS</option>
+                                        <option value="tds">TDS</option>
+                                        <option value="dr.ai">Dr.AI</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
+
                         <div class="mktoFormRow">
                             <div class="mktoFieldDescriptor mktoFormCol" style="margin-bottom: 10px;">
                                 <div class="mktoFieldWrap mktoRequiredField" id="help" onclick="help()"><label
@@ -356,7 +370,7 @@
 
     <script src="{% static 'resp.js' %} "></script>
     <script src="{% static 's.js' %} "></script>
-    
+
 </body>
 
 </html>

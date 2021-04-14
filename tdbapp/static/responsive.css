@@ -1,5 +1,5 @@
 @media only screen and (max-width: 1020px) {
-    .none{
+    .none {
         display: none;
     }
 
@@ -339,6 +339,13 @@
         flex-direction: column;
         width: 100%;
         font-size: 0.8rem;
+    }
+
+    .custom-btn {
+        width: fit-content;
+        height: fit-content;
+        margin: 24% 0;
+        padding: 8px;
     }
 
     .terms-privacy a {

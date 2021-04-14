@@ -144,10 +144,7 @@
                         y.style.filter = "invert(1)";
                         menu.style.filter = "invert(1)";
 
-                        burger.addEventListener('click', () => {
-                            menu.style.display = 'none';
-                            z.style.opacity = '1';
-                        });
+                        
                     }
 
                     document.getElementById("nav").onmouseout = function () {
@@ -155,6 +152,11 @@
                         y.style.filter = "invert(0)";
                         menu.style.filter = "invert(0)";
                     }
+
+                    burger.addEventListener('click', () => {
+                            menu.style.display = 'none';
+                            z.style.opacity = '1';
+                        });
                 }
 
                 if (scrollY < 100) {

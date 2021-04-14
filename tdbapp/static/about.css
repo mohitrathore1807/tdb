@@ -129,11 +129,11 @@
     margin: unset;
 }
 
-.timeline-head h1{
+.timeline-head h1 {
     margin: unset;
 }
 
-.timeline-head p{
+.timeline-head p {
     margin: unset;
 }
 
@@ -387,35 +387,6 @@
     }
 }
 
-
-/* HOVER STYLES */
-
-div#pop-up {
-    display: none;
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    padding: 10px;
-    background: #eeeeee;
-    color: #000000;
-    border: 1px solid #1a1a1a;
-    font-size: 90%;
-    z-index: 8;
-}
-
-
-/* #pop-up #myGif{
-    width: 200px;
-    height: 200px;
-  } */
-
-/* hkhgjhfjghfjhfj */
-@media (max-width: 720px) {
-    .home {
-        display: none;
-    }
-}
-
 .profile {
     text-align: center;
     width: 100%;
@@ -509,5 +480,11 @@ div#pop-up {
 
     to {
         transform: rotate(-360deg);
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .home {
+        display: none;
     }
 }
