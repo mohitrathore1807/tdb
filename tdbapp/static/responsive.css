@@ -344,8 +344,17 @@
     .custom-btn {
         width: fit-content;
         height: fit-content;
-        margin: 24% 0;
         padding: 8px;
+    }
+
+    .btn-15{
+        margin: 12% 0;
+        font-size: 1rem;
+    }
+
+    .btn-16{
+        margin: 24% 0;
+        font-size: 1.1rem;
     }
 
     .terms-privacy a {

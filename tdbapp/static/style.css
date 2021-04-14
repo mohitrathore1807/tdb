@@ -490,7 +490,7 @@ if it's not present, don't show loader */
     background: #000;
     color: #fff;
     z-index: 1;
-    font-size: 84%;
+    font-size: 1.4rem;
 }
 
 .btn-15:after {
