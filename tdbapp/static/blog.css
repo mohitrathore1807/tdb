@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.hero-image {
+    background-blend-mode: darken;
+    background: linear-gradient(45deg, #1d1b1a, #3d3939, #050505, #4a4c4a);
+    background-size: 444% 444%;
+    color: white;
+    animation: gradient 15s ease infinite;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+}
+
+.hero-text h1{
+    font-size: 50px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gallery {
+    background-blend-mode: darken;
+    background: linear-gradient(-45deg, #1d1b1a, #3d3939, #050505, #4a4c4a);
+    background-size: 444% 444%;
+    color: white;
+    animation: gradient 15s ease infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    margin: 1%;
+}
+
+.row-div {
+    margin: 1%;
+    padding: 0.6%;
+    list-style: none;
+    display: inline-block;
+}
+
+li {
+    display: inline;
+}
+
+li:nth-child(3n+0):after {
+    content: "\a";
+    white-space: pre;
+}
+
+.imgtitle {
+    float: left;
+}
+
+.blog-img {
+    border: 1px solid white;
+    width: 24vw;
+    padding: 1%;
+    opacity: 0.4;
+    transition: all 1s;
+    
+}
+
+.blog-img:hover {
+    opacity: 1;
+}
+
+.readmore a {
+    color: #b9b9b9;
+    float: right;
+}
+
+.readmore a:hover {
+    color: white;
+}
+
+.scrollBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+button {
+    padding: 1px;
+    width: 4rem;
+}
+
+@media only screen and (max-width: 764px){
+    .hero-image{
+        height: 44vh;
+        margin: 2%;
+    }
+
+    .gallery {
+        margin: 2%;
+    }
+
+    li:nth-child(3n+0):after {
+        content: unset;
+        white-space: unset;
+    }
+
+    li:nth-child(2n+0):after {
+        content: "\a";
+        white-space: pre;
+    }
+
+    .blog-img {
+        width: 40vw;
+    }
+}
+
+@media only screen and (max-width: 514px){
+    .hero-image{
+        height: 32vh;
+    }
+
+    li:nth-child(3n+0):after {
+        content: unset;
+        white-space: unset;
+    }
+
+    li:nth-child(2n+0):after {
+        content: unset;
+        white-space: unset;
+    }
+
+    li:nth-child(1n+0):after {
+        content: "\a";
+        white-space: pre;
+    }
+
+    .blog-img {
+        width: 70vw;
+    }
+
+    .hero-text h1{
+        font-size: 28px;
+    }
+}

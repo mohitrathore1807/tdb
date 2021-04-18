@@ -1,5 +1,6 @@
 from django.db import models
-
+from django.contrib.auth.models import User
+from django.utils import timezone
 # Create your models here.
 class Leads(models.Model):
 
@@ -16,3 +17,18 @@ class Leads(models.Model):
 
     def get_absolute_url(self):
         return reverse("_detail", kwargs={"pk": self.pk})
+
+
+class Post(models.Model):
+    uid = models.TextField()
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    title = models.CharField(max_length=75)
+    date_posted = models.DateTimeField(default=timezone.now)
+    image = models.ImageField(upload_to='blog_images/', null=True)
+    content = models.TextField()
+
+    def __str__(self):
+        return str(self.title) + ' ' + str(self.author)
+
+    def get_absolute_url(self):
+        return reverse("Post_detail", kwargs={"pk": self.pk})
