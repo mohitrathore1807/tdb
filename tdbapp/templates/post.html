@@ -3,14 +3,14 @@
 
 
 {% block head %}
-  <link rel="stylesheet" href="{% static 'post.css' %}">
-  <style>
-        body {
-            background-color: black;
-            color: whitesmoke;
-        }
-    </style>
-    
+<link rel="stylesheet" href="{% static 'post.css' %}">
+<style>
+    body {
+        background-color: black;
+        color: whitesmoke;
+    }
+</style>
+
 {% endblock head %}
 
 {% block title %}post{% endblock title %}
@@ -18,7 +18,7 @@
 {% block body %}
 
 <body>
-    <div class="container">
+    <div class="container" style="width: 75vw; margin: 2% auto;">
 
         <div class="row">
 
@@ -50,7 +50,8 @@
                 <p> {{post.content}}</p>
 
                 <!-- Post Content -->
-                {% comment %} <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut,
+                {% comment %} <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero,
+                    obcaecati, aut,
                     error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni
                     recusandae
                     laborum minus inventore?</p>
@@ -88,6 +89,7 @@
             </div>
             <!-- /.row -->
         </div>
+    </div>
 </body>
 {% endblock body %}
 

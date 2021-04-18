@@ -11,6 +11,10 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.navbar{
+    background-color: black;
+}
+
 .hero-image {
     background-blend-mode: darken;
     background: linear-gradient(45deg, #1d1b1a, #3d3939, #050505, #4a4c4a);
@@ -42,7 +46,7 @@ body {
     }
 }
 
-.gallery {
+#blogBox {
     background-blend-mode: darken;
     background: linear-gradient(-45deg, #1d1b1a, #3d3939, #050505, #4a4c4a);
     background-size: 444% 444%;
@@ -90,10 +94,16 @@ li:nth-child(3n+0):after {
 .readmore a {
     color: #b9b9b9;
     float: right;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .readmore a:hover {
     color: white;
+}
+
+.readmore a:visited {
+    color: unset;
 }
 
 .scrollBtn {
@@ -114,7 +124,7 @@ button {
         margin: 2%;
     }
 
-    .gallery {
+    #blogBox {
         margin: 2%;
     }
 

@@ -1,4 +1,4 @@
-{% comment %} {% extends 'base.html' %} {% endcomment %}
+{% extends 'base.html' %}
 {% load static %}
 
 
@@ -19,13 +19,13 @@
     </div>
 
     <div class="gallery" id="blogBox">
-        <ul>
+        <ul style="margin-left: unset;">
             {% for ttl in post%}
             <li>
-                <div class="row-div">
+                <div class="row-div" data-aos="zoom-in">
                     <span class="imgtitle">{{ttl.title}}</span>
                     <br>
-                    <a href="https://tdb-website-demo-con.b-cdn.net/new_img/bg3.jpg" title="Image 1 Link Title Tag"><img
+                    <a href="post/{{ttl.uid}}" title="Image 1 Link Title Tag"><img
                             class="blog-img" src="{{ttl.image.url}}" alt="" /></a>
                     <br>
                     <span class="readmore"><a href="post/{{ttl.uid}}">Continue Reading &raquo;</a></span>
@@ -35,12 +35,12 @@
         </ul>
     </div>
 
-    <div class="scrollBtn">
+    {% comment %} <div class="scrollBtn">
         <button id="slideBack" type="button">Prev</button>
         <button id="slide" type="button">Next</button>
-    </div>
+    </div> {% endcomment %}
 
-    <script>
+    {% comment %} <script>
         var button = document.getElementById('slide');
         button.onclick = function () {
             var blogBox = document.getElementById('blogBox');
@@ -67,7 +67,7 @@
                 }
             }, speed);
         }
-    </script>
+    </script> {% endcomment %}
 
 </body>
 {% endblock body %}
