@@ -30,6 +30,7 @@ body {
 
 .hero-text h1{
     font-size: 50px;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 @keyframes gradient {
@@ -65,17 +66,19 @@ body {
     display: inline-block;
 }
 
-li {
+#blogBox ul li {
     display: inline;
 }
 
-li:nth-child(3n+0):after {
+#blogBox ul li:nth-child(3n+0):after {
     content: "\a";
     white-space: pre;
 }
 
 .imgtitle {
+    font-size: 18px;
     float: left;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .blog-img {
@@ -96,14 +99,15 @@ li:nth-child(3n+0):after {
     float: right;
     text-decoration: underline;
     cursor: pointer;
-}
-
-.readmore a:hover {
-    color: white;
+    font-size: 92%;
 }
 
 .readmore a:visited {
-    color: unset;
+    color: #b9b9b9;
+}
+
+.readmore a:active, .readmore a:hover {
+    color: white;
 }
 
 .scrollBtn {
@@ -118,7 +122,7 @@ button {
     width: 4rem;
 }
 
-@media only screen and (max-width: 764px){
+@media only screen and (max-width: 1000px){
     .hero-image{
         height: 44vh;
         margin: 2%;

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +20,11 @@ body {
 
 .mt-4 {
     margin-top: 1.5rem !important;
+    margin-top: 1.5rem !important;
+    font-size: 3rem;
+    letter-spacing: normal;
+    font-weight: normal;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 h1 {
@@ -56,18 +63,18 @@ hr {
     border-top: 1px solid rgba(0,0,0,.1);
 }
 
-.rounded {
-    border-radius: .25rem!important;
-}
-
 .col-12 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 95%;
     position: relative;
-    width: 100%;
     padding-right: 15px;
     padding-left: 15px;
+}
+
+.rounded {
+    border-radius: .25rem!important;
+    width: 48vw;
 }
 
 .blockquote {
@@ -88,4 +95,10 @@ hr {
 
 .blockquote-footer::before {
     content: "\2014\00A0";
+}
+
+@media only screen and (max-width: 864px){
+    .mt-4 {
+        font-size: 2rem;
+    }
 }
