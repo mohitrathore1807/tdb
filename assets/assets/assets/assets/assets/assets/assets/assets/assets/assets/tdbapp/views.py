@@ -1,0 +1,63 @@
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+
+# Create your views here.
+def index(request):
+    return render(request, 'index.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
+def about(request):
+    return render(request, 'about.html')
+
+def automobile(request):
+    return render(request, 'automobile.html')
+
+def construction(request):
+    return render(request, 'construction.html')
+
+def retail(request):
+    return render(request, 'retail.html')
+    
+def smartcity(request):
+    return render(request, 'customize.html')
+
+def healthcare(request):
+    return render(request, 'healthcare.html')
+
+def upai(request):
+    return render(request, "Product/UPAI.html")
+
+def fds(request):
+    return render(request, "Product/FDS.html")
+
+def fads(request):
+    return render(request, "Product/FADS.html")
+
+def ddds(request):
+    return render(request, "Product/DDDS.html")
+
+def tds(request):
+    return render(request, "Product/TDS.html")
+
+def heartrate(request):
+    return render(request, "Product/Heartrate.html")
+
+from .models import Leads
+def leads(request):
+    name = request.POST['FirstName']
+    email = request.POST['Email']
+    phone = request.POST['Phone']
+    company = request.POST['Company']
+    inquiry_type = request.POST['enquiry']
+    helping = request.POST['howcanwehelptextarea']
+    print(name, email, phone)
+
+    lead = Leads(name=name, email=email, phone=phone, company=company, inquiry_type=inquiry_type, helping=helping )
+
+    lead.save()
+        
+    return redirect('index')
+
+

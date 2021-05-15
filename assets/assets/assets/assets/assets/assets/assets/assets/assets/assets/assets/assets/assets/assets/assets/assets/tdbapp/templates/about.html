@@ -1,0 +1,1261 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/eae2567ff1.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+
+    {% block title %} About {% endblock title %}
+</head>
+{% block body %}
+
+<body>
+    <div id="myImages"></div>
+
+    <section class="home">
+        <ul>
+            <li><button class="btn-sticky" id="start0" style="height: 40px;"></button>
+                <a href="#">
+                    <div class="line" id="line0"></div>
+                </a>
+            </li>
+            <li><button class="btn-sticky" id="start" style="height: 40px;">About</button>
+                <a href="#content">
+                    <div class="line" id="line1"></div>
+                </a>
+            </li>
+            <li><button class="btn-sticky" id="start1" style="height: 40px;">Journey</button>
+                <a href="#timeline">
+                    <div class="line" id="line2"></div>
+                </a>
+            </li>
+            <li><button class="btn-sticky" id="start2" style="height: 40px;">Our Team</button>
+                <a href="#team">
+                    <div class="line" id="line3"></div>
+                </a>
+            </li>
+            <li><button class="btn-sticky" id="start3" style="height: 40px;">Our Culture</button>
+                <a href="#culture">
+                    <div class="line" id="line4"></div>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+
+
+    <div id="home">
+        <p class="big-para">Tech Driven Basic</p>
+        <p class="sm-para"></p>
+    </div>
+
+    <div id="about">
+        <a href="#about-us">
+            <h2 class="heading" id="head1">About</h2>
+        </a>
+        <a href="#timeline">
+            <h2 class="heading" id="head2">Journey</h2>
+        </a>
+        <a href="#team">
+            <h2 class="heading" id="head3">Team</h2>
+        </a>
+        <a href="#culture">
+            <h2 class="heading" id="head4">Culture</h2>
+        </a>
+    </div>
+
+    <div class="content" id="about-us">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Faustina&family=Play&family=Rokkitt:wght@500&family=Josefin+Sans:wght@400&display=swap');
+
+            *,
+            *:before,
+            *:after {
+                box-sizing: border-box;
+            }
+
+            /* body {
+                    background: #383A3F;
+                    font-family: "Varela Round", sans-serif;
+                } */
+
+            .card {
+                background: #1F2124;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+                border-radius: 5px;
+                margin: 50px 20px 20px 20px;
+                width: calc(27.3333% - 40px);
+                height: 36rem;
+                /* 1/3 minus the margins (20+20) */
+                padding: 20px;
+                text-align: center;
+                color: white;
+                float: left;
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 1.2rem;
+            }
+
+            @media (max-width: 768px) {
+                .card {
+                    margin: 10px 20px;
+                    width: calc(100% - 40px);
+                }
+
+                /* .card:first-child {
+                        margin-top: 20px;
+                    } */
+            }
+
+            /* .card:nth-child(2) {
+                    margin: 20px 0px;
+                    width: 33.3333%;
+                    padding: 50px 20px;
+                } */
+
+            @media (max-width: 768px) {
+                .card:nth-child(2) {
+                    margin: 10px 20px;
+                    width: calc(100% - 40px);
+                }
+            }
+
+            .card .title {
+                font-size: 25px;
+            }
+
+            .card .icon {
+                margin: 50px 0;
+            }
+
+            .card .icon svg {
+                width: 100px;
+                height: 100px;
+                filter: brightness(0) invert(1);
+            }
+
+            .card .icon svg path {
+                fill: #F6B352;
+            }
+
+
+            .card .features ul {
+                padding: 0;
+                margin: 20px 0 50px 0;
+                list-style-type: none;
+            }
+
+            .card .features ul li {
+                margin: 10px 0;
+                font-size: 14px;
+            }
+
+            .card .features ul li span {
+                border-bottom: 2px dotted #F6B352;
+            }
+
+            /* .card .btn {
+                    display: block;
+                    background: #F6B352;
+                    color: white;
+                    padding: 15px 20px;
+                    margin: 20px 0;
+                    border-radius: 5px;
+                    box-shadow: rgba(0, 0, 0, 0.9);
+                    transition: all 200ms ease-in-out;
+                    text-decoration: none;
+                } */
+
+            .card:hover {
+                background: #302f2f;
+            }
+        </style>
+
+        <div class="card">
+
+            <div class="title">Our Mission</div>
+            <div class="icon">
+                <!-- <svg enable-background="new 0 0 512 512" height="512px" id="Layer_1" version="1.1"
+                        viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path
+                            d="M468.493,101.637L371.955,5.098H159.57v77.231H43.724v424.769h308.923v-77.231h115.846V101.637z   M371.955,32.401l69.236,69.235h-69.236V32.401z M63.031,487.79V101.637h173.769v96.538h96.538V487.79H63.031z M256.108,109.632  l69.236,69.235h-69.236V109.632z M352.647,410.56V178.867l-96.538-96.538h-77.231V24.406h173.769v96.538h96.538V410.56H352.647z"
+                            fill="#37404D" />
+                    </svg> -->
+                <svg version="1.1" id="fi_48683" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31.998px" height="31.998px"
+                    viewBox="0 0 31.998 31.998" style="enable-background:new 0 0 31.998 31.998;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path
+                                d="M23.608,28.365c0.318-0.234,0.525-0.611,0.525-1.038c0-0.562-0.36-1.035-0.861-1.212c0.5-0.178,0.861-0.649,0.861-1.211
+                    			c0-0.565-0.365-1.04-0.871-1.215c0.506-0.174,0.871-0.648,0.871-1.213c0-0.055-0.004-0.106-0.011-0.158
+                    			c2.063-2.03,3.345-4.854,3.345-7.979c-3.135,0-7.271,0-11.452,0c-0.011,0-0.022,0-0.033,0c-4.181,0-8.318,0-11.453,0
+                    			c0,3.124,1.28,5.946,3.344,7.977c-0.005,0.049-0.009,0.099-0.009,0.148c0,0.564,0.366,1.04,0.872,1.215
+                    			c-0.506,0.174-0.872,0.648-0.872,1.213c0,0.562,0.36,1.035,0.861,1.213c-0.501,0.177-0.861,0.649-0.861,1.211
+                    			c0,0.426,0.207,0.802,0.525,1.037c-1.629,0.408-2.837,1.879-2.837,3.633c5.605,0,3.688,0,7.501,0c0-1.625-1.037-3.006-2.483-3.525
+                    			c0.415-0.215,0.698-0.646,0.698-1.146c0-0.562-0.36-1.033-0.862-1.211c0.501-0.177,0.862-0.649,0.862-1.211
+                    			c0-0.105-0.017-0.207-0.041-0.305c1.375,0.604,2.894,0.941,4.493,0.941c0.092,0,0.182-0.004,0.273-0.008
+                    			c0.094,0.002,0.188,0.008,0.282,0.008c1.6,0,3.12-0.338,4.496-0.942c-0.026,0.101-0.043,0.207-0.043,0.315
+                    			c0,0.562,0.361,1.035,0.861,1.211c-0.5,0.177-0.861,0.65-0.861,1.212c0,0.499,0.283,0.931,0.699,1.146
+                    			c-1.446,0.521-2.483,1.9-2.483,3.527c3.813,0,1.896,0,7.501,0C26.447,30.244,25.238,28.773,23.608,28.365z">
+                            </path>
+                            <path d="M10.104,5.454c0.052,0.34,0.302,1.758,0.974,3.021c-1.182,1.229-1.911,2.899-1.911,4.74c1.979,0,4.414,0,6.816,0
+                    			c0.011,0,0.022,0,0.033,0c2.401,0,4.836,0,6.816,0c0-1.839-0.727-3.507-1.907-4.737c0.67-1.261,0.918-2.675,0.972-3.015
+                    			C23.134,5.19,24.06,4.088,24.06,2.77c0-1.525-1.235-2.76-2.76-2.76c-1.523,0-2.76,1.235-2.76,2.76c0,1.301,0.902,2.39,2.114,2.681
+                    			c-0.075,0.415-0.276,1.337-0.685,2.2c-1.114-0.799-2.479-1.271-3.953-1.277l0,0c-0.002,0-0.005,0-0.007,0
+                    			c-0.003,0-0.006,0-0.009,0c-0.003,0-0.006,0-0.009,0c-0.002,0-0.005,0-0.007,0l0,0c-1.474,0.006-2.836,0.478-3.95,1.274
+                    			c-0.411-0.865-0.612-1.791-0.689-2.207C12.559,5.15,13.46,4.062,13.46,2.76C13.46,1.236,12.225,0,10.7,0S7.941,1.236,7.941,2.76
+                    			C7.941,4.08,8.867,5.181,10.104,5.454z M19.396,2.771c0-1.051,0.853-1.904,1.904-1.904c1.051,0,1.903,0.853,1.903,1.904
+                    			c0,1.052-0.853,1.904-1.903,1.904C20.248,4.675,19.396,3.822,19.396,2.771z M12.84,11.122h3.144h0.033h3.144v0.941h-3.144h-0.033
+                    			H12.84V11.122z M10.7,0.856c1.052,0,1.904,0.853,1.904,1.904c0,1.052-0.853,1.905-1.904,1.905c-1.051,0-1.904-0.853-1.904-1.905
+                    			C8.797,1.709,9.649,0.856,10.7,0.856z"></path>
+                            <circle cx="10.7" cy="2.76" r="0.862"></circle>
+                            <circle cx="21.3" cy="2.771" r="0.862"></circle>
+                        </g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                </svg>
+            </div>
+            <!--/icon-->
+
+            <div class="features">
+                With having a strong vision and experience, Tech Driven Basic Provides solutions for the real time
+                problems using computer vision techniques and artificial intelligence which reduces the need of
+                manual
+                monitoring.
+            </div>
+            <!--/features-->
+
+        </div>
+        <!--/card-->
+
+        <div class="card">
+
+            <div class="title">About TDB</div>
+            <div class="icon">
+                <!-- <svg enable-background="new 0 0 512 512" height="512px" id="Layer_1" version="1.1"
+                        viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path
+                            d="M316.01,199.02L256.134,14.817L196.239,199.02H1.134l158.102,113.324L98.53,496.487l157.604-114.232  l157.585,114.232l-60.687-184.143L511.134,199.02H316.01z M335.084,318.257l42.407,128.63L267.22,366.963l-11.086-8.033  l-11.086,8.033l-110.291,79.923l42.408-128.63l4.353-13.18l-11.289-8.08L59.903,217.909h136.336h13.724l4.242-13.051l41.929-128.957  l41.91,128.957l4.242,13.051h13.724h136.336l-110.327,79.088l-11.27,8.08L335.084,318.257z"
+                            fill="#37404D" />
+                    </svg> -->
+                <svg id="fi_4412212" enable-background="new 0 0 511.997 511.997" height="512"
+                    viewBox="0 0 511.997 511.997" width="512" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path
+                            d="m188.022 69.966c0-19.062-15.508-34.57-34.569-34.57-19.062 0-34.57 15.508-34.57 34.57s15.508 34.569 34.57 34.569c19.061.001 34.569-15.507 34.569-34.569zm-54.139 0c0-10.791 8.779-19.57 19.57-19.57s19.569 8.779 19.569 19.57-8.779 19.569-19.569 19.569c-10.791.001-19.57-8.778-19.57-19.569z">
+                        </path>
+                        <path
+                            d="m326.818 238.903c4.142 0 7.5-3.358 7.5-7.5v-28.789c0-4.142-3.358-7.5-7.5-7.5s-7.5 3.358-7.5 7.5v28.789c0 4.142 3.358 7.5 7.5 7.5z">
+                        </path>
+                        <path
+                            d="m377.221 195.114c-4.142 0-7.5 3.358-7.5 7.5v28.789c0 4.142 3.358 7.5 7.5 7.5s7.5-3.358 7.5-7.5v-28.789c0-4.142-3.358-7.5-7.5-7.5z">
+                        </path>
+                        <path
+                            d="m382.15 299.294c-2.929-2.93-7.678-2.929-10.606 0-10.142 10.14-26.643 10.141-36.783 0-2.929-2.929-7.678-2.929-10.606 0-2.929 2.929-2.929 7.678 0 10.606 7.996 7.996 18.495 11.992 28.998 11.992 10.5 0 21.004-3.999 28.998-11.992 2.928-2.928 2.928-7.677-.001-10.606z">
+                        </path>
+                        <path
+                            d="m473.428 455.688c-.881-14.317-4.262-28.176-10.091-41.26-1.685-3.783-6.119-5.484-9.903-3.799-3.784 1.686-5.485 6.119-3.799 9.903 4.416 9.913 7.223 20.34 8.397 31.099h-31.45l-2.815-15.208c-.754-4.072-4.668-6.764-8.74-6.009-4.073.754-6.763 4.667-6.009 8.74l2.31 12.478h-12.809c-14.86 0-28.299 6.172-37.913 16.076v-66.654c10.416 8.498 25.83 7.898 35.523-1.796 5.013-5 7.773-11.662 7.773-18.76 0-3.709-.762-7.299-2.199-10.599 12.776 6.583 24.203 15.802 33.336 26.969 1.483 1.813 3.637 2.752 5.81 2.752 1.67 0 3.35-.555 4.744-1.694 3.207-2.622 3.68-7.347 1.058-10.554-9.503-11.619-21.185-21.39-34.224-28.727 25.733-16.141 44.463-42.454 50.51-73.263 20.672-13.557 34.363-36.922 34.363-63.437 0-31.992-19.926-59.399-48.01-70.517-4.146-6.927-9.076-13.44-14.738-19.436 25.367-9.405 43.495-33.844 43.495-62.442v-42.204c0-15.079-12.267-27.346-27.346-27.346s-27.346 12.267-27.346 27.346c0 7.936-6.457 14.392-14.393 14.392h-29.68c-16.641 0-31.287 8.666-39.692 21.714-8.405-13.048-23.05-21.714-39.691-21.714h-5.771c-13.887 0-26.39 6.032-35.033 15.611-25.864-32.956-65.336-52.349-107.599-52.349-30.634 0-59.6 9.901-83.765 28.632-3.274 2.538-3.871 7.249-1.333 10.522 2.537 3.274 7.248 3.871 10.522 1.333 21.512-16.674 47.3-25.487 74.576-25.487 39.426 0 76.133 18.95 99.029 50.896-2.308 5.56-3.589 11.649-3.589 18.034 0 18.317 10.497 34.218 25.784 42.036-6.044 6.239-11.29 13.106-15.679 20.452-22.909 9.058-40.375 28.955-46.05 53.343-3.707-7.818-11.674-13.239-20.885-13.239h-2.084v-55.629c0-12.371-10.064-22.436-22.436-22.436h-52.704c-12.738 0-23.102 10.364-23.102 23.102s10.363 23.102 23.102 23.102h6v31.861h-6c-12.738 0-23.102 10.363-23.102 23.102s10.363 23.102 23.102 23.102h77.224c7.947 0 14.969-4.034 19.128-10.162.493 6.693 1.854 13.145 3.978 19.246-18.665 10.998-39.87 16.8-61.716 16.8-67.161 0-121.8-54.644-121.8-121.81 0-27.824 9.62-55.023 27.088-76.589 2.607-3.219 2.111-7.941-1.107-10.549-3.219-2.607-7.942-2.111-10.549 1.107-19.624 24.229-30.432 54.781-30.432 86.031 0 75.438 61.368 136.81 136.8 136.81 24.044 0 47.4-6.261 68.061-18.14 5.931 10.011 14.096 18.542 23.807 24.911 6.096 31.054 25.076 57.542 51.128 73.647-34.601 19.762-57.503 55.922-60.249 95.914-9.763 5.005-16.465 15.167-16.465 26.872 0 16.643 13.54 30.183 30.183 30.183h210.38c16.643 0 30.183-13.54 30.183-30.183.001-11.15-6.081-20.9-15.096-26.126zm-283.322-232.962h-77.224c-4.467 0-8.102-3.635-8.102-8.102s3.634-8.102 8.102-8.102h13.5c4.142 0 7.5-3.358 7.5-7.5v-46.861c0-4.142-3.358-7.5-7.5-7.5h-13.5c-4.467 0-8.102-3.634-8.102-8.102s3.634-8.102 8.102-8.102h52.704c4.1 0 7.436 3.335 7.436 7.436v63.129c0 4.142 3.358 7.5 7.5 7.5h9.584c4.467 0 8.102 3.634 8.102 8.102s-3.634 8.102-8.102 8.102zm130.67 149.615 1.113-1.113c7.605 2.217 15.542 3.644 23.717 4.192v4.699l-8.526 8.525c-4.495 4.495-11.809 4.495-16.304 0-4.494-4.495-4.494-11.808 0-16.303zm64.754 16.303c-4.495 4.495-11.815 4.493-16.311.002l-8.613-8.621v-4.6c8.208-.542 16.177-1.972 23.812-4.197l1.111 1.111c2.175 2.176 3.374 5.073 3.374 8.157 0 3.086-1.195 5.976-3.373 8.148zm64.506-179.894v55.04c0 4.142-.262 8.225-.769 12.232-8.337 4.302-17.781 6.748-27.791 6.748-33.539 0-60.824-27.286-60.824-60.824s27.286-60.824 60.824-60.824c6.081 0 11.952.908 17.496 2.577 7.228 13.727 11.064 29.093 11.064 45.051zm14.993 55.593c.001-.185.007-.368.007-.553v-34.345h16.785c-1.667 13.492-7.762 25.624-16.792 34.898zm16.792-49.898h-16.785v-5.695c0-11.711-1.795-23.145-5.239-33.995 11.886 9.671 20.052 23.733 22.024 39.69zm-102.538-157.707h29.68c16.207 0 29.393-13.185 29.393-29.392 0-6.808 5.538-12.346 12.346-12.346s12.346 5.538 12.346 12.346v42.205c0 28.436-23.135 51.571-51.571 51.571h-32.193c-17.75 0-32.192-14.441-32.192-32.192s14.44-32.192 32.191-32.192zm-117.346 32.192c0-17.75 14.441-32.192 32.192-32.192h5.771c17.75 0 32.191 14.441 32.191 32.192s-14.441 32.192-32.191 32.192h-5.771c-17.751 0-32.192-14.442-32.192-32.192zm27.369 46.947c2.884.348 7.633.225 10.594.245 16.641 0 31.287-8.666 39.691-21.714 8.405 13.048 23.051 21.714 39.692 21.714h32.193c1.858 0 3.694-.096 5.514-.247 3.679 3.214 7.154 6.765 10.292 10.491-1.919-.146-3.851-.245-5.806-.245-30.042 0-56.058 17.562-68.324 42.958-12.266-25.396-38.283-42.958-68.324-42.958-1.958 0-3.893.099-5.815.245 3.138-3.721 6.573-7.23 10.293-10.489zm-33.04 127.913v-55.04c0-15.95 3.883-31.349 11.088-45.059 5.538-1.664 11.401-2.57 17.473-2.57 33.539 0 60.824 27.286 60.824 60.824s-27.286 60.824-60.824 60.824c-10.011 0-19.455-2.446-27.792-6.749-.506-4.006-.769-8.088-.769-12.23zm-9.734-89.054c-3.454 10.857-5.266 22.307-5.266 34.014v5.695h-16.783c1.974-15.968 10.149-30.038 22.049-39.709zm-22.049 54.709h16.783v34.345c0 .184.006.367.007.551-9.029-9.273-15.123-21.405-16.79-34.896zm36.591 64.493c7.477 2.473 15.457 3.832 23.753 3.832 30.042 0 56.058-17.562 68.324-42.958 12.266 25.396 38.283 42.958 68.324 42.958 8.295 0 16.275-1.358 23.752-3.832-12.704 38.709-49.173 66.742-92.072 66.742-42.902 0-79.376-28.033-92.081-66.742zm-28.295 187.875c0-8.372 6.811-15.183 15.183-15.183h52.324v30.366h-52.324c-8.372.001-15.183-6.81-15.183-15.183zm82.507 15.184v-29.611c14.873 3.001 26.62 14.737 29.62 29.611zm-7.5-45.367h-11.497l2.31-12.478c.754-4.073-1.937-7.986-6.009-8.74-4.079-.755-7.986 1.936-8.74 6.009l-2.815 15.208h-31.432c3.791-34.129 24.354-64.569 54.648-80.855-3.735 9.526-1.765 20.79 5.92 28.475 5.172 5.172 11.964 7.758 18.758 7.758 5.916-.001 11.833-1.964 16.678-5.887v66.489c-9.608-9.847-23.009-15.979-37.821-15.979zm83.233 15.755v29.611h-29.621c3-14.873 14.747-26.609 29.621-29.611zm67.323 29.612h-52.323v-30.367h52.323c8.372 0 15.183 6.811 15.183 15.183s-6.811 15.184-15.183 15.184z">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+            <!--/icon-->
+            <!-- <div class="box-content"> -->
+            Tech Driven Basic (TDB) is a computer vision company with a vision of providing AI softwares in various
+            domains such as Medical, Real estate, Government, Retails, Construction. We provide our clients with
+            various camera enabling tools as an autonomous tool, life saviour tool, decision making software, Edge
+            surveillance, IOT.
+        </div>
+        <!--/card-->
+
+        <div class="card">
+
+            <div class="title">Our Vision</div>
+
+            <div class="icon">
+                <!-- <svg enable-background="new 0 0 512 512" height="512px" id="Layer_1" version="1.1"
+                        viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path
+                            d="M316.01,199.02L256.134,14.817L196.239,199.02H1.134l158.102,113.324L98.53,496.487l157.604-114.232  l157.585,114.232l-60.687-184.143L511.134,199.02H316.01z M335.084,318.257l42.407,128.63L267.22,366.963l-11.086-8.033  l-11.086,8.033l-110.291,79.923l42.408-128.63l4.353-13.18l-11.289-8.08L59.903,217.909h136.336h13.724l4.242-13.051l41.929-128.957  l41.91,128.957l4.242,13.051h13.724h136.336l-110.327,79.088l-11.27,8.08L335.084,318.257z"
+                            fill="#37404D" />
+                    </svg> -->
+                <svg id="fi_2285551" enable-background="new 0 0 512.004 512.004" height="512"
+                    viewBox="0 0 512.004 512.004" width="512" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="m130.239 138.268-44.358 3.427c-12.343.954-23.336 7.423-30.162 17.748l-51.157 77.372c-5.177 7.83-6 17.629-2.203 26.213 3.798 8.584 11.603 14.566 20.878 16.003l40.615 6.29c9.501-50.42 32.245-100.716 66.387-147.053z">
+                    </path>
+                    <path
+                        d="m226.682 448.151 6.291 40.615c1.437 9.275 7.419 17.08 16.002 20.877 3.571 1.58 7.351 2.36 11.112 2.36 5.283 0 10.529-1.539 15.102-4.563l77.374-51.156c10.325-6.827 16.794-17.821 17.746-30.162l3.427-44.358c-46.338 34.143-96.633 56.887-147.054 66.387z">
+                    </path>
+                    <path
+                        d="m211.407 420c1.41 0 2.828-.116 4.243-.352 21.124-3.532 41.484-9.482 60.906-17.27l-166.93-166.93c-7.788 19.421-13.738 39.781-17.27 60.906-1.392 8.327 1.401 16.81 7.37 22.78l93.144 93.144c4.956 4.955 11.645 7.722 18.537 7.722z">
+                    </path>
+                    <path
+                        d="m471.178 227.003c40.849-78.974 42.362-162.43 40.227-201.57-.731-13.411-11.423-24.103-24.835-24.834-6.373-.348-13.926-.599-22.439-.599-43.766 0-113.017 6.629-179.131 40.826-52.542 27.177-121.439 87.018-162.087 165.66.48.375.949.773 1.391 1.215l180 180c.442.442.839.91 1.214 1.39 78.642-40.649 138.483-109.546 165.66-162.088zm-173.48-118.763c29.241-29.241 76.822-29.244 106.065 0 14.166 14.165 21.967 33 21.967 53.033s-7.801 38.868-21.967 53.033c-14.619 14.619-33.829 21.93-53.032 21.932-19.209.001-38.41-7.309-53.033-21.932-14.166-14.165-21.968-33-21.968-53.033s7.802-38.868 21.968-53.033z">
+                    </path>
+                    <path
+                        d="m318.911 193.092c17.545 17.545 46.095 17.546 63.64 0 8.499-8.5 13.18-19.8 13.18-31.82s-4.681-23.32-13.18-31.819c-8.772-8.773-20.296-13.159-31.82-13.159-11.523 0-23.047 4.386-31.819 13.159-8.499 8.499-13.181 19.799-13.181 31.819s4.681 23.321 13.18 31.82z">
+                    </path>
+                    <path
+                        d="m15.305 421.938c3.839 0 7.678-1.464 10.606-4.394l48.973-48.973c5.858-5.858 5.858-15.355 0-21.213-5.857-5.858-15.355-5.858-21.213 0l-48.973 48.973c-5.858 5.858-5.858 15.355 0 21.213 2.929 2.929 6.768 4.394 10.607 4.394z">
+                    </path>
+                    <path
+                        d="m119.765 392.239c-5.857-5.858-15.355-5.858-21.213 0l-94.155 94.155c-5.858 5.858-5.858 15.355 0 21.213 2.929 2.929 6.768 4.393 10.607 4.393s7.678-1.464 10.606-4.394l94.154-94.154c5.859-5.858 5.859-15.355.001-21.213z">
+                    </path>
+                    <path
+                        d="m143.432 437.12-48.972 48.973c-5.858 5.858-5.858 15.355 0 21.213 2.929 2.929 6.768 4.394 10.606 4.394s7.678-1.464 10.606-4.394l48.973-48.973c5.858-5.858 5.858-15.355 0-21.213-5.857-5.858-15.355-5.858-21.213 0z">
+                    </path>
+                </svg>
+            </div>
+            <!--/icon-->
+
+            <div class="features">
+                Our vision is to provide affordable AI and reduce human level monitoring.
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+
+    <style>
+        .zopa {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @media (min-width: 768px) {
+            .zopa {
+                width: 750px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .zopa {
+                width: 970px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .zopa {
+                width: 1170px;
+            }
+        }
+
+            {
+            % comment %
+        }
+
+        filter: brightness(0) invert(1);
+
+            {
+            % endcomment %
+        }
+    </style>
+    <div id="timeline" class="zop">
+        <div class="timeline-head">
+            <h1>Timeline</h1>
+            <p class="italic-para"> <i>The Journey Of TDB.ai. Let's roll the Camera</i> </p>
+        </div>
+        <div id="journey">
+            <button id="left" onclick="leftFunc()">&#10094;</button>
+            <button id="right" style="margin-right:8.5%" onclick="rightFunc()">&#10095;</button>
+            <img src="https://tdb-website-demo-con.b-cdn.net/new_img/logo.png" id="logoIcon" style="margin-left:2.9%"
+                alt="Logo">
+        </div>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade" id="one">
+                <div class="numbertext">1 / 8</div>
+                <video class="slide-img" autoplay muted loop>
+                    <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/beginning.webm" type="video/webm">
+                </video>
+                <div class="text">
+                    <strong class="item-head">The Begining</strong>
+                    <p>We say every success story starts with a dream, Our <b>Director Mr. Deepanshu Bhinda</b> with
+                        an
+                        idea
+                        and aim of providing
+                        affordable and accurate AI softwares to people of various domains started a company TDB
+                        Technologies on 15th March,2019
+                        as a sole proprietorship firm.</p>
+                </div>
+
+            </div>
+
+            <div class="mySlides fade" id="two">
+                <div class="numbertext">2 / 8</div>
+                <video class="slide-img" autoplay muted loop>
+                    <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/hardwork.webm" type="video/webm">
+                </video>
+                <div class="text"><strong class="item-head">The Hardwork</strong>
+                    <p>We got the first opportunity to introduce ourselves to youth and public soon after the
+                        starting
+                        of firm on 1st April,
+                        2019 where we were asked to provide a workshop on AI at SKNCOE Pune.</p>
+                </div>
+            </div>
+
+            <div class="mySlides fade" id="three">
+                <div class="numbertext">3 / 8</div>
+                <video class="slide-img" autoplay muted loop>
+                    <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/detection.webm" type="video/webm">
+                </video>
+
+                <div class="text"><strong class="item-head">The Adaptation</strong>
+                    <p>On 20th April, 2019 we got our very first project from a singapore client base on Automatic
+                        Number Plate
+                        Recognition(ANPR) and then we got an opportunity to build a complete product on road safety
+                        by a
+                        UAE based client.</p>
+                </div>
+            </div>
+
+            <div class="mySlides fade" id="four">
+                <div class="numbertext">4 / 8</div>
+                <video class="slide-img" autoplay muted loop>
+                    <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/consistency.webm" type="video/webm">
+                </video>
+                <div class="text"><strong class="item-head">The Consistency</strong>
+                    <p>We started conducting workshops on AI in various colleges
+                        and universities like
+                        Symbiosis University of Applied Science Indore, Swami Vivekanand College of Engineering and
+                        many
+                        more..</p>
+                </div>
+            </div>
+
+            <div class="mySlides fade" id="five">
+                <div class="numbertext">5 / 8</div>
+                <video class="slide-img" autoplay muted loop>
+                    <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/thermal_temp1.webm" type="video/webm">
+                </video>
+                <div class="text"><strong class="item-head">The Conversion</strong>
+                    <p>While Covid-19 pandemic brought many things and many lives to a standstill it also gave
+                        opportunities. We were lucky to have got many opportunities during this time and got to work
+                        on
+                        COVID-19 precautionary like temperature detection, heart rate variation, mask detection and
+                        many
+                        more.</p>
+                </div>
+            </div>
+
+            <div class="mySlides fade" id="six">
+                <div class="numbertext">6 / 8</div>
+                <video class="slide-img" autoplay muted loop>
+                    <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/beginning.webm" type="video/webm">
+                </video>
+                <div class="text"><strong class="item-head">The Incorporation</strong>
+                    <p>On July 28th, 2020 almost after a year of starting the firm, we got blessed to have
+                        incorporated
+                        Tech Driven Basic AI
+                        into a Private Limited Company and we know this is just the beginning.</p>
+                </div>
+            </div>
+
+            <div class="mySlides fade" id="seven">
+                <div class="numbertext">7 / 8</div>
+                <video class="slide-img" autoplay muted loop>
+                    <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/beginning.webm" type="video/webm">
+                </video>
+                <div class="text"><strong class="item-head">The New Begining</strong>
+                    <p>On 25th november 2020 we have collaborated with one of the best IT networking solution based
+                        company in hydrabad named veloxtech solutions in order to integrate AI with existing
+                        software in
+                        industry.</p>
+                </div>
+            </div>
+
+            <div class="mySlides fade" id="eight">
+                <div class="numbertext">8 / 8</div>
+                <video class="slide-img" autoplay muted loop>
+                    <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/hardwork.webm" type="video/webm">
+                </video>
+                <div class="text"><strong class="item-head">The Consulting</strong>
+                    <p>On December 16th 2020, We and Veloxtech Solutions have started an AI consulting firm
+                        SolvingScale.ai which focuses on solving problems with AI.</p>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <br>
+
+    <div id="team">
+        <div class="team-head">
+            <h1>Our Team</h1>
+            <p class="italic-para"> <i>Teamwork is the ability to work together toward a common vision. The ability
+                    to
+                    direct individual accomplishments toward organizational objectives. It is the fuel that allows
+                    common people to attain uncommon results.</i> </p>
+        </div>
+        <div class="hierarchy">
+            <div class="container">
+                <img src="https://tdb-website-demo-con.b-cdn.net/new_img/team_tdb_images/deepanshu_bhinda.jpg"
+                    alt="Image" class="hierarchy1 trigger">
+                <div class="center">
+                    <img src="https://tdb-website-demo-con.b-cdn.net/new_img/tdb_team_website/DEEPANSHU%20BHINDA%20SIR.gif"
+                        alt="">
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="https://tdb-website-demo-con.b-cdn.net/new_img/team_tdb_images/prachi_bhinda.jpg" alt="Image"
+                    class="hierarchy1">
+                <div class="center"><img
+                        src="https://tdb-website-demo-con.b-cdn.net/new_img/tdb_team_website/PRACHI%20BHINDA.gif"
+                        alt=""></div>
+            </div>
+        </div>
+
+        <div class="hierarchy">
+            <div class="container">
+                <img src="https://tdb-website-demo-con.b-cdn.net/new_img/team_tdb_images/sushil_moury.jpg" alt="Image"
+                    class="hierarchy1">
+                <div class="center"><img
+                        src="https://tdb-website-demo-con.b-cdn.net/new_img/tdb_team_website/SUSHIL%20MOURYA.gif"
+                        alt=""></div>
+            </div>
+
+            <div class="container">
+                <img src="https://tdb-website-demo-con.b-cdn.net/new_img/team_tdb_images/chitresh_vardhan.jpg"
+                    alt="Image" class="hierarchy1">
+                <div class="center"><img
+                        src="https://tdb-website-demo-con.b-cdn.net/new_img/tdb_team_website/CHITRESH%20VARDHAN.gif"
+                        alt="">
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="https://tdb-website-demo-con.b-cdn.net/new_img/team_tdb_images/amit_dhangar.jpg" alt="Image"
+                    class="hierarchy1">
+                <div class="center"><img
+                        src="https://tdb-website-demo-con.b-cdn.net/new_img/tdb_team_website/AMIT%20DHANGAR.gif"
+                        alt=""></div>
+            </div>
+            
+            <div class="container">
+                <img src="https://tdb-website-demo-con.b-cdn.net/new_img/team_tdb_images/abhijit_kaushi.jpg" alt="Image"
+                    class="hierarchy1">
+                <div class="center"><img
+                        src="https://tdb-website-demo-con.b-cdn.net/new_img/tdb_team_website/ABHIJEET%20KAUSHI.gif"
+                        alt=""></div>
+            </div>
+        </div>
+
+        <div class="hierarchy">
+            <div class="container">
+                <img src="https://tdb-website-demo-con.b-cdn.net/new_img/team_tdb_images/prachi_panchal.jpg" alt="Image"
+                    class="hierarchy1">
+                <div class="center"><img
+                        src="https://tdb-website-demo-con.b-cdn.net/new_img/tdb_team_website/PRACHI%20PANCHAL.gif "
+                        alt=""></div>
+            </div>
+
+            <div class="container">
+                <img src="https://tdb-website-demo-con.b-cdn.net/new_img/team_tdb_images/shrey_trivedi.jpg" alt="Image"
+                    class="hierarchy1">
+                <div class="center"><img
+                        src="https://tdb-website-demo-con.b-cdn.net/new_img/tdb_team_website/SHREY%20TRIVEDI%20.gif"
+                        alt=""></div>
+            </div>
+
+            <div class="container">
+                <img src="https://tdb-website-demo-con.b-cdn.net/new_img/team_tdb_images/pratyush_pandey.jpg"
+                    alt="Image" class="hierarchy1">
+                <div class="center"><img
+                        src="https://tdb-website-demo-con.b-cdn.net/new_img/tdb_team_website/PRATYUSH%20PANDEY.gif"
+                        alt=""></div>
+            </div>
+
+            <div class="container">
+                <img src="https://tdb-website-demo-con.b-cdn.net/new_img/team_tdb_images/mohit_rathore.jpg" alt="Image"
+                    class="hierarchy1">
+                <div class="center"><img
+                        src="https://tdb-website-demo-con.b-cdn.net/new_img/tdb_team_website/MOHIT%20RATHORE%20.gif"
+                        alt=""></div>
+            </div>
+        </div>
+
+        <div class="hierarchy">
+            <div class="container">
+                <img src="https://tdb-website-demo-con.b-cdn.net/new_img/team_tdb_images/akshay_barua.jpg" alt="Image"
+                    class="hierarchy1">
+                <div class="center"><img
+                        src="https://tdb-website-demo-con.b-cdn.net/new_img/tdb_team_website/AKSHAY%20BARUA.gif" alt="">
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="https://tdb-website-demo-con.b-cdn.net/new_img/team_tdb_images/harish_bhabhar.jpg" alt="Image"
+                    class="hierarchy1">
+                <div class="center"><img
+                        src="https://tdb-website-demo-con.b-cdn.net/new_img/tdb_team_website/HARISH%20BHABHAR.gif"
+                        alt=""></div>
+            </div>
+            <div class="container">
+                <img src="https://tdb-website-demo-con.b-cdn.net/new_img/team_tdb_images/harish_parmar.jpg" alt="Image"
+                    class="hierarchy1">
+                <div class="center"><img
+                        src="https://tdb-website-demo-con.b-cdn.net/new_img/tdb_team_website/HARISH%20PARMAR.gif"
+                        alt=""></div>
+            </div>
+            <div class="container">
+                <img src="https://tdb-website-demo-con.b-cdn.net/new_img/team_tdb_images/sandeep_yadav.jpg" alt="Image"
+                    class="hierarchy1">
+                <div class="center"><img
+                        src="https://tdb-website-demo-con.b-cdn.net/new_img/tdb_team_website/SANDEEP%20YADAV.gif"
+                        alt=""></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="culture">
+        <div class="culture-head">
+            <h1>Our Culture</h1>
+            <p class="italic-para"> <i>Cultural differences should not separate us from each other,
+                    but rather cultural diversity brings a collective strength that can benefit all of humanity</i>
+            </p>
+        </div>
+        <div id="culture-box">
+            <img src="https://tdb-website-demo-con.b-cdn.net/new_img/1.jpg" id="card1" alt="Culture" class="cards">
+            <img src="https://tdb-website-demo-con.b-cdn.net/new_img/2.jpg" id="card2" alt="Culture" class="cards">
+            <img src="https://tdb-website-demo-con.b-cdn.net/new_img/3.jpg" id="card3" alt="Culture" class="cards">
+            <img src="https://tdb-website-demo-con.b-cdn.net/new_img/4.jpg" id="card4" alt="Culture" class="cards">
+        </div>
+    </div>
+
+    <div class="profile">
+        <a href="https://tdb-website-demo-con.b-cdn.net/Profile/TECH_DRIVEN_BASIC.pdf" target="_blank" download="TDB_Profile">
+            <div class="container-2">
+                <div class="btn btn-two">
+                    <span>View Profile</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+    <script>
+        var count = 1;
+        var one = document.getElementById("one");
+        var two = document.getElementById("two");
+        var three = document.getElementById("three");
+        var four = document.getElementById("four");
+        var five = document.getElementById("five");
+        var six = document.getElementById("six");
+        var seven = document.getElementById("seven");
+        var eight = document.getElementById("eight");
+        var logoIcon = document.getElementById("logoIcon");
+        function leftFunc() {
+            if (count != 1) {
+                count = count - 1;
+            }
+            if (count == 1) {
+                one.style.display = "block";
+                two.style.display = "none";
+                three.style.display = "none";
+                four.style.display = "none";
+                five.style.display = "none";
+                six.style.display = "none";
+                seven.style.display = "none";
+                eight.style.display = "none";
+                logoIcon.style.left = "10%";
+            } else if (count == 2) {
+                one.style.display = "none";
+                two.style.display = "block";
+                three.style.display = "none";
+                four.style.display = "none";
+                five.style.display = "none";
+                six.style.display = "none";
+                seven.style.display = "none";
+                eight.style.display = "none";
+                logoIcon.style.left = "20%";
+            } else if (count == 3) {
+                one.style.display = "none";
+                two.style.display = "none";
+                three.style.display = "block";
+                four.style.display = "none";
+                five.style.display = "none";
+                six.style.display = "none";
+                seven.style.display = "none";
+                eight.style.display = "none";
+                logoIcon.style.left = "30%";
+            } else if (count == 4) {
+                one.style.display = "none";
+                two.style.display = "none";
+                three.style.display = "none";
+                four.style.display = "block";
+                five.style.display = "none";
+                six.style.display = "none";
+                seven.style.display = "none";
+                eight.style.display = "none";
+                logoIcon.style.left = "40%";
+            } else if (count == 5) {
+                one.style.display = "none";
+                two.style.display = "none";
+                three.style.display = "none";
+                four.style.display = "none";
+                five.style.display = "block";
+                six.style.display = "none";
+                seven.style.display = "none";
+                eight.style.display = "none";
+                logoIcon.style.left = "50%";
+            } else if (count == 6) {
+                one.style.display = "none";
+                two.style.display = "none";
+                three.style.display = "none";
+                four.style.display = "none";
+                five.style.display = "none";
+                six.style.display = "block";
+                seven.style.display = "none";
+                eight.style.display = "none";
+                logoIcon.style.left = "60%";
+            } else if (count == 7) {
+                one.style.display = "none";
+                two.style.display = "none";
+                three.style.display = "none";
+                four.style.display = "none";
+                five.style.display = "none";
+                six.style.display = "none";
+                seven.style.display = "block";
+                eight.style.display = "none";
+                logoIcon.style.left = "70%";
+            } else if (count == 8) {
+                one.style.display = "none";
+                two.style.display = "none";
+                three.style.display = "none";
+                four.style.display = "none";
+                five.style.display = "none";
+                six.style.display = "none";
+                seven.style.display = "none";
+                eight.style.display = "block";
+                logoIcon.style.left = "80%";
+            }
+        }
+
+        function rightFunc() {
+            if (count != 8) {
+                count = count + 1;
+            }
+            if (count == 1) {
+                one.style.display = "block";
+                two.style.display = "none";
+                three.style.display = "none";
+                four.style.display = "none";
+                five.style.display = "none";
+                six.style.display = "none";
+                seven.style.display = "none";
+                eight.style.display = "none";
+                logoIcon.style.left = "10%";
+            } else if (count == 2) {
+                one.style.display = "none";
+                two.style.display = "block";
+                three.style.display = "none";
+                four.style.display = "none";
+                five.style.display = "none";
+                six.style.display = "none";
+                seven.style.display = "none";
+                eight.style.display = "none";
+                logoIcon.style.left = "20%";
+            } else if (count == 3) {
+                one.style.display = "none";
+                two.style.display = "none";
+                three.style.display = "block";
+                four.style.display = "none";
+                five.style.display = "none";
+                six.style.display = "none";
+                seven.style.display = "none";
+                eight.style.display = "none";
+                logoIcon.style.left = "30%";
+            } else if (count == 4) {
+                one.style.display = "none";
+                two.style.display = "none";
+                three.style.display = "none";
+                four.style.display = "block";
+                five.style.display = "none";
+                six.style.display = "none";
+                seven.style.display = "none";
+                eight.style.display = "none";
+                logoIcon.style.left = "40%";
+            } else if (count == 5) {
+                one.style.display = "none";
+                two.style.display = "none";
+                three.style.display = "none";
+                four.style.display = "none";
+                five.style.display = "block";
+                six.style.display = "none";
+                seven.style.display = "none";
+                eight.style.display = "none";
+                logoIcon.style.left = "50%";
+            } else if (count == 6) {
+                one.style.display = "none";
+                two.style.display = "none";
+                three.style.display = "none";
+                four.style.display = "none";
+                five.style.display = "none";
+                six.style.display = "block";
+                seven.style.display = "none";
+                eight.style.display = "none";
+                logoIcon.style.left = "60%";
+            } else if (count == 7) {
+                one.style.display = "none";
+                two.style.display = "none";
+                three.style.display = "none";
+                four.style.display = "none";
+                five.style.display = "none";
+                six.style.display = "none";
+                seven.style.display = "block";
+                eight.style.display = "none";
+                logoIcon.style.left = "70%";
+            } else if (count == 8) {
+                one.style.display = "none";
+                two.style.display = "none";
+                three.style.display = "none";
+                four.style.display = "none";
+                five.style.display = "none";
+                six.style.display = "none";
+                seven.style.display = "none";
+                eight.style.display = "block";
+                logoIcon.style.left = "80%";
+            }
+        }
+
+
+    </script>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            console.log(window.scrollY);
+        });
+
+        var p = document.getElementById("home");
+        var q = document.getElementById("about");
+
+        var x = document.querySelector(".navbar");
+        var y = document.getElementById("logo");
+        var z = document.querySelector(".nav-list");
+        var a = document.getElementById("myImages");
+        var h1 = document.getElementById("head1");
+        var h2 = document.getElementById("head2");
+        var h3 = document.getElementById("head3");
+        var h4 = document.getElementById("head4");
+
+
+        burger = document.querySelector('.burger');
+        var menu = document.getElementById("menu");
+
+        const mediaQuery = window.matchMedia('(min-width: 1020px)');
+        if (mediaQuery.matches) {
+
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+
+                if (scrollY > 100) {
+                    x.style.backgroundColor = 'black';
+                    z.style.opacity = '0';
+                    menu.style.display = 'block';
+                    a.style.margin = '50px';
+                    a.style.width = '92vw';
+                    p.style.height = '80vh';
+                    p.style.paddingTop = '348px';
+                    q.style.height = '30vh';
+
+                    document.getElementById("nav").onmouseover = function () {
+                        x.style.backgroundColor = 'white';
+                        y.style.filter = "invert(1)";
+                        menu.style.filter = "invert(1)";
+
+                        burger.addEventListener('click', () => {
+                            menu.style.display = 'none';
+                            z.style.opacity = '1';
+                        });
+                    }
+
+                    document.getElementById("nav").onmouseout = function () {
+                        x.style.backgroundColor = 'black';
+                        y.style.filter = "invert(0)";
+                        menu.style.filter = "invert(0)";
+                    }
+
+                }
+
+                if (scrollY < 100) {
+                    x.style.background = 'none';
+                    z.style.display = 'flex';
+                    a.style.margin = '0px';
+                    a.style.width = '100vw';
+                    p.style.height = '100vh';
+                    p.style.paddingTop = '0';
+                    q.style.height = '60vh';
+
+                    z.style.opacity = '1';
+                    menu.style.display = 'none';
+                }
+
+                if (scrollY > 264) {
+                    a.style.display = 'none';
+                    p.style.height = '60vh';
+                    q.style.height = '10vh';
+
+                    p.style.paddingTop = '0';
+                    q.style.position = "fixed";
+                    q.style.top = "100px";
+                    q.style.zIndex = "2";
+                    q.style.width = "100%"
+                    h2.style.color = "rgb(132 126 117)";
+                    h3.style.color = "rgb(132 126 117)";
+                    h4.style.color = "rgb(132 126 117)";
+                    h2.style.borderColor = "rgb(132 126 117)";
+                    h3.style.borderColor = "rgb(132 126 117)";
+                    h4.style.borderColor = "rgb(132 126 117)";
+                }
+
+                if (scrollY < 264) {
+                    q.style.position = "unset";
+                    a.style.display = 'block';
+
+                    h2.style.color = "white";
+                    h3.style.color = "white";
+                    h4.style.color = "white";
+                    h2.style.borderColor = "white";
+                    h3.style.borderColor = "white";
+                    h4.style.borderColor = "white";
+                }
+
+                if (scrollY > 417) {
+                    q.style.display = "none";
+                }else{
+                    q.style.display = "flex";
+                }
+
+                if (scrollY > 564) {
+                    h1.style.color = "rgb(132 126 117)";
+                    h2.style.color = "white";
+                    h3.style.color = "rgb(132 126 117)";
+                    h4.style.color = "rgb(132 126 117)";
+                    h1.style.borderColor = "rgb(132 126 117)";
+                    h2.style.borderColor = "white";
+                    h3.style.borderColor = "rgb(132 126 117)";
+                    h4.style.borderColor = "rgb(132 126 117)";
+                }
+
+                if (scrollY < 564) {
+                    h1.style.color = "white";
+                    h2.style.color = "rgb(132 126 117)";
+                    h3.style.color = "rgb(132 126 117)";
+                    h4.style.color = "rgb(132 126 117)";
+                    h1.style.borderColor = "white";
+                    h2.style.borderColor = "rgb(132 126 117)";
+                    h3.style.borderColor = "rgb(132 126 117)";
+                    h4.style.borderColor = "rgb(132 126 117)";
+                }
+
+                if (scrollY > 1380) {
+                    h1.style.color = "rgb(132 126 117)";
+                    h2.style.color = "rgb(132 126 117)";
+                    h3.style.color = "white";
+                    h4.style.color = "rgb(132 126 117)";
+                    h1.style.borderColor = "rgb(132 126 117)";
+                    h2.style.borderColor = "rgb(132 126 117)";
+                    h3.style.borderColor = "white";
+                    h4.style.borderColor = "rgb(132 126 117)";
+                }
+
+                if (scrollY > 3240) {
+                    h1.style.color = "rgb(132 126 117)";
+                    h2.style.color = "rgb(132 126 117)";
+                    h3.style.color = "rgb(132 126 117)";
+                    h4.style.color = "white";
+                    h1.style.borderColor = "rgb(132 126 117)";
+                    h2.style.borderColor = "rgb(132 126 117)";
+                    h3.style.borderColor = "rgb(132 126 117)";
+                    h4.style.borderColor = "white";
+                }
+
+                document.getElementById("line0").style.backgroundColor = "white";
+                document.getElementById("start0").style.display = "block";
+
+                if (scrollY < 100) {
+                    document.getElementById("line1").style.backgroundColor = "#998e8e";
+                    document.getElementById("start").style.display = "none";
+                }
+
+                if (scrollY > 264) {
+                    document.getElementById("start").style.display = "block";
+                    document.getElementById("start1").style.display = "none";
+                    document.getElementById("start2").style.display = "none";
+                    document.getElementById("start3").style.display = "none";
+                    document.getElementById("line0").style.backgroundColor = "#998e8e";
+                    document.getElementById("line1").style.backgroundColor = "white";
+                    document.getElementById("line2").style.backgroundColor = "#998e8e";
+                    document.getElementById("line3").style.backgroundColor = "#998e8e";
+                    document.getElementById("line4").style.backgroundColor = "#998e8e";
+                }
+
+                if (scrollY > 564) {
+                    document.getElementById("start").style.display = "none";
+                    document.getElementById("start1").style.display = "block";
+                    document.getElementById("start2").style.display = "none";
+                    document.getElementById("start3").style.display = "none";
+                    document.getElementById("line0").style.backgroundColor = "#998e8e";
+                    document.getElementById("line1").style.backgroundColor = "#998e8e";
+                    document.getElementById("line2").style.backgroundColor = "white";
+                    document.getElementById("line3").style.backgroundColor = "#998e8e";
+                    document.getElementById("line4").style.backgroundColor = "#998e8e";
+                }
+
+                if (scrollY > 1380) {
+                    document.getElementById("start").style.display = "none";
+                    document.getElementById("start1").style.display = "none";
+                    document.getElementById("start2").style.display = "block";
+                    document.getElementById("start3").style.display = "none";
+                    document.getElementById("line0").style.backgroundColor = "#998e8e";
+                    document.getElementById("line1").style.backgroundColor = "#998e8e";
+                    document.getElementById("line2").style.backgroundColor = "#998e8e";
+                    document.getElementById("line3").style.backgroundColor = "white";
+                    document.getElementById("line4").style.backgroundColor = "#998e8e";
+                }
+
+                if (scrollY > 3240) {
+                    document.getElementById("start").style.display = "none";
+                    document.getElementById("start1").style.display = "none";
+                    document.getElementById("start2").style.display = "none";
+                    document.getElementById("start3").style.display = "block";
+                    document.getElementById("line0").style.backgroundColor = "#998e8e";
+                    document.getElementById("line1").style.backgroundColor = "#998e8e";
+                    document.getElementById("line2").style.backgroundColor = "#998e8e";
+                    document.getElementById("line3").style.backgroundColor = "#998e8e";
+                    document.getElementById("line4").style.backgroundColor = "white";
+                }
+            }
+        } else {
+
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+
+                if (scrollY > 100) {
+                    a.style.margin = '6vw';
+                    a.style.width = '89vw';
+                    p.style.height = '80vh';
+                    p.style.paddingTop = '348px';
+                    q.style.height = '30vh';
+                }
+
+                if (scrollY < 100) {
+                    a.style.margin = '0px';
+                    a.style.width = '100vw';
+                    p.style.height = '100vh';
+                    p.style.paddingTop = '0';
+                    q.style.height = '60vh';
+                }
+
+                if (scrollY > 264) {
+                    a.style.display = 'none';
+                    p.style.height = '60vh';
+                    q.style.height = '10vh';
+
+                    p.style.paddingTop = '0';
+                    q.style.position = "fixed";
+                    q.style.top = "100px";
+                    q.style.zIndex = "2";
+                    q.style.width = "100%"
+                    h2.style.color = "rgb(132 126 117)";
+                    h3.style.color = "rgb(132 126 117)";
+                    h4.style.color = "rgb(132 126 117)";
+                    h2.style.borderColor = "rgb(132 126 117)";
+                    h3.style.borderColor = "rgb(132 126 117)";
+                    h4.style.borderColor = "rgb(132 126 117)";
+                }
+
+                if (scrollY < 264) {
+                    q.style.position = "unset";
+                    a.style.display = 'block';
+
+                    h2.style.color = "white";
+                    h3.style.color = "white";
+                    h4.style.color = "white";
+                    h2.style.borderColor = "white";
+                    h3.style.borderColor = "white";
+                    h4.style.borderColor = "white";
+                }
+
+                if (scrollY > 324) {
+                    q.style.display = "none";
+                }else{
+                    q.style.display = "flex";
+                }
+
+                if (scrollY > 869) {
+                    h1.style.color = "rgb(132 126 117)";
+                    h2.style.color = "white";
+                    h3.style.color = "rgb(132 126 117)";
+                    h4.style.color = "rgb(132 126 117)";
+                    h1.style.borderColor = "rgb(132 126 117)";
+                    h2.style.borderColor = "white";
+                    h3.style.borderColor = "rgb(132 126 117)";
+                    h4.style.borderColor = "rgb(132 126 117)";
+                }
+
+                if (scrollY < 869) {
+                    h1.style.color = "white";
+                    h2.style.color = "rgb(132 126 117)";
+                    h3.style.color = "rgb(132 126 117)";
+                    h4.style.color = "rgb(132 126 117)";
+                    h1.style.borderColor = "white";
+                    h2.style.borderColor = "rgb(132 126 117)";
+                    h3.style.borderColor = "rgb(132 126 117)";
+                    h4.style.borderColor = "rgb(132 126 117)";
+                }
+
+                if (scrollY > 1963) {
+                    h1.style.color = "rgb(132 126 117)";
+                    h2.style.color = "rgb(132 126 117)";
+                    h3.style.color = "white";
+                    h4.style.color = "rgb(132 126 117)";
+                    h1.style.borderColor = "rgb(132 126 117)";
+                    h2.style.borderColor = "rgb(132 126 117)";
+                    h3.style.borderColor = "white";
+                    h4.style.borderColor = "rgb(132 126 117)";
+                }
+
+                if (scrollY > 6565) {
+                    h1.style.color = "rgb(132 126 117)";
+                    h2.style.color = "rgb(132 126 117)";
+                    h3.style.color = "rgb(132 126 117)";
+                    h4.style.color = "white";
+                    h1.style.borderColor = "rgb(132 126 117)";
+                    h2.style.borderColor = "rgb(132 126 117)";
+                    h3.style.borderColor = "rgb(132 126 117)";
+                    h4.style.borderColor = "white";
+                }
+
+                document.getElementById("line0").style.backgroundColor = "white";
+                document.getElementById("start0").style.display = "block";
+
+                if (scrollY < 100) {
+                    document.getElementById("line1").style.backgroundColor = "#998e8e";
+                    document.getElementById("start").style.display = "none";
+                }
+
+                if (scrollY > 264) {
+                    document.getElementById("start").style.display = "block";
+                    document.getElementById("start1").style.display = "none";
+                    document.getElementById("start2").style.display = "none";
+                    document.getElementById("start3").style.display = "none";
+                    document.getElementById("line0").style.backgroundColor = "#998e8e";
+                    document.getElementById("line1").style.backgroundColor = "white";
+                    document.getElementById("line2").style.backgroundColor = "#998e8e";
+                    document.getElementById("line3").style.backgroundColor = "#998e8e";
+                    document.getElementById("line4").style.backgroundColor = "#998e8e";
+                }
+
+                if (scrollY > 869) {
+                    document.getElementById("start").style.display = "none";
+                    document.getElementById("start1").style.display = "block";
+                    document.getElementById("start2").style.display = "none";
+                    document.getElementById("start3").style.display = "none";
+                    document.getElementById("line0").style.backgroundColor = "#998e8e";
+                    document.getElementById("line1").style.backgroundColor = "#998e8e";
+                    document.getElementById("line2").style.backgroundColor = "white";
+                    document.getElementById("line3").style.backgroundColor = "#998e8e";
+                    document.getElementById("line4").style.backgroundColor = "#998e8e";
+                }
+
+                if (scrollY > 1963) {
+                    document.getElementById("start").style.display = "none";
+                    document.getElementById("start1").style.display = "none";
+                    document.getElementById("start2").style.display = "block";
+                    document.getElementById("start3").style.display = "none";
+                    document.getElementById("line0").style.backgroundColor = "#998e8e";
+                    document.getElementById("line1").style.backgroundColor = "#998e8e";
+                    document.getElementById("line2").style.backgroundColor = "#998e8e";
+                    document.getElementById("line3").style.backgroundColor = "white";
+                    document.getElementById("line4").style.backgroundColor = "#998e8e";
+                }
+
+                if (scrollY > 6565) {
+                    document.getElementById("start").style.display = "none";
+                    document.getElementById("start1").style.display = "none";
+                    document.getElementById("start2").style.display = "none";
+                    document.getElementById("start3").style.display = "block";
+                    document.getElementById("line0").style.backgroundColor = "#998e8e";
+                    document.getElementById("line1").style.backgroundColor = "#998e8e";
+                    document.getElementById("line2").style.backgroundColor = "#998e8e";
+                    document.getElementById("line3").style.backgroundColor = "#998e8e";
+                    document.getElementById("line4").style.backgroundColor = "white";
+                }
+            }
+        }
+    </script>
+
+</body>
+{% endblock body %}
+
+</html>
