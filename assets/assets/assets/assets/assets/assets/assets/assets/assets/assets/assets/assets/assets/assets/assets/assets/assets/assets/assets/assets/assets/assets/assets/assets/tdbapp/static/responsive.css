@@ -1,4 +1,24 @@
 @media only screen and (max-width: 1020px) {
+    .navbar .Slogo {
+        justify-content: unset;
+        align-items: unset;
+        width: 48px;
+        height: 32px;
+        position: fixed;
+        left: 4%;
+        top: 1%;
+        transition: all 0s;
+        transition-delay: 0.2s;
+    }
+
+    .navbar:hover .Slogo {
+        filter: invert(1);
+    }
+
+    .navbar:hover .Ilogo {
+        filter: invert(0);
+    }
+
     .nav-list {
         flex-direction: column;
     }
@@ -6,33 +26,52 @@
     .navbar {
         height: 16rem;
         flex-direction: column;
-        /* transition: all 0.8s ease-out; */
+        align-items: unset;
+        height: 100%;
+        margin-left: 0vw;
+        transition: all 0.2s ease-out;
+        overflow: hidden;
     }
 
     .navbar:hover {
         background-color: white;
     }
 
-    .navbar:hover img,
-    .navbar:hover img {
+    /* .navbar:hover img {
         filter: invert(1);
-    }
+    } */
 
     .navbar ul {
-        padding-left: 0;
-    }
-
-    .navbar img {
-        width: 56px;
-        height: 36px;
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        width: 100%;
+        justify-content: unset;
+        align-items: unset;
+        padding-top: 15%;
     }
 
     .navbar ul li {
         padding: 4px;
+        border-bottom: 1px solid #6a6a6a;
+        line-height: 4rem;
+    }
+
+    .dropbtn {
+        padding: 0px;
+    }
+
+    .dropdown-content {
+        background-color: #100f0f;
+        border: 1px solid #100f0f;
+    }
+
+    .dropdown-content a {
+        padding: 8px 22px;
     }
 
     .navbar ul a {
-        font-size: 1.2rem;
+        font-size: 22px;
     }
 
     .navbar ul .btn {
@@ -41,7 +80,9 @@
     }
 
     .h-nav-resp {
-        height: 4rem;
+        /* height: 4rem; */
+        height: 0vh;
+        margin-left: 100vw;
     }
 
     .v-class-resp {
@@ -51,10 +92,17 @@
 
     .burger {
         display: block;
-        position: absolute;
+        position: fixed;
         cursor: pointer;
-        top: 12px;
+        top: 1%;
         right: 1%;
+        filter: invert(1);
+        transition: all 0s;
+        transition-delay: 0.2s;
+    }
+
+    .Iburger {
+        filter: invert(0);
     }
 
     .b-line {
@@ -72,7 +120,7 @@
 
     #home .big-para {
         text-align: center;
-        width: 56%;
+        width: 64%;
         font-size: 2rem;
     }
 
@@ -109,14 +157,14 @@
     #para2,
     #para3 {
         text-align: center;
-        font-size: 1.4rem;
+        font-size: 1rem;
         max-width: 100%;
     }
 
     #para1 strong,
     #para2 strong,
     #para3 strong {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     #img1,
@@ -130,6 +178,11 @@
     .content {
         flex-direction: column;
         align-items: center;
+    }
+
+    .card {
+        width: 75%;
+        height: fit-content;
     }
 
     .boxes {
@@ -168,6 +221,7 @@
         top: 48%;
         width: 100%;
         right: 0%;
+        font-size: 16px;
     }
 
 
@@ -196,8 +250,31 @@
 }
 
 @media only screen and (max-width: 800px) {
+    .team-head {
+        color: white;
+        padding: 4px;
+        font-size: 16px;
+        font-family: 'Josefin Sans', sans-serif;
+        width: 98%;
+    }
 
-    .container{
+    .timeline-head {
+        color: white;
+        padding: 4px;
+        font-size: 16px;
+        font-family: 'Josefin Sans', sans-serif;
+        width: 98%;
+    }
+
+    .culture-head {
+        color: white;
+        padding: 4px;
+        font-size: 16px;
+        font-family: 'Josefin Sans', sans-serif;
+        width: 98%;
+    }
+
+    .container {
         width: 84%;
     }
 
@@ -221,6 +298,10 @@
     .footerBox {
         font-size: 0.8rem;
         flex-direction: column;
+        display: grid;
+        grid: 150px / auto auto;
+        grid-gap: 10px;
+        padding: 10px;
     }
 
     .box-item {
@@ -229,6 +310,7 @@
 
     .footerBox h1 {
         font-size: 1rem;
+        margin-bottom: unset;
     }
 
     .footerBox2 {
@@ -242,6 +324,6 @@
     }
 
     .box-item {
-        padding: 1rem 0;
+        padding: 0.4rem 0;
     }
 }

@@ -5,6 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+
+
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -4129,6 +4131,7 @@ input[type="button"].btn-block {
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0.5rem 1rem;
+    background-color: black;
 }
 
 .navbar>.container,

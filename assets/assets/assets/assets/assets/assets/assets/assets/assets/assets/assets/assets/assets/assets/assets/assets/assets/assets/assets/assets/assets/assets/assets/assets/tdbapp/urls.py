@@ -15,6 +15,7 @@ urlpatterns = [
     path('fads', views.fads, name='fads'),
     path('ddds', views.ddds, name='ddds'),
     path('tds', views.tds, name='tds'),
+    path('dr.ai', views.heartrate, name='dr.ai'),
     path('about', views.about, name='about'),
     path('leads', views.leads, name="leads")
     

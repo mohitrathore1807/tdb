@@ -3,6 +3,10 @@
         display: none;
     }
 
+    .arrow-box {
+        margin: unset;
+    }
+
     .block {
         display: block;
         position: sticky;
@@ -347,14 +351,19 @@
         padding: 8px;
     }
 
+    .btn-shine {
+        padding: 2px 8px;
+        font-size: 20px;
+    }
+
+    .btn-5 {
+        line-height: 28px;
+        padding: 4px 16px;
+    }
+
     .btn-15{
         margin: 12% 0;
         font-size: 1rem;
-    }
-
-    .btn-16{
-        margin: 24% 0;
-        font-size: 1.1rem;
     }
 
     .terms-privacy a {
