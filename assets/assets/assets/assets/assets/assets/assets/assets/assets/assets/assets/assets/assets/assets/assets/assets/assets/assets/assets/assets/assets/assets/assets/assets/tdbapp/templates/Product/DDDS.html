@@ -11,10 +11,11 @@
   <link rel="stylesheet" href="{% static 'style.css' %}">
   <link rel="stylesheet" href="{% static 'responsive.css' %}">
   <script src="https://kit.fontawesome.com/c3993a26e0.js" crossorigin="anonymous"></script>
-    {% block title %} DDDS {% endblock title %} 
+  {% block title %} DDDS {% endblock title %}
 
 </head>
 {% block body %}
+
 <body>
   <video autoplay muted loop id="myVideo">
     <source src="https://tdb-website-demo-con.b-cdn.net/new_video/drowsiness.mp4" type="video/mp4">
@@ -43,7 +44,7 @@
     </ul>
   </section>
 
- 
+
 
   <div id="home">
     <p class="big-para">Prevention from Distraction</p>
@@ -66,10 +67,14 @@
     <p id="para1">
       <strong>Distraction leads to Deceased</strong>
       <br>
-      TDB's video intelligence DDDS based on artificial intelligence platform focuses primarily saftey of driver and passengers through fatigue, mobile, yawning detection.    </p>
-    
+      TDB's video intelligence DDDS based on artificial intelligence platform focuses primarily saftey of driver and
+      passengers through fatigue, mobile, yawning detection.
+      <br>
+      <a href="#" class="arrow-box"><i class="arrow fas fa-arrow-down"></i></a>
+    </p>
+
     <video id="img1" autoplay muted loop>
-      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/drowsiness1.webm" type="video/webm"> 
+      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/drowsiness1.webm" type="video/webm">
     </video>
   </div>
 
@@ -78,12 +83,14 @@
 
   <div id="mission">
     <video id="img2" autoplay muted loop>
-      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/drowsiness2.webm" type="video/webm"> 
+      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/drowsiness2.webm" type="video/webm">
     </video>
     <p id="para2">
       <strong>Video Analytics is the new Survellience</strong>
       <br>
       From Big enterprises to public streets, Video Analytics helps out to be more effective way to manage crowd.
+      <br>
+      <a href="#" class="arrow-box"><i class="arrow fas fa-arrow-down"></i></a>
     </p>
   </div>
 
@@ -96,9 +103,11 @@
       <br>
       Our Mission is to leverage AI to solve the sensitive points in various industries through AI and be affordable for
       ALL.
+      <br>
+      <a href="#" class="arrow-box"><i class="arrow fas fa-arrow-down"></i></a>
     </p>
     <video id="img3" autoplay muted loop>
-      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/drowsiness3.webm" type="video/webm"> 
+      <source src="https://tdb-website-demo-con.b-cdn.net/new_gif/drowsiness3.webm" type="video/webm">
     </video>
 
   </div>
@@ -216,7 +225,7 @@
         }
 
         if (scrollY > 656) {
-                    q.style.display = "none";
+          q.style.display = "none";
           h1.style.color = "rgb(132 126 117)";
           h2.style.color = "white";
           h3.style.color = "rgb(132 126 117)";
@@ -234,7 +243,7 @@
         }
 
         if (scrollY < 656) {
-                    q.style.display = "flex";
+          q.style.display = "flex";
           h1.style.color = "white";
           h2.style.color = "rgb(132 126 117)";
           h3.style.color = "rgb(132 126 117)";
@@ -323,50 +332,24 @@
           document.getElementById("line3").style.backgroundColor = "#998e8e";
         }
       }
-    }else{
-        document.getElementById("nav").onmouseover = function() {
-            x.style.backgroundColor = 'white';
-            y.style.filter = "invert(1)";
-            menu.style.filter = "invert(1)";
-        }
-
-        document.getElementById("nav").onmouseout = function() {
-            x.style.backgroundColor = 'black';
-            y.style.filter = "invert(0)";
-            menu.style.filter = "invert(0)";
-        }
-
-
-        z.style.filter = "invert(1)";
-        menu.style.display = 'block';
-
+    } else {
       window.onscroll = function () { scrollFunction() };
 
       function scrollFunction() {
         if (scrollY > 100) {
-          x.style.backgroundColor = 'black';
           a.style.margin = '50px';
           a.style.width = '84vw';
           p.style.height = '50vh';
           p.style.paddingTop = '348px';
           q.style.height = '30vh';
-
-                    x.style.backgroundColor = 'white';
-                    y.style.filter = "invert(1)";
-                    menu.style.filter = "invert(1)";
         }
 
         if (scrollY < 100) {
-          x.style.backgroundColor = 'none';
           a.style.margin = '0px';
           a.style.width = '100vw';
           p.style.height = '100vh';
           p.style.paddingTop = '0';
           q.style.height = '60vh';
-          
-                    x.style.backgroundColor = 'black';
-                    y.style.filter = "invert(0)";
-                    menu.style.filter = "invert(0)";
         }
 
         if (scrollY > 300) {
@@ -411,7 +394,7 @@
         }
 
         if (scrollY > 656) {
-                    q.style.display = "none";
+          q.style.display = "none";
           h1.style.color = "rgb(132 126 117)";
           h2.style.color = "white";
           h3.style.color = "rgb(132 126 117)";
@@ -429,7 +412,7 @@
         }
 
         if (scrollY < 656) {
-                    q.style.display = "flex";
+          q.style.display = "flex";
           h1.style.color = "white";
           h2.style.color = "rgb(132 126 117)";
           h3.style.color = "rgb(132 126 117)";
@@ -520,7 +503,7 @@
       }
     }
   </script>
-  
+
 </body>
 {% endblock body %}
 

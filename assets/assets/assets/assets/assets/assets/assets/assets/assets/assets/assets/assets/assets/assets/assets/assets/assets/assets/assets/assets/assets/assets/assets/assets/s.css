@@ -424,6 +424,11 @@ select,
 textarea {
   font-family: inherit;
 }
+
+button{
+  cursor: pointer;
+}
+
 .is-visible {
   display: block !important;
 }
