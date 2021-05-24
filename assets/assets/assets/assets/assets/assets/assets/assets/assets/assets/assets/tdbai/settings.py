@@ -23,9 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'b$!8+#km5sd%)t^nk^z&u#5yho*dc^e5cbulxuck%yio9cwp!m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ["*"]
 ALLOWED_HOSTS = ['www.tdb.ai']
 
 
@@ -121,3 +122,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS =[BASE_DIR,'static',]
 STATIC_ROOT= os.path.join(BASE_DIR,'assets')
+DEFAULT_AUTO_FIELD='django.db.models.AutoField' 
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+DATETIME_FORMAT = '%d-%m-%Y %H:%M:%S'

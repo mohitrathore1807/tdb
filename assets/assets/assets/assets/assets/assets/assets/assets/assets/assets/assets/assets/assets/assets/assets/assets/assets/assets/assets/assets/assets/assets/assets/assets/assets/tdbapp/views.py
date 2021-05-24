@@ -41,6 +41,9 @@ def ddds(request):
 def tds(request):
     return render(request, "Product/TDS.html")
 
+def heartrate(request):
+    return render(request, "Product/Heartrate.html")
+
 from .models import Leads
 def leads(request):
     name = request.POST['FirstName']

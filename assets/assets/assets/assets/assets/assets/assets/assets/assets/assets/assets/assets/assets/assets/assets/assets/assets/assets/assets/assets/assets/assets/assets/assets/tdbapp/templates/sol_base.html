@@ -29,16 +29,17 @@
 </head>
 
 <body>
-    <div class="se-pre-con"></div>
+  <div class="se-pre-con"></div>
+  <div class="none block"></div>
   <nav id="nav" class="navbar h-nav-resp">
     <a href="{% url 'index' %}">
       <img id="logo" style="left: 8%;" class="Slogo Ilogo" src="https://tdb-website-demo-con.b-cdn.net/new_img/logo.png" alt="logo">
     </a>
     <ul id="navigate" class="nav-list v-class-resp">
-      <li><a href="{% url 'index' %}">Home</a></li>
-      <li><a href="{% url 'about' %}">About us</a></li>
+      <a href="{% url 'index' %}"><li>Home</li></a>
+      <a href="{% url 'about' %}"><li>About us</li></a>
       <div class="dropdown">
-        <li><a class="dropbtn" href="#">Products</a></li>
+        <li class="dropbtn">Products</li>
         <div class="dropdown-content">
           <a href="{% url 'upai' %}">UPAI</a>
           <a href="{% url 'ddds' %}">DDDS</a>
@@ -49,7 +50,7 @@
         </div>
       </div>
       <div class="dropdown">
-        <li><a class="dropbtn" href="#">Solutions</a></li>
+        <li class="dropbtn">Solutions</li>
         <div class="dropdown-content">
           <a href="{% url 'healthcare' %}">Healthcare</a>
           <a href="{% url 'construction' %}">Construction</a>
@@ -58,7 +59,7 @@
           <a href="{% url 'smartcity' %}">Smart City</a>
         </div>
       </div>
-      <li><a href="{% url 'contact' %}">Contact</a></li>
+      <a href="{% url 'contact' %}"><li>Contact</li></a>
       <!-- <li><a href="blog/hell.html">Blog</a></li> -->
       {% comment %} <li><button class="btn" onclick="openForm()">Get Started</button></li> {% endcomment %}
     </ul>

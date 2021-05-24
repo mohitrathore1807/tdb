@@ -10,6 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/eae2567ff1.js" crossorigin="anonymous"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175631726-1"></script>
+
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="{% static 's.css' %}">
     <link rel="stylesheet" href="{%static '/css/bootstrap.css'%}">
     <link rel="stylesheet" href=" {% static 'style.css' %} ">
@@ -71,8 +75,6 @@
             <a href="{% url 'contact' %}">
                 <li>Contact</li>
             </a>
-            <!-- <li><a href="blog/hell.html">Blog</a></li> -->
-            {% comment %} <li><button class="btn" onclick="openForm()">Get Started</button></li> {% endcomment %}
         </ul>
 
         <div class="burger Iburger" style="right: 8%;" onclick="display()" id="menu">
@@ -370,6 +372,10 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-175631726-1');
+    </script>
+
+    <script>
+        AOS.init();
     </script>
 
     <script src="{% static 'resp.js' %} "></script>

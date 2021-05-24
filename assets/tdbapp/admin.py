@@ -8,3 +8,4 @@ admin.site.register(models_lst)
 class PostAdmin(admin.ModelAdmin):
     class Media:
         js = ('tiny.js',)
+        

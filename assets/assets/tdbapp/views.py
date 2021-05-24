@@ -26,6 +26,24 @@ def smartcity(request):
 def healthcare(request):
     return render(request, 'healthcare.html')
 
+def upai(request):
+    return render(request, "Product/UPAI.html")
+
+def fds(request):
+    return render(request, "Product/FDS.html")
+
+def fads(request):
+    return render(request, "Product/FADS.html")
+
+def ddds(request):
+    return render(request, "Product/DDDS.html")
+
+def tds(request):
+    return render(request, "Product/TDS.html")
+
+def heartrate(request):
+    return render(request, "Product/Heartrate.html")
+
 from .models import Leads
 def leads(request):
     name = request.POST.get('FirstName', False)
@@ -51,7 +69,7 @@ def blog(request):
 
 
 def post(request, id):
-    post1 = Post.objects.filter(uid=id)[0]
+    post1 = Post.objects.filter(uid=id).first()
 
     return render(request, 'post.html', {'post': post1})
 

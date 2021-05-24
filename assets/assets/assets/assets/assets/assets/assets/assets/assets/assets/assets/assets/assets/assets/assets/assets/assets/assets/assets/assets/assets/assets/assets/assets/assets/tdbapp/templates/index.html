@@ -320,21 +320,6 @@
                 }
             }
         } else {
-            document.getElementById("nav").onmouseover = function () {
-                x.style.backgroundColor = 'white';
-                y.style.filter = "invert(1)";
-                menu.style.filter = "invert(1)";
-            }
-
-            document.getElementById("nav").onmouseout = function () {
-                x.style.backgroundColor = 'black';
-                y.style.filter = "invert(0)";
-                menu.style.filter = "invert(0)";
-            }
-
-
-            z.style.filter = "invert(1)";
-            menu.style.display = 'block';
 
 
             window.onscroll = function () {
@@ -348,10 +333,6 @@
                     p.style.height = '80vh';
                     p.style.paddingTop = '348px';
                     q.style.height = '40vh';
-
-                    x.style.backgroundColor = 'white';
-                    y.style.filter = "invert(1)";
-                    menu.style.filter = "invert(1)";
                 }
 
                 if (scrollY < 100) {
@@ -360,10 +341,6 @@
                     p.style.height = '100vh';
                     p.style.paddingTop = '0';
                     q.style.height = '60vh';
-
-                    x.style.backgroundColor = 'black';
-                    y.style.filter = "invert(0)";
-                    menu.style.filter = "invert(0)";
                 }
 
                 if (scrollY > 300) {
