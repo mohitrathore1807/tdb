@@ -21,7 +21,7 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('leads', views.leads, name="leads"),
     path('blogs', views.blog, name="blogs"),
-    path('post/<id>',  views.post, name="post")
+    path('post/<str:id>',  views.post, name="post")
     
 
 ]

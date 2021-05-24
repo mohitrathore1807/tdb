@@ -69,7 +69,7 @@ def blog(request):
 
 
 def post(request, id):
-    post1 = Post.objects.filter(uid=id).first()
+    post1 = Post.objects.filter(title=id).first()
 
     return render(request, 'post.html', {'post': post1})
 

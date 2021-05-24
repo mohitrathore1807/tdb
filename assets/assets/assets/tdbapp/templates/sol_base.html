@@ -49,6 +49,17 @@
                 <li>About us</li>
             </a>
             <div class="dropdown">
+                <li class="dropbtn">Products</li>
+                <div class="dropdown-content">
+                    <a href="{% url 'upai' %}">UPAI</a>
+                    <a href="{% url 'ddds' %}">DDDS</a>
+                    <a href="{% url 'fds' %}">FDS</a>
+                    <a href="{% url 'fads' %}">FADS</a>
+                    <a href="{% url 'tds' %}">TDS</a>
+                    <a href="{% url 'dr.ai' %}">Dr.AI</a>
+                </div>
+            </div>
+            <div class="dropdown">
                 <li class="dropbtn">Solutions</li>
                 <div class="dropdown-content">
                     <a href="{% url 'healthcare' %}">Healthcare</a>
@@ -96,6 +107,27 @@
                     <a href="https://www.tdb.ai/about#culture">Culture</a>
                 </div>
 
+            </div>
+            <div class="box-item">
+                <h1>Products</h1>
+                <div>
+                    <a href="{% url 'upai' %}">UPAI</a>
+                </div>
+                <div>
+                    <a href="{% url 'ddds' %}">DDDS</a>
+                </div>
+                <div>
+                    <a href="{% url 'fds' %}">FDS</a>
+                </div>
+                <div>
+                    <a href="{% url 'fads' %}">FADS</a>
+                </div>
+                <div>
+                    <a href="{% url 'tds' %}">TDS</a>
+                </div>
+                <div>
+                    <a href="{% url 'dr.ai' %}">Dr.AI</a>
+                </div>
             </div>
             <div class="box-item">
                 <h1>Solutions</h1>
@@ -165,6 +197,11 @@
                     </path>
                 </svg>
             </button><br>
+
+            <div style="text-align: center;padding: 22px;">
+                <img id="logo" class="Slogo Ilogo" style="filter: invert(1); width: 98px; height: 64px;"
+                    src="https://tdb-website-demo-con.b-cdn.net/new_img/logo.png" alt="logo">
+            </div>
 
             <div class="grid-x grid-margin-x align-center">
                 <div class="cell small-12 medium-10 large-8">

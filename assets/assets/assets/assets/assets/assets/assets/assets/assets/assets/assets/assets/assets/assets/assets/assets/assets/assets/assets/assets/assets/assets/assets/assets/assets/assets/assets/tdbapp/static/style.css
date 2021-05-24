@@ -14,7 +14,7 @@ body {
 }
 
 /* Paste this css to your style sheet file or under head tag */
-/* This only works with JavaScript, 
+/* This only works with JavaScript,
 if it's not present, don't show loader */
 .no-js #loader {
     display: none;
@@ -198,7 +198,7 @@ if it's not present, don't show loader */
 }
 
 #home .big-para {
-    font-size: 4.8rem;
+    font-size: 4.7rem;
     width: 50%;
     height: 41vh;
     font-family: sans-serif;

@@ -46,12 +46,12 @@ def heartrate(request):
 
 from .models import Leads
 def leads(request):
-    name = request.POST['FirstName']
-    email = request.POST['Email']
-    phone = request.POST['Phone']
-    company = request.POST['Company']
-    inquiry_type = request.POST['enquiry']
-    helping = request.POST['howcanwehelptextarea']
+    name = request.POST.get('FirstName', False)
+    email = request.POST.get('Email', False)
+    phone = request.POST.get('Phone', False)
+    company = request.POST.get('Company', False)
+    inquiry_type = request.POST.get('enquiry', False)
+    helping = request.POST.get('howcanwehelptextarea', False)
     print(name, email, phone)
 
     lead = Leads(name=name, email=email, phone=phone, company=company, inquiry_type=inquiry_type, helping=helping )
@@ -59,5 +59,18 @@ def leads(request):
     lead.save()
         
     return redirect('index')
+
+from .models import Post
+def blog(request):
+    post = Post.objects.all()
+    
+
+    return render(request, 'blog.html', {'post': post})
+
+
+def post(request, id):
+    post1 = Post.objects.filter(uid=id)[0]
+
+    return render(request, 'post.html', {'post': post1})
 
 

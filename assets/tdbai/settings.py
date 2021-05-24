@@ -26,8 +26,8 @@ SECRET_KEY = 'b$!8+#km5sd%)t^nk^z&u#5yho*dc^e5cbulxuck%yio9cwp!m'
 DEBUG = True
 
 # ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ["*"]
-ALLOWED_HOSTS = ['www.tdb.ai']
+ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = ['www.tdb.ai']
 
 
 # Application definition

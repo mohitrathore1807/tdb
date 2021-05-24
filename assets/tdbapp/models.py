@@ -23,6 +23,8 @@ class Leads(models.Model):
 class Post(models.Model):
     uid = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+    keywords = models.TextField(default=None)
+    description = models.TextField(default=None)
     title = models.CharField(max_length=75)
     date_posted = models.DateTimeField(default=timezone.now)
     image = models.ImageField(upload_to='blog_images/', null=True)
