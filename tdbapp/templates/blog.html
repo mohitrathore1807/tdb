@@ -23,7 +23,7 @@
             {% for ttl in post%}
             <li>
                 <div class="row-div" data-aos="zoom-in">
-                    <span class="imgtitle">{{ttl.title | truncatechars:25 }}</span>
+                    <span class="imgtitle">{{ttl.title }}</span>
                     <br>
                     <a href="post/{{ttl.uid}}" title="Image 1 Link Title Tag"><img
                             class="blog-img" src="{{ttl.image.url}}" alt="" /></a>
