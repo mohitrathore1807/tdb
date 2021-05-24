@@ -29,44 +29,47 @@
 </head>
 
 <body>
-    <nav id="nav" style="flex-wrap: unset;" class="navbar h-nav-resp">
-        <a href="{% url 'index' %}">
-            <img id="logo" src="https://tdb-website-demo-con.b-cdn.net/new_img/logo.png" alt="logo">
-        </a>
-        <ul id="navigate" class="nav-list v-class-resp">
-            <li><a href="{% url 'index' %}">Home</a></li>
-            <li><a href="{% url 'about' %}">About us</a></li>
-            <div class="dropdown">
-                <li><a class="dropbtn" href="#">Products</a></li>
-                <div class="dropdown-content">
-                    <a href="{% url 'upai' %}">UPAI</a>
-                    <a href="{% url 'ddds' %}">DDDS</a>
-                    <a href="{% url 'fds' %}">FDS</a>
-                    <a href="{% url 'fads' %}">FADS</a>
-                    <a href="{% url 'tds' %}">TDS</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <li><a class="dropbtn" href="#">Solutions</a></li>
-                <div class="dropdown-content">
-                    <a href="{% url 'healthcare' %}">Healthcare</a>
-                    <a href="{% url 'construction' %}">Construction</a>
-                    <a href="{% url 'retail' %}">Retail</a>
-                    <a href="{% url 'automobile' %}">Automobile</a>
-                    <a href="{% url 'smartcity' %}">Smart City</a>
-                </div>
-            </div>
-            <li><a href="{% url 'contact' %}">Contact</a></li>
-            <!-- <li><a href="blog/hell.html">Blog</a></li> -->
-            {% comment %} <li><button class="btn" onclick="openForm()">Get Started</button></li> {% endcomment %}
-        </ul>
-
-        <div class="burger" onclick="display()" id="menu">
-            <div class="b-line"></div>
-            <div class="b-line"></div>
-            <div class="b-line"></div>
+  <div class="se-pre-con"></div>
+  <div class="none block"></div>
+  <nav id="nav" class="navbar h-nav-resp">
+    <a href="{% url 'index' %}">
+      <img id="logo" style="left: 8%;" class="Slogo Ilogo" src="https://tdb-website-demo-con.b-cdn.net/new_img/logo.png" alt="logo">
+    </a>
+    <ul id="navigate" class="nav-list v-class-resp">
+      <a href="{% url 'index' %}"><li>Home</li></a>
+      <a href="{% url 'about' %}"><li>About us</li></a>
+      <div class="dropdown">
+        <li class="dropbtn">Products</li>
+        <div class="dropdown-content">
+          <a href="{% url 'upai' %}">UPAI</a>
+          <a href="{% url 'ddds' %}">DDDS</a>
+          <a href="{% url 'fds' %}">FDS</a>
+          <a href="{% url 'fads' %}">FADS</a>
+          <a href="{% url 'tds' %}">TDS</a>
+          <a href="{% url 'dr.ai' %}">Dr.AI</a>
         </div>
-    </nav>
+      </div>
+      <div class="dropdown">
+        <li class="dropbtn">Solutions</li>
+        <div class="dropdown-content">
+          <a href="{% url 'healthcare' %}">Healthcare</a>
+          <a href="{% url 'construction' %}">Construction</a>
+          <a href="{% url 'retail' %}">Retail</a>
+          <a href="{% url 'automobile' %}">Automobile</a>
+          <a href="{% url 'smartcity' %}">Smart City</a>
+        </div>
+      </div>
+      <a href="{% url 'contact' %}"><li>Contact</li></a>
+      <!-- <li><a href="blog/hell.html">Blog</a></li> -->
+      {% comment %} <li><button class="btn" onclick="openForm()">Get Started</button></li> {% endcomment %}
+    </ul>
+
+    <div class="burger Iburger" style="right: 8%;" onclick="display()" id="menu">
+      <div class="b-line"></div>
+      <div class="b-line"></div>
+      <div class="b-line"></div>
+    </div>
+  </nav>
 
     {% block body%} {% endblock body%}
 
@@ -108,6 +111,9 @@
                 </div>
                 <div>
                     <a href="{% url 'tds' %}">TDS</a>
+                </div>
+                <div>
+                  <a href="{% url 'dr.ai' %}">Dr.AI</a>
                 </div>
             </div>
             <div class="box-item">
@@ -350,6 +356,7 @@
 
     <script src="{% static 'resp.js' %} "></script>
     <script src="{% static 's.js' %} "></script>
+    
 </body>
 
 </html>

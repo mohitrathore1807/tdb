@@ -1,8 +1,4 @@
-{% extends 'base.html' %}
-{% load static %}
-
-
-{% block head %}
+{% extends 'base.html' %} {% load static %} {% block head %}
 <link rel="stylesheet" href="{% static 'post.css' %}">
 <style>
     body {
@@ -10,12 +6,9 @@
         color: whitesmoke;
     }
 </style>
-
-{% endblock head %}
-
-{% block title %}{{post.title}}{% endblock title %}
-
-{% block body %}
+<meta name="author" content="{{post.author}}">
+<meta name="keywords" content="{{post.keywords}}">
+<meta name="description" content="{{post.description}}"> {% endblock head %} {% block title %}{{post.title}}{% endblock title %} {% block body %}
 
 <body>
     <div class="container" style="width: 75vw; margin: 2% auto;">
@@ -24,7 +17,7 @@
 
             <!-- Post Content Column -->
             <div class="col-lg-12">
-            
+
 
                 <!-- Title -->
                 <h1 class="mt-4">{{post.title}}</h1>
@@ -46,16 +39,22 @@
                 <img class="img-fluid rounded col-12" src="{{post.image.url}}" alt="">
 
                 <hr style="border-bottom: none;">
+                <div id="blog_content">
 
-                <p> {{post.content}}</p>
+                    <pre>{{post.content | safe}}</pre>
+                </div>
 
-                
             </div>
             <!-- /.row -->
         </div>
     </div>
+
+    <script>
+    </script>
 </body>
 {% endblock body %}
+
+
 
 
 </html>

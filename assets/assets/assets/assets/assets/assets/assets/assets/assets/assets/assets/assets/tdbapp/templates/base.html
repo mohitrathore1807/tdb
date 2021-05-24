@@ -4,6 +4,7 @@
 <html lang="en">
 
 <head>
+  {% block head %}{% endblock head %}
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175631726-1"></script>
+
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet" href="{% static 's.css' %}">
   <link rel="stylesheet" href=" {% static 'style.css' %}">
@@ -88,11 +92,12 @@
           <a href="{% url 'smartcity' %}">Smart City</a>
         </div>
       </div>
+      <a href="{% url 'blogs' %}">
+        <li>Blogs</li>
+      </a>
       <a href="{% url 'contact' %}">
         <li>Contact</li>
       </a>
-      <!-- <li><a href="blog/hell.html">Blog</a></li> -->
-      {% comment %} <li><button class="btn" onclick="openForm()">Get Started</button></li> {% endcomment %}
     </ul>
 
     <div class="burger Iburger" onclick="display()" id="menu">
@@ -176,7 +181,8 @@
           <a href="tel:+917507898930" target="_blank">+91-7507898930</a>
         </div>
         <div>
-          <a href="https://goo.gl/maps/2Frr1XHXFfgtsv4b6" target="_blank"><i class="co-icon fa fa-map-marker"></i>615, Apollo Premier,
+          <a href="https://goo.gl/maps/2Frr1XHXFfgtsv4b6" target="_blank"><i class="co-icon fa fa-map-marker"></i>615,
+            Apollo Premier,
             Vijay Nagar Square, Indore,
             Madhya Pradesh 452001</a>
         </div>
@@ -383,6 +389,10 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-175631726-1');
+  </script>
+
+  <script>
+    AOS.init();
   </script>
 
   <script src="{% static 's.js' %} "></script>

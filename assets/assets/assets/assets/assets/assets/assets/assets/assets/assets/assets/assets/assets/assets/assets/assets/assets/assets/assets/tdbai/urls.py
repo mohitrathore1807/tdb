@@ -25,6 +25,6 @@ admin.site.site_index = "TDB"
 admin.site.index_title = "Leads"
 
 urlpatterns = [
-    path('marvel/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', include('tdbapp.urls'))
 ]

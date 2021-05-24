@@ -128,3 +128,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 DATETIME_FORMAT = '%d-%m-%Y %H:%M:%S'
+
+
+

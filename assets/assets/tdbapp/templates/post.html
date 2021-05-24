@@ -6,8 +6,9 @@
         color: whitesmoke;
     }
 </style>
-
-{% endblock head %} {% block title %}{{post.title}}{% endblock title %} {% block body %}
+<meta name="author" content="{{post.author}}">
+<meta name="keywords" content="{{post.keywords}}">
+<meta name="description" content="{{post.description}}"> {% endblock head %} {% block title %}{{post.title}}{% endblock title %} {% block body %}
 
 <body>
     <div class="container" style="width: 75vw; margin: 2% auto;">

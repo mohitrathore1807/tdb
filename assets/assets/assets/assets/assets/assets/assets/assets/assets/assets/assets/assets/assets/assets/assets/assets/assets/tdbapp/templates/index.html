@@ -137,17 +137,14 @@
                     a.style.width = '92vw';
                     p.style.height = '86vh';
                     p.style.paddingTop = '348px';
-                    q.style.height = '30vh';
+                    q.style.height = '36vh';
 
                     document.getElementById("nav").onmouseover = function () {
                         x.style.backgroundColor = 'white';
                         y.style.filter = "invert(1)";
                         menu.style.filter = "invert(1)";
 
-                        burger.addEventListener('click', () => {
-                            menu.style.display = 'none';
-                            z.style.opacity = '1';
-                        });
+                        
                     }
 
                     document.getElementById("nav").onmouseout = function () {
@@ -155,6 +152,11 @@
                         y.style.filter = "invert(0)";
                         menu.style.filter = "invert(0)";
                     }
+
+                    burger.addEventListener('click', () => {
+                            menu.style.display = 'none';
+                            z.style.opacity = '1';
+                        });
                 }
 
                 if (scrollY < 100) {

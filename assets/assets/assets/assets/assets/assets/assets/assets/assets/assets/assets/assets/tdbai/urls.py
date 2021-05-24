@@ -28,3 +28,4 @@ urlpatterns = [
     path('marvel/', admin.site.urls),
     path('', include('tdbapp.urls'))
 ]
+
