@@ -25,6 +25,12 @@
     key="ce25136f-b358-4965-b51f-e5fcbe6d0be5"></script>
   <link rel="icon" href="https://tdb-website-demo-con.b-cdn.net/new_img/logo.jfif">
 
+  <!-- Share Button CSS -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/vaakash/socializer@2f749eb/css/socializer.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+
+
   <title>{% block title %} {% endblock title %} | TDB.ai</title>
   <style>
     html {
@@ -402,6 +408,14 @@
 
   <script src="{% static 's.js' %} "></script>
   <script src="{% static 'resp.js' %} "></script>
+
+  <!-- Share Button JS -->
+  <script src="https://cdn.jsdelivr.net/gh/vaakash/socializer@2f749eb/js/socializer.min.js"></script>
+  <script>
+    (function () {
+      socializer('.socializer');
+    }());
+  </script>
 
 </body>
 
