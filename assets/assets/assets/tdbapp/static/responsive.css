@@ -1,0 +1,376 @@
+@media only screen and (max-width: 1020px) {
+    .none {
+        display: none;
+    }
+
+    .arrow-box {
+        margin: unset;
+    }
+
+    .block {
+        display: block;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 3rem;
+        background-color: black;
+        transition: all 0s;
+        transition-delay: 0.2s;
+        z-index: 2;
+    }
+
+    .navbar .Slogo {
+        justify-content: unset;
+        align-items: unset;
+        width: 48px;
+        height: 32px;
+        position: fixed;
+        left: 4%;
+        top: 1%;
+        transition: all 0s;
+        transition-delay: 0.2s;
+    }
+
+    .navbar:hover .Slogo {
+        filter: invert(1);
+    }
+
+    .navbar:hover .Ilogo {
+        filter: invert(0);
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .navbar {
+        height: 16rem;
+        flex-direction: column;
+        align-items: unset;
+        height: 100%;
+        margin-left: 0vw;
+        transition: all 0.2s ease-out;
+        overflow: hidden;
+    }
+
+    .navbar:hover {
+        background-color: white;
+    }
+
+    /* .navbar:hover img {
+        filter: invert(1);
+    } */
+
+    .navbar ul {
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        width: 100%;
+        justify-content: unset;
+        align-items: unset;
+        padding-top: 15%;
+    }
+
+    .navbar ul a:hover {
+        border-bottom: unset;
+    }
+
+    .navbar ul li {
+        padding: 4px;
+        border-bottom: 1px solid #6a6a6a;
+        line-height: 4rem;
+        font-size: 1.4rem;
+    }
+
+    .dropbtn {
+        padding: 0px;
+    }
+
+    .dropdown-content {
+        background-color: #100f0f;
+        border: 1px solid #100f0f;
+    }
+
+    .dropdown-content a {
+        padding: 8px 22px;
+    }
+
+    .navbar ul a {
+        font-size: 22px;
+    }
+
+    .navbar ul .btn {
+        font-size: 16px;
+        padding: 4px;
+    }
+
+    .h-nav-resp {
+        /* height: 4rem; */
+        height: 0vh;
+        margin-left: 100vw;
+    }
+
+    .v-class-resp {
+        opacity: 0;
+        height: 0.4rem;
+    }
+
+    .burger {
+        display: block;
+        position: fixed;
+        cursor: pointer;
+        top: 1%;
+        right: 1%;
+        filter: invert(1);
+        transition: all 0s;
+        transition-delay: 0.2s;
+    }
+
+    .Iburger {
+        filter: invert(0);
+    }
+
+    .b-line {
+        width: 28px;
+        height: 2.4px;
+    }
+
+    .heading {
+        font-size: 1rem;
+    }
+
+    #home {
+        text-align: center;
+    }
+
+    #home .big-para {
+        text-align: center;
+        width: 64%;
+        font-size: 2rem;
+    }
+
+    #content,
+    #vision {
+        flex-direction: column-reverse;
+        height: 100vh;
+    }
+
+    @keyframes mynewmove {
+        0% {
+            max-width: 78%;
+            max-height: 44%;
+        }
+
+        50% {
+            max-width: 74%;
+            max-height: 40%;
+        }
+
+        100% {
+            max-width: 78%;
+            max-height: 44%;
+        }
+    }
+
+    #mission,
+    #culture {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    #para1,
+    #para2,
+    #para3 {
+        text-align: center;
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    #para1 strong,
+    #para2 strong,
+    #para3 strong {
+        font-size: 1.6rem;
+    }
+
+    #img1,
+    #img2,
+    #img3 {
+        max-width: 64%;
+        padding: 4px;
+        margin: 8px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 75%;
+        height: fit-content;
+    }
+
+    .boxes {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .box-content {
+        width: 100%;
+        height: fit-content;
+        margin: 8px;
+    }
+
+    #journey {
+        background: none;
+    }
+
+    #logoIcon {
+        height: 36px;
+        width: 40px;
+    }
+
+    #timeline {
+        margin-top: 16%;
+    }
+
+    .slideshow-container {
+        max-width: 100%;
+    }
+
+    .slide-img {
+        width: 100%;
+    }
+
+    .text {
+        top: 68%;
+        width: 100%;
+        right: 0%;
+        font-size: 16px;
+    }
+
+
+
+    #culture-box {
+        flex-direction: column;
+        height: unset;
+    }
+
+    #card1,
+    #card2,
+    #card3,
+    #card4 {
+        animation: none;
+        position: unset;
+        width: 96%;
+        padding: 8px;
+    }
+
+    #card1:hover,
+    #card2:hover,
+    #card3:hover,
+    #card4:hover {
+        width: 95.6%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .team-head {
+        color: white;
+        padding: 4px;
+        font-size: 16px;
+        font-family: 'Josefin Sans', sans-serif;
+        width: 98%;
+    }
+
+    .timeline-head {
+        color: white;
+        padding: 4px;
+        font-size: 16px;
+        font-family: 'Josefin Sans', sans-serif;
+        width: 98%;
+    }
+
+    .culture-head {
+        color: white;
+        padding: 4px;
+        font-size: 16px;
+        font-family: 'Josefin Sans', sans-serif;
+        width: 98%;
+    }
+
+    .container {
+        width: 84%;
+    }
+
+    #team {
+        padding-top: 36%;
+    }
+
+    .hierarchy {
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 1194px) {
+    .arrow {
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 896px) {
+    .footerBox {
+        font-size: 0.8rem;
+        flex-direction: column;
+        display: grid;
+        grid: 150px / auto auto;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    .box-item {
+        width: 100%;
+    }
+
+    .footerBox h1 {
+        font-size: 1rem;
+        margin-bottom: unset;
+    }
+
+    .footerBox2 {
+        flex-direction: column;
+        width: 100%;
+        font-size: 0.8rem;
+    }
+
+    .custom-btn {
+        width: fit-content;
+        height: fit-content;
+        padding: 8px;
+    }
+
+    .btn-shine {
+        padding: 2px 8px;
+        font-size: 20px;
+    }
+
+    .btn-5 {
+        line-height: 28px;
+        padding: 4px 16px;
+    }
+
+    .btn-15{
+        margin: 12% 0;
+        font-size: 1rem;
+    }
+
+    .terms-privacy a {
+        padding-left: 1rem;
+    }
+
+    .box-item {
+        padding: 0.4rem 0;
+    }
+}
