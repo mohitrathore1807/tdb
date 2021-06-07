@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load static %} 
+{% extends 'base.html' %} {% load static %}
 
 {% block head %}
 <link rel="stylesheet" href="{% static 'post.css' %}">
@@ -10,10 +10,10 @@
 </style>
 <meta name="author" content="{{post.author}}">
 <meta name="keywords" content="{{post.keywords}}">
-<meta name="description" content="{{post.description}}"> 
-{% endblock head %} 
+<meta name="description" content="{{post.description}}">
+{% endblock head %}
 
-{% block title %}{{post.title}}{% endblock title %} 
+{% block title %}{{post.title}}{% endblock title %}
 
 {% block body %}
 
@@ -21,7 +21,7 @@
         <div class="socializer" data-features="32px,circle,opacity,vertical,icon-white,bg-dark,pad"
             data-sites="facebook,twitter,linkedin,reddit,quora,pinterest"></div>
     </div>
-    
+
     <div class="container" style="width: 75vw; margin: 2% auto;">
 
         <div class="row">
@@ -52,7 +52,7 @@
                 <hr style="border-bottom: none;">
                 <div id="blog_content">
 
-                    <pre>{{post.content | safe}}</pre>
+                    <p>{{post.content | safe}}</p>
                 </div>
 
             </div>
