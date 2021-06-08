@@ -24,8 +24,6 @@ urlpatterns = [
     path('post/<str:id>',  views.post, name="post"),
     path('sitemap.xml',  views.sitemap, name="sitemap"),
     path('robots.txt',  views.robots, name="robots")
-    
-
 ]
 
 
