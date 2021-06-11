@@ -74,7 +74,6 @@ def post(request, id):
     return render(request, 'post.html', {'post': post1})
 
 def sitemap(request):
-    
     return render(request, "sitemap.xml", content_type='application/xml')
 
 def robots(request):
