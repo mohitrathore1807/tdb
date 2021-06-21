@@ -3,25 +3,39 @@
 */
 
 @import url(fonts.css);
-
+html{
+    height: 100vh;
+    width:100%;
+}
 body {
     margin: 0;
     padding: 0;
     font-size: 14px;
     font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
     color: #333;
-    background: #fff;
+    background: rgb(0, 0, 0);
+    
+    /* top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -4;
+    background: rgb(0 0 0 / 80%) url('https://tdb-website-demo-con.b-cdn.net/CAMSEC_AI/Background/home_bg.jpg')   center center/cover;
+    background-size: cover;
+    background-blend-mode: darken; */
 }
 
 /* LINKS */
 
 a:link, a:visited {
-    color: #447e9b;
+    color: #ffffff;
     text-decoration: none;
 }
 
 a:focus, a:hover {
-    color: #036;
+    color: rgb(223, 221, 221);
 }
 
 a:focus {
@@ -33,7 +47,8 @@ a img {
 }
 
 a.section:link, a.section:visited {
-    color: #fff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -244,12 +259,13 @@ p img, h1 img, h2 img, h3 img, h4 img, td img {
 table {
     border-collapse: collapse;
     border-color: #ccc;
+    border:1px solid #fff;
 }
 
 td, th {
     font-size: 13px;
     line-height: 16px;
-    border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #eee; */
     vertical-align: top;
     padding: 8px;
     font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
@@ -285,11 +301,11 @@ tr.alt {
 }
 
 .row1 {
-    background: #fff;
+    background: transparent;
 }
 
 .row2 {
-    background: #f9f9f9;
+    background: transparent;
 }
 
 /* SORTABLE TABLES */
@@ -425,9 +441,13 @@ textarea {
 input[type=text], input[type=password], input[type=email], input[type=url],
 input[type=number], input[type=tel], textarea, select, .vTextField {
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 25px;
     padding: 5px 6px;
     margin-top: 0;
+    background: transparent;
+    color: #ffffff;
+    outline: none;
+    text-align: center;
 }
 
 input[type=text]:focus, input[type=password]:focus, input[type=email]:focus,
@@ -449,11 +469,11 @@ select[multiple] {
 /* FORM BUTTONS */
 
 .button, input[type=submit], input[type=button], .submit-row input, a.button {
-    background: #79aec8;
+    background: #ffffff;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
-    color: #fff;
+    color: rgb(0, 0, 0);
     cursor: pointer;
 }
 
@@ -464,7 +484,7 @@ a.button {
 .button:active, input[type=submit]:active, input[type=button]:active,
 .button:focus, input[type=submit]:focus, input[type=button]:focus,
 .button:hover, input[type=submit]:hover, input[type=button]:hover {
-    background: #609ab6;
+    background: #ffffff;
 }
 
 .button[disabled], input[type=submit][disabled], input[type=button][disabled] {
@@ -475,13 +495,13 @@ a.button {
     float: right;
     border: none;
     font-weight: 400;
-    background: #417690;
+    background: #ffffff;
 }
 
 .button.default:active, input[type=submit].default:active,
 .button.default:focus, input[type=submit].default:focus,
 .button.default:hover, input[type=submit].default:hover {
-    background: #205067;
+    background: #ffffff;
 }
 
 .button[disabled].default,
@@ -496,7 +516,7 @@ input[type=button][disabled].default {
 .module {
     border: none;
     margin-bottom: 30px;
-    background: #fff;
+    /* background: #fff; */
 }
 
 .module p, .module ul, .module h3, .module h4, .module dl, .module pre {
@@ -522,8 +542,8 @@ input[type=button][disabled].default {
     font-weight: 400;
     font-size: 13px;
     text-align: left;
-    background: #79aec8;
-    color: #fff;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
 }
 
 .module caption,
@@ -646,20 +666,21 @@ div.system-message p.system-message-title {
 /* BREADCRUMBS */
 
 div.breadcrumbs {
-    background: #79aec8;
+    background: #000000;
     padding: 10px 40px;
     border: none;
     font-size: 14px;
-    color: #c4dce8;
+    color: #ffffff;
     text-align: left;
+    border-bottom: 1px solid #ffffff;
 }
 
 div.breadcrumbs a {
-    color: #fff;
+    color: #808080;
 }
 
 div.breadcrumbs a:focus, div.breadcrumbs a:hover {
-    color: #c4dce8;
+    color: #303030;
 }
 
 /* ACTION ICONS */
@@ -834,13 +855,13 @@ table#change-history tbody th {
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
-    background: #417690;
-    color: #ffc;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
     overflow: hidden;
 }
 
 #header a:link, #header a:visited {
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 #header a:focus , #header a:hover {
@@ -860,7 +881,7 @@ table#change-history tbody th {
 }
 
 #branding h1, #branding h1 a:link, #branding h1 a:visited {
-    color: #f5dd5d;
+    color: #000000;
 }
 
 #branding h2 {
@@ -892,14 +913,15 @@ table#change-history tbody th {
 
 #user-tools a:focus, #user-tools a:hover {
     text-decoration: none;
-    border-bottom-color: #79aec8;
-    color: #79aec8;
+    border-bottom-color: #000000;
+    color: #000000;
 }
 
 /* SIDEBAR */
 
 #content-related {
-    background: #f8f8f8;
+    background: transparent;
+    border: 1px solid #fff;
 }
 
 #content-related .module {
@@ -939,7 +961,7 @@ table#change-history tbody th {
     margin-bottom: 16px;
     border-bottom: 1px solid #eaeaea;
     font-size: 18px;
-    color: #333;
+    color: #ffffff;
 }
 
 .delete-confirmation form input[type="submit"] {
@@ -984,4 +1006,10 @@ table#change-history tbody th {
 
 .popup #header {
     padding: 10px 20px;
+}
+
+
+option{
+    background-color: black;
+    color: white;
 }
