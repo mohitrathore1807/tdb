@@ -19,9 +19,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from django.conf.urls.static import static
+from django.conf import settings
+
 #django admin cutomization
-admin.site.site_header = "Welcome To TDB Admin"
-admin.site.site_index = "TDB"
+admin.site.site_header = "Welcome To TDB.AI Admin"
+admin.site.site_index = "TDB.AI"
 admin.site.index_title = "Leads"
 
 urlpatterns = [
@@ -29,3 +32,4 @@ urlpatterns = [
     path('', include('tdbapp.urls'))
 ]
 
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

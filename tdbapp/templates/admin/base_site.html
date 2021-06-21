@@ -3,8 +3,8 @@
 {% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %} 
 {% block branding %}
 <h1 id="site-name">
-    <a href="{% url 'admin:index' %}">
-        <img src="{% static 'Biometric_Eye.png' %}" height="40px" /> TDB
+    <a href="{% url 'admin:index' %}" style="text-decoration:none;">
+        <img src="{% static 'Biometric_Eye.png' %}" height="50px" />  TDB.AI
     </a>
 </h1>
 {% endblock %} {% block nav-global %}{% endblock %}
