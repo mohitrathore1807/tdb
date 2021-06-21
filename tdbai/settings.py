@@ -131,3 +131,5 @@ DATETIME_FORMAT = '%d-%m-%Y %H:%M:%S'
 
 
 
+import mimetypes
+mimetypes.add_type("text/css", ".css", True)
