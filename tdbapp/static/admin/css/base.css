@@ -13,9 +13,9 @@ body {
     font-size: 14px;
     font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
     color: #333;
-    background: #fff;
+    background: rgb(0, 0, 0);
     
-    top: 0;
+    /* top: 0;
     left: 0;
     right: 0;
     width: 100vw;
@@ -24,7 +24,7 @@ body {
     z-index: -4;
     background: rgb(0 0 0 / 80%) url('https://tdb-website-demo-con.b-cdn.net/CAMSEC_AI/Background/home_bg.jpg')   center center/cover;
     background-size: cover;
-    background-blend-mode: darken;
+    background-blend-mode: darken; */
 }
 
 /* LINKS */
@@ -666,12 +666,13 @@ div.system-message p.system-message-title {
 /* BREADCRUMBS */
 
 div.breadcrumbs {
-    background: #ffffff;
+    background: #000000;
     padding: 10px 40px;
     border: none;
     font-size: 14px;
-    color: #000000;
+    color: #ffffff;
     text-align: left;
+    border-bottom: 1px solid #ffffff;
 }
 
 div.breadcrumbs a {
@@ -854,13 +855,13 @@ table#change-history tbody th {
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
-    background: #000000;
-    color: rgb(255, 255, 255);
+    background: #ffffff;
+    color: rgb(0, 0, 0);
     overflow: hidden;
 }
 
 #header a:link, #header a:visited {
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 #header a:focus , #header a:hover {
@@ -880,7 +881,7 @@ table#change-history tbody th {
 }
 
 #branding h1, #branding h1 a:link, #branding h1 a:visited {
-    color: #ffffff;
+    color: #000000;
 }
 
 #branding h2 {
@@ -913,7 +914,7 @@ table#change-history tbody th {
 #user-tools a:focus, #user-tools a:hover {
     text-decoration: none;
     border-bottom-color: #000000;
-    color: #ffffff;
+    color: #000000;
 }
 
 /* SIDEBAR */
