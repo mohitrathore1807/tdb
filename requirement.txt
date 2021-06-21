@@ -201,3 +201,4 @@ widgetsnbextension==3.5.1
 wrapt==1.12.1
 xkit==0.0.0
 zipp==3.4.0
+whitenoise
