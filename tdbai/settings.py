@@ -123,12 +123,12 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    #'/static/admin/css'
+    '/static/admin/css'
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-# STATIC_ROOT= os.path.join(BASE_DIR,'assets')
+#STATIC_ROOT= os.path.join(BASE_DIR,'assets')
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField' 
 
@@ -136,7 +136,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 DATETIME_FORMAT = '%d-%m-%Y %H:%M:%S'
-
 
 
 
