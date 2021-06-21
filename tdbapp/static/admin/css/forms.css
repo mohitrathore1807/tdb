@@ -6,7 +6,7 @@
     overflow: hidden;
     padding: 10px;
     font-size: 13px;
-    /* border-bottom: 1px solid #eee; */
+    border-bottom: 1px solid #eee;
 }
 
 .form-row img, .form-row input {
@@ -36,7 +36,7 @@ label {
 
 .required label, label.required {
     font-weight: bold;
-    color: rgb(255, 255, 255);
+    color: #333;
 }
 
 /* RADIO BUTTONS */
@@ -250,8 +250,8 @@ fieldset.monospace textarea {
 .submit-row {
     padding: 12px 14px;
     margin: 0 0 20px;
-    /* background: #f8f8f8; */
-    /* border: 1px solid #eee; */
+    background: #f8f8f8;
+    border: 1px solid #eee;
     border-radius: 4px;
     text-align: right;
     overflow: hidden;
