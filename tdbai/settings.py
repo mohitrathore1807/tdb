@@ -56,7 +56,7 @@ ROOT_URLCONF = 'tdbai.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'BACKEND': 'django.template.backends.django.Djangotemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -129,7 +129,7 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT= os.path.join(BASE_DIR,'assets')
 
-DEFAULT_AUTO_FIELD='django.db.models.AutoField' 
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
