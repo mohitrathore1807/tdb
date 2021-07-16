@@ -215,10 +215,9 @@ End Fixed Navigation
 					<input type="radio" id="radio-one" name="switch-one" value="1" checked />
 					<label style="color: white;" for="radio-one">Indore Office</label>
 
-					<input type="radio" id="radio-two" name="switch-one" value="2" />
-					<label style="color: white;" for="radio-two">Hyderabad Office</label>
+					
 
-					<input type="radio" id="radio-three" name="switch-one" value="3" />
+					<input type="radio" id="radio-three" name="switch-one" value="2" />
 					<label style="color: white;" for="radio-three">Saudi Arabia Office</label>
 				</div>
 
@@ -249,35 +248,7 @@ End Fixed Navigation
 					</div>
 				</div>
 
-				<!-- HYDERABAD -->
-				<div class="row hyderabad">
-					<div class="col-2 text-right"><img src="{%static '/images/icons/email.png'%}" class="icon-size"
-							alt="">
-					</div>
-					<div class="col">
-						<p>info@tdb.ai</p>
-					</div>
-				</div>
-				<div class="row hyderabad">
-					<div class="col-2 text-right"><img src="{%static '/images/icons/address.png'%}" class="icon-size"
-							alt="">
-					</div>
-					<div class="col">
-
-						2nd Floor, Adviti Nivas PLOT - 26, near RTO Office,
-						Chandragiri
-						Colony, Trimulgherry, Secunderabad, Telangana 500015
-					</div>
-				</div>
-				<div class="row hyderabad">
-					<div class="col-2 text-right"><img src="{%static '/images/icons/phone-call.png'%}" class="icon-size"
-							alt="">
-					</div>
-					<div class="col ">
-
-						+91-7000258253
-					</div>
-				</div>
+				
 
 				<!-- Saudi Arabia -->
 				<div class="row Saudi">
@@ -317,14 +288,7 @@ End Fixed Navigation
 					</div>
 				</div>
 
-				<div class="hyderabad" class="card" style="width: 100%; height: 100%;">
-					<div class="card-body">
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3805.861083484804!2d78.5053892!3d17.4663618!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb997deea44453%3A0x711962286c3e4ce8!2sVeloxtech%20Solutions!5e0!3m2!1sen!2sin!4v1611638625149!5m2!1sen!2sin"
-							width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
-							aria-hidden="false" tabindex="0"></iframe>
-					</div>
-				</div>
+				
 
 				<div class="Saudi" class="card" style="width: 100%; height: 100%;">
 					<div class="card-body">
@@ -363,19 +327,11 @@ End Fixed Navigation
 				switch (n) {
 					case '1':
 						$('.indore').show();
-						$('.hyderabad').hide();
 						$('.Saudi').hide();
 
 						break;
 					case '2':
 						$('.indore').hide();
-						$('.hyderabad').show();
-						$('.hyderabad').css("display", "flex");
-						$('.Saudi').hide();
-						break;
-					case '3':
-						$('.indore').hide();
-						$('.hyderabad').hide();
 						$('.Saudi').show();
 						$('.Saudi').css("display", "flex");
 						break;
